@@ -1,0 +1,175 @@
+# Script for generating 1-D tecplot output
+
+set xlabel 'x (mm)'
+set key at 60,90
+set xrange [0:1]
+
+set yrange [0:1]
+set ylabel 'Concentration'
+set out 'selfDiffusion_nfrac_s4k3v32m12.ps'
+plot './dsmc/ppc2000_alpha=1.4_Kn=0.5/prop_grid.0900000.txt' every 19 u ($2/1e-3):($5/($5+$10)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_1400_sol_.txt' u ($1/1e-3):($2/($2+$9)) w l nz 4 lc 'blue' dt 'Solid' title 'Case SD-01, n<sup>(1)</sup>/n', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.5/prop_grid.0900000.txt' every 19 u ($2/1e-3):($10/($5+$10)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_1400_sol_.txt' u ($1/1e-3):($9/($2+$9)) w l nz 4 lc 'blue' dt 'DashDot' title 'Case SD-01, n<sup>(2)</sup>/n', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.1/prop_grid.0900000.txt' every 19 u ($2/1e-3):($5/($5+$10)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_3700_sol_.txt' u ($1/1e-3):($2/($2+$9)) w l nz 4 lc 'red' pt 4 dt 'Solid' title 'Case SD-02, n<sup>(1)</sup>/n', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.1/prop_grid.0900000.txt' every 19 u ($2/1e-3):($10/($5+$10)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_3700_sol_.txt' u ($1/1e-3):($9/($2+$9)) w l nz 4 lc 'red' pt 4 dt 'DashDot' title 'Case SD-02, n<sup>(2)</sup>/n'
+set out
+
+set yrange [20:250]
+set ylabel 'Diffusion velocity (m/s)'
+set out 'selfDiffusion_vD_s4k3v32m12.ps'
+plot './dsmc/ppc2000_alpha=1.4_Kn=0.5/prop_grid.0900000.txt' every 19 u ($2/1e-3):($7-($6*$7+$11*$12)/($6+$11)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_1400_sol_.txt' u ($1/1e-3):(($3-($2*$3+$9*$10)/($2+$9))) w l nz 4 lc 'blue' dt 'Solid' title 'Case SD-01, v<sub>D</sub><sup>(1)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.5/prop_grid.0900000.txt' every 19 u ($2/1e-3):(-($12-($6*$7+$11*$12)/($6+$11))) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_1400_sol_.txt' u ($1/1e-3):(-($10-($2*$3+$9*$10)/($2+$9))) w l nz 4 lc 'blue' dt 'DashDot' title 'Case SD-01, -v<sub>D</sub><sup>(2)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.1/prop_grid.0900000.txt' every 19 u ($2/1e-3):($7-($6*$7+$11*$12)/($6+$11)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_3700_sol_.txt' u ($1/1e-3):(($3-($2*$3+$9*$10)/($2+$9))) w l nz 4 lc 'red' pt 4 dt 'Solid' title 'Case SD-02, v<sub>D</sub><sup>(1)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.1/prop_grid.0900000.txt' every 19 u ($2/1e-3):(-($12-($6*$7+$11*$12)/($6+$11))) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_3700_sol_.txt' u ($1/1e-3):(-($10-($2*$3+$9*$10)/($2+$9))) w l nz 4 lc 'red' pt 4 dt 'DashDot' title 'Case SD-02, -v<sub>D</sub><sup>(2)</sup>'
+set out
+
+set yrange [210:280]
+set key at 65,35
+set ylabel 'Temperature (K)'
+set out 'selfDiffusion_T_s4k3v32m12.ps'
+plot './dsmc/ppc2000_alpha=1.4_Kn=0.5/prop_grid.0900000.txt' every 19 u ($2/1e-3):($14) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_1400_sol_.txt' u ($1/1e-3):($5) w l nz 4 lc 'blue' dt 'Solid' title 'Case SD-01, T<sup>(1)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.5/prop_grid.0900000.txt' every 19 u ($2/1e-3):($16) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_1400_sol_.txt' u ($1/1e-3):($12) w l nz 4 lc 'blue' dt 'DashDot' title 'Case SD-01, T<sup>(2)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.1/prop_grid.0900000.txt' every 19 u ($2/1e-3):($14) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_3700_sol_.txt' u ($1/1e-3):($5) w l nz 4 lc 'red' pt 4 dt 'Solid' title 'Case SD-02, T<sup>(1)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.1/prop_grid.0900000.txt' every 19 u ($2/1e-3):($16) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_3700_sol_.txt' u ($1/1e-3):($12) w l nz 4 lc 'red' pt 4 dt 'DashDot' title 'Case SD-02, T<sup>(2)</sup>'
+set out
+
+
+# we will plot just 50% of the center domain
+set yrange [0.1:0.3]
+set xrange [0:1] #[0.25:0.75]
+set key at 85,90
+set yticks spacing 0.05
+set xticks spacing 0.2
+set ylabel 'D<sup>(11)</sup> (m<sup>2</sup>/s)'
+set out 'selfDiffusion_D11_Case01_s4k3v32m12.ps'
+plot './D11_dsmc.dat' every 19 u ($1/1e-3):($2) w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s4k3v32m12_alpha=1.0/selfDiffusion1D_ArAr_1800_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'blue' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($3) w p pt 'square' sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.5_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_1400_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'red' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.4', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($4) w p pt 'rtri' sf 'no' st 0.3 lw 1.2 lc 'green' title '', \
+     './Kn=0.5_ArAr_s4k3v32m12_alpha=1.8/selfDiffusion1D_ArAr_1400_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'green' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.8'
+set out
+
+
+# we will plot just 50% of the center domain
+set yrange [0.03:0.075]
+set xrange [0:1] #[0.25:0.75]
+set key at 85,90
+set yticks spacing 0.015
+set xticks spacing 0.2
+set ylabel 'D<sup>(11)</sup> (m<sup>2</sup>/s)'
+set out 'selfDiffusion_D11_Case02_s4k3v32m12.ps'
+plot './D11_dsmc.dat' every 19 u ($1/1e-3):($5) w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.1_ArAr_s4k3v32m12_alpha=1.0/selfDiffusion1D_ArAr_1800_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'blue' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($6) w p pt 'square' sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s4k3v32m12_alpha=1.4/selfDiffusion1D_ArAr_2500_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'red' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.4', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($7) w p pt 'rtri' sf 'no' st 0.3 lw 1.2 lc 'green' title '', \
+     './Kn=0.1_ArAr_s4k3v32m12_alpha=1.8/selfDiffusion1D_ArAr_1800_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'green' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.8'
+set out
+
+############## Refined grid
+
+set yrange [210:280]
+set yticks spacing 10
+set key at 65,35
+set ylabel 'Temperature (K)'
+set out 'selfDiffusion_T_s4k4v32m12.ps'
+plot './dsmc/ppc2000_alpha=1.4_Kn=0.5/prop_grid.0900000.txt' every 19 u ($2/1e-3):($14) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s4k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_3000_sol_.txt' u ($1/1e-3):($5) w l nz 4 lc 'blue' dt 'Solid' title 'Case SD-01, T<sup>(1)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.5/prop_grid.0900000.txt' every 19 u ($2/1e-3):($16) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s4k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_3000_sol_.txt' u ($1/1e-3):($12) w l nz 4 lc 'blue' dt 'DashDot' title 'Case SD-01, T<sup>(2)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.1/prop_grid.0900000.txt' every 19 u ($2/1e-3):($14) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s4k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_3500_sol_.txt' u ($1/1e-3):($5) w l nz 4 lc 'red' pt 4 dt 'Solid' title 'Case SD-02, T<sup>(1)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.1/prop_grid.0900000.txt' every 19 u ($2/1e-3):($16) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s4k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_3500_sol_.txt' u ($1/1e-3):($12) w l nz 4 lc 'red' pt 4 dt 'DashDot' title 'Case SD-02, T<sup>(2)</sup>'
+set out
+
+
+set yrange [0.1:0.3]
+set xrange [0:1] #[0.25:0.75]
+set key at 85,90
+set yticks spacing 0.05
+set xticks spacing 0.2
+set ylabel 'D<sup>(11)</sup> (m<sup>2</sup>/s)'
+set out 'selfDiffusion_D11_Case01_s4k4v32m12.ps'
+plot './D11_dsmc.dat' every 19 u ($1/1e-3):($2) w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s4k4v32m12_alpha=1.0/selfDiffusion1D_ArAr_3000_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'blue' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($3) w p pt 'square' sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.5_ArAr_s4k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_3000_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'red' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.4', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($4) w p pt 'rtri' sf 'no' st 0.3 lw 1.2 lc 'green' title '', \
+     './Kn=0.5_ArAr_s4k4v32m12_alpha=1.8/selfDiffusion1D_ArAr_3000_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'green' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.8'
+set out
+
+set yrange [0.03:0.075]
+set xrange [0:1] #[0.25:0.75]
+set key at 85,90
+set yticks spacing 0.015
+set xticks spacing 0.2
+set ylabel 'D<sup>(11)</sup> (m<sup>2</sup>/s)'
+set out 'selfDiffusion_D11_Case02_s4k4v32m12.ps'
+plot './D11_dsmc.dat' every 19 u ($1/1e-3):($5) w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.1_ArAr_s4k4v32m12_alpha=1.0/selfDiffusion1D_ArAr_3400_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'blue' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($6) w p pt 'square' sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s4k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_3400_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'red' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.4', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($7) w p pt 'rtri' sf 'no' st 0.3 lw 1.2 lc 'green' title '', \
+     './Kn=0.1_ArAr_s4k4v32m12_alpha=1.8/selfDiffusion1D_ArAr_3400_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 4 lc 'green' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.8'
+set out
+
+set yrange [210:280]
+set yticks spacing 10
+set key at 65,35
+set ylabel 'Temperature (K)'
+set out 'selfDiffusion_T_s8k4v32m12.ps'
+plot './dsmc/ppc2000_alpha=1.4_Kn=0.5/prop_grid.0900000.txt' every 19 u ($2/1e-3):($14) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s8k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_6500_sol_.txt' u ($1/1e-3):($5) w l nz 8 lc 'blue' dt 'Solid' title 'Case SD-01, T<sup>(1)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.5/prop_grid.0900000.txt' every 19 u ($2/1e-3):($16) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s8k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_6500_sol_.txt' u ($1/1e-3):($12) w l nz 8 lc 'blue' dt 'DashDot' title 'Case SD-01, T<sup>(2)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.1/prop_grid.0900000.txt' every 19 u ($2/1e-3):($14) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s8k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_7000_sol_.txt' u ($1/1e-3):($5) w l nz 8 lc 'red' pt 4 dt 'Solid' title 'Case SD-02, T<sup>(1)</sup>', \
+     './dsmc/ppc2000_alpha=1.4_Kn=0.1/prop_grid.0900000.txt' every 19 u ($2/1e-3):($16) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s8k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_7000_sol_.txt' u ($1/1e-3):($12) w l nz 8 lc 'red' pt 4 dt 'DashDot' title 'Case SD-02, T<sup>(2)</sup>'
+set out
+
+set yrange [0.1:0.3]
+set xrange [0:1] #[0.25:0.75]
+set key at 85,90
+set yticks spacing 0.05
+set xticks spacing 0.2
+set ylabel 'D<sup>(11)</sup> (m<sup>2</sup>/s)'
+set out 'selfDiffusion_D11_Case01_s8k4v32m12.ps'
+plot './D11_dsmc.dat' every 19 u ($1/1e-3):($2) w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArAr_s8k4v32m12_alpha=1.0/selfDiffusion1D_ArAr_6500_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 8 lc 'blue' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($3) w p pt 'square' sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.5_ArAr_s8k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_6500_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 8 lc 'red' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.4', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($4) w p pt 'rtri' sf 'no' st 0.3 lw 1.2 lc 'green' title '', \
+     './Kn=0.5_ArAr_s8k4v32m12_alpha=1.8/selfDiffusion1D_ArAr_6500_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 8 lc 'green' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.8'
+set out
+
+set yrange [0.03:0.075]
+set xrange [0:1] #[0.25:0.75]
+set key at 85,90
+set yticks spacing 0.015
+set xticks spacing 0.2
+set ylabel 'D<sup>(11)</sup> (m<sup>2</sup>/s)'
+set out 'selfDiffusion_D11_Case02_s8k4v32m12.ps'
+plot './D11_dsmc.dat' every 19 u ($1/1e-3):($5) w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.1_ArAr_s8k4v32m12_alpha=1.0/selfDiffusion1D_ArAr_7000_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 8 lc 'blue' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($6) w p pt 'square' sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArAr_s8k4v32m12_alpha=1.4/selfDiffusion1D_ArAr_7000_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 8 lc 'red' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.4', \
+     './D11_dsmc.dat' every 19 u ($1/1e-3):($7) w p pt 'rtri' sf 'no' st 0.3 lw 1.2 lc 'green' title '', \
+     './Kn=0.1_ArAr_s8k4v32m12_alpha=1.8/selfDiffusion1D_ArAr_7000_diffusionCoefficients_.txt' u ($1/1e-3):($2) w l nz 8 lc 'green' dt 'Solid' title '<greek>a</greek><sub>ij</sub>=1.8'
+set out
+
+
+

@@ -17,3 +17,4 @@ The research data contained in this repository is arranged by section number as 
 - Section 4.3: Multi-species Fourier heat transfer
 - Section 4.4: Multi-species oscillatory Couette flow
 - Section 4.5: Multi-species normal shock
+- Section 4.6: Multi-species self-diffusion

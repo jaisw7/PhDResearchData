@@ -1,0 +1,78 @@
+#-- 1D Ar-Ar self-diffusion
+#-- Section-12.5 in Bird's monograph, Oxford University Press
+
+############################# Initialization ##################################
+
+seed               12345
+dimension          2
+global             gridcut 0.0 comm/sort yes
+
+boundary           oo pp p
+create_box         0.0 1e-3 -1e-3 1e-3 -0.5 0.5
+create_grid        500 1 1 #level 2 * * * 2 2 1 level 3 * * * 2 2 1
+balance_grid       rcb cell
+fix                fbalance balance 1000 1.1 rcb part
+				   
+global             nrho 1.68e+21 fnum 2.8e+9 #use a higher fnum for debugging;
+species            air.species Ar1 Ar2
+
+#mixture            gas Ar1 Ar2 vstream 0 0 0 temp 273
+#mixture            gas Ar1 frac 0.5
+#mixture            gas Ar2 frac 0.5
+
+mixture            gas1 Ar1 vstream 0 0 0 temp 273
+mixture            gas1 Ar1 frac 1
+
+mixture            gas2 Ar2 vstream 0 0 0 temp 273
+mixture            gas2 Ar2 frac 1
+
+#fix                inLeft emit/face gas1 xlo subsonic 0.5272162063063063 273
+#fix                inRight emit/face gas2 xhi subsonic 0.5272162063063063 273
+
+fix                inLeft emit/face gas1 xlo 
+fix                inRight emit/face gas2 xhi
+
+collide            vss all air.vss
+#create_particles   gas1 n 0
+timestep           1e-8
+
+
+compute            sumKe reduce sum ke
+stats_style        step elaplong cpu np c_sumKe nattempt ncoll nscoll #nscheck #c_fcircle[1] c_fcircle[2]
+				   
+############################# Unsteady Regime #################################
+
+collide_modify     vremax 100 yes
+
+#dump               dimage image all 50 prop_image_*.ppm vx type pdiam 2e-4 &
+#                           box yes 0.01 surf one 0.01 size 720 120 zoom 600 # gline yes 5e-5 #grid proc
+#dump_modify        dimage pad 6 scolor * black backcolor white glinecolor gray boxcolor magenta &
+#                           cmap particle 0 600 cf 0 5 min blue 0.25 cyan 0.5 green 0.75 yellow max red
+
+#stats              100
+#run                3000
+#undump             dimage
+
+stats              10000 
+run                200000
+
+############################## Steady Regime ##################################
+
+collide_modify     vremax 10000 yes
+
+compute            cgrid grid all species n nrho massrho u v #tvib trot
+compute            cthermal thermal/grid all species temp press
+compute            cpflux pflux/grid all species momxy momyz momxz momxx momyy momzz
+compute            ceflux eflux/grid all species heatx heaty heatz
+compute            cgrid2 grid all species nfrac
+compute            cgrid3 grid all all u
+
+fix                fgrid ave/grid all 1 300000 300000 c_cgrid[*] c_cthermal[*] c_cpflux[*] c_ceflux[*] c_cgrid2[*] c_cgrid3[*] ave running
+
+dump               dgrid grid all 300000 prop_grid.*.dat id xlo ylo f_fgrid[*]
+dump_modify        dgrid pad 7 append no
+
+stats              10000
+run                1200000  #-- the reference uses 21000000
+
+############################ End of Simulation ################################
