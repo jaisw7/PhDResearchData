@@ -2,6 +2,11 @@ This folder contains data for Fig. 4.1 of the thesis.
 
 ### Figures:  
 
+The figures have been named in a format errorVsMassRatio\_mr=x_L=12.pdf where 
+- x is the mass ratio of the two species
+- L=12 is the length of the velocity domain.
+
+The individal figure files can be found at  
 - [Fig. 4.1(a)](errorVsMassRatio_mr=1_L=12.pdf)
 - [Fig. 4.1(b)](errorVsMassRatio_mr=2_L=12.pdf)
 - [Fig. 4.1(c)](errorVsMassRatio_mr=4_L=12.pdf)
