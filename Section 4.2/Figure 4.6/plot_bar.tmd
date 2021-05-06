@@ -1,0 +1,30 @@
+# Script for generating 1-D tecplot output
+
+set key at 95,90
+set yrange [0:100]
+set xrange [2:9]
+set xticks spacing 1
+set yticks spacing 20
+set xlabel 'Order of scheme (K)'
+set out 'bar_72_k_20.ps'
+plot 'abc_72.k.20.txt' u ($1):($1/$1*100) w b sf 'yes' st 5  lc 'yellow' title 'Others/DG', \
+     'abc_72.k.20.txt' u ($1):($2+$3+$4+$5) w b sf 'yes' st 5  lc 'cyan' title 'Step 7', \
+     'abc_72.k.20.txt' u ($1):($2+$3+$4) w b sf 'yes' st 5  lc 'green' title 'Step 6 (Multiply)', \
+     'abc_72.k.20.txt' u ($1):($2+$3) w b sf 'yes' st 5  lc 'red' title 'Step 4/5', \
+     'abc_72.k.20.txt' u ($1):($2) w b sf 'yes' st 5  lc 'blue' title 'FFTs'
+set out
+
+set key at 95,90
+set yrange [0:100]
+set xrange [2:9]
+set xticks spacing 1
+set yticks spacing 20
+set xlabel 'Order of scheme (K)'
+set out 'bar_72_k_32.ps'
+plot 'abc_72.k.32.txt' u ($1):($1/$1*100) w b sf 'yes' st 5  lc 'yellow' title 'Others/DG', \
+     'abc_72.k.32.txt' u ($1):($2+$3+$4+$5) w b sf 'yes' st 5  lc 'cyan' title 'Step 7', \
+     'abc_72.k.32.txt' u ($1):($2+$3+$4) w b sf 'yes' st 5  lc 'green' title 'Step 6 (Multiply)', \
+     'abc_72.k.32.txt' u ($1):($2+$3) w b sf 'yes' st 5  lc 'red' title 'Step 4/5', \
+     'abc_72.k.32.txt' u ($1):($2) w b sf 'yes' st 5  lc 'blue' title 'FFTs'
+set out
+
