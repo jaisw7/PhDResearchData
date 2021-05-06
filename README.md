@@ -8,3 +8,6 @@ The Intellectual property (IP) rights of several universities prohibit public di
 - The practice is remarkably common in venues like [NIPS](https://nips.cc/Conferences/2020/PaperInformation/CodeSubmissionPolicy), [CVPR](http://cvpr2020.thecvf.com/submission/main-conference/author-guidelines). Moreover, public release of research data and code prevents researchers from writing incremental papers. The incremental papers neither push the field forward nor add to our understanding of the reality.
 - NSF funds are public money. The work done under NSF projects are done by the people for the people. The public release of research data ensures accountability.
 
+### Contents
+
+The research data contained in this repository is arranged by section number as per [PhD thesis](PhDThesis.pdf). Each section number is assigned a folder. The sub-section data is contained in the corresponding sub-folders.
