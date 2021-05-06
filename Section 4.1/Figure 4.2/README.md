@@ -1,10 +1,13 @@
 This folder contains data for Fig. 4.2 of the thesis.
 
-### Figures: The figures have been named in a format variationF\_mr=x\_s=y_L=12.pdf where 
+### Figures
+
+The figures have been named in a format variationF\_mr=x\_s=y_L=12.pdf where 
 - x is the mass ratio of the two species
 - y is the species (first species: s=1, second species: s=2)
 - L=12 is the length of the velocity domain.
 
+The individal figure files can be found at  
 - [Fig. 4.2(a)](variationF_mr=2_s=1_L=12.pdf)
 - [Fig. 4.2(b)](variationF_mr=2_s=2_L=12.pdf)
 - [Fig. 4.2(c)](variationF_mr=4_s=1_L=12.pdf)
