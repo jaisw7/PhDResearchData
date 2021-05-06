@@ -1,0 +1,31 @@
+# Script for generating 1-D tecplot output
+
+#set yrange [-30:30]
+set xlabel 'x (mm)'
+set ylabel 'T (K)'
+set key at 50,90
+set xrange [0:1]
+set yrange [240:300]
+set yticks spacing 10
+
+set yrange [0:1]
+set yticks spacing 0.2
+set ylabel '( T<sup>(1)</sup> - T<sub><i>l</i></sub> ) / ( T<sub><i>r</i></sub> - T<sub><i>l</i></sub> )'
+set out 'T_Ar_s4k3v64_T100_deviation.ps'
+plot './Kn=0.5_ArKr_s4k3v64m12_T100/dsmc_Kn=0.5_diffusion_T100.txt' every 19 u ($2/1e-3):(($14-223)/(323-223)) w p pt 'circle' lw 1.1 sf 'no' st 0.3 lc 'blue' title '', \
+     './Kn=0.5_ArKr_s4k3v64m12_T100/fourier1D_Ar_specie1_2200_sol_.txt' u ($1/1e-3):(($5-223)/(323-223)) w l lc 'blue' pt 4 title 'Case F-04', \
+     './Kn=1_ArKr_s4k3v64m12_T100/dsmc_Kn=1_diffusion_T100.txt' every 19 u ($2/1e-3):(($14-223)/(323-223)) w p pt 'circle' lw 1.1 sf 'no' st 0.3 lc 'red' title '', \
+     './Kn=1_ArKr_s4k3v64m12_T100/fourier1D_Ar_specie1_1800_sol_.txt' u ($1/1e-3):(($5-223)/(323-223)) w l lc 'red' pt 4 title 'Case F-05', \
+     './Kn=5_ArKr_s4k3v64m12_T100/dsmc_Kn=5_diffusion_T100.txt' every 19 u ($2/1e-3):(($14-223)/(323-223)) w p pt 'circle' lw 1.1 sf 'no' st 0.3 lc 'green' title '', \
+     './Kn=5_ArKr_s4k3v64m12_T100/fourier1D_Ar_specie1_3300_sol_.txt' u ($1/1e-3):(($5-223)/(323-223)) w l lc 'green' pt 4 title 'Case F-06'
+set out
+
+set ylabel '( T<sup>(2)</sup> - T<sub><i>l</i></sub> ) / ( T<sub><i>r</i></sub> - T<sub><i>l</i></sub> )'
+set out 'T_Kr_s4k3v64_T100_deviation.ps'
+plot './Kn=0.5_ArKr_s4k3v64m12_T100/dsmc_Kn=0.5_diffusion_T100.txt' every 19 u ($2/1e-3):(($16-223)/(323-223)) w p pt 'circle' lw 1.1 sf 'no' st 0.3 lc 'blue' title '', \
+     './Kn=0.5_ArKr_s4k3v64m12_T100/fourier1D_Kr_specie2_2200_sol_.txt' u ($1/1e-3):(($5-223)/(323-223)) w l lc 'blue' pt 4 title 'Case F-04', \
+     './Kn=1_ArKr_s4k3v64m12_T100/dsmc_Kn=1_diffusion_T100.txt' every 19 u ($2/1e-3):(($16-223)/(323-223)) w p pt 'circle' lw 1.1 sf 'no' st 0.3 lc 'red' title '', \
+     './Kn=1_ArKr_s4k3v64m12_T100/fourier1D_Kr_specie2_1800_sol_.txt' u ($1/1e-3):(($5-223)/(323-223)) w l lc 'red' pt 4 title 'Case F-05', \
+     './Kn=5_ArKr_s4k3v64m12_T100/dsmc_Kn=5_diffusion_T100.txt' every 19 u ($2/1e-3):(($16-223)/(323-223)) w p pt 'circle' lw 1.1 sf 'no' st 0.3 lc 'green' title '', \
+     './Kn=5_ArKr_s4k3v64m12_T100/fourier1D_Kr_specie2_3300_sol_.txt' u ($1/1e-3):(($5-223)/(323-223)) w l lc 'green' pt 4 title 'Case F-06'
+set out
