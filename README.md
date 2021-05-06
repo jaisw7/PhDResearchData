@@ -14,4 +14,5 @@ The research data contained in this repository is arranged by section number as 
 
 - Section 4.1: Multi-species Krook-Wu solution
 - Section 4.2: Multi-species Couette flow
-- Section 4.2: Multi-species Fourier heat transfer
+- Section 4.3: Multi-species Fourier heat transfer
+- Section 4.4: Multi-species oscillatory Couette flow
