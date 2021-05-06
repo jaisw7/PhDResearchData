@@ -1,0 +1,96 @@
+# Script for generating 1-D tecplot output
+
+set xlabel 'c'
+set key at 93,90
+set xrange [-4:4]
+#set yrange [1e-4:1]
+#set logscale y
+
+#set datafile separator ","
+
+set ylabel 'f<sup>(1)</sup>'
+
+keyword N=64.
+keyword L=12.
+keyword dc=2.*L/N
+
+set yrange [0:0.16]
+set yticks spacing 0.02
+set out 'variationF_mr=2_s=1_L=12.ps'
+plot 'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=4.500000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'circle' lw 1.2 lc 'red' title 't=4.5, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=4.500000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'circle' lw 0.3 lc 'red' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=5.500000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'square' lw 1.2 lc 'blue' title 't=5.5, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=5.500000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'square' lw 0.3 lc 'blue' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=6.500000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'diamond' lw 1.2 lc 'green' title 't=6.5, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=6.500000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'diamond' lw 0.3 lc 'green' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=8.000000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'delta' lw 1.2 lc 'black' title 't=8.0, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=8.000000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'delta' lw 0.3 lc 'black' title ''
+set out
+
+set yrange [0:0.45]
+set yticks spacing 0.05
+set out 'variationF_mr=4_s=1_L=12.ps'
+plot 'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=4.500000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'circle' lw 1.2 lc 'red' title 't=4.5, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=4.500000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'circle' lw 0.3 lc 'red' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=5.500000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'square' lw 1.2 lc 'blue' title 't=5.5, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=5.500000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'square' lw 0.3 lc 'blue' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=6.500000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'diamond' lw 1.2 lc 'green' title 't=6.5, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=6.500000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'diamond' lw 0.3 lc 'green' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=8.000000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'delta' lw 1.2 lc 'black' title 't=8.0, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=8.000000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'delta' lw 0.3 lc 'black' title ''
+set out
+
+set yrange [0:1]
+set yticks spacing 0.1
+set out 'variationF_mr=8_s=1_L=12.ps'
+plot 'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=4.500000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'circle' lw 1.2 lc 'red' title 't=4.5, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=4.500000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'circle' lw 0.3 lc 'red' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=5.500000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'square' lw 1.2 lc 'blue' title 't=5.5, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=5.500000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'square' lw 0.3 lc 'blue' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=6.500000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'diamond' lw 1.2 lc 'green' title 't=6.5, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=6.500000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'diamond' lw 0.3 lc 'green' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=8.000000.txt' u (-L-dc/2+($1)*dc):($3) w p pt 'delta' lw 1.2 lc 'black' title 't=8.0, Specie:1', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=8.000000.txt.analytical' u (-L-dc/2+($1)*dc):($3) w l pt 'delta' lw 0.3 lc 'black' title ''
+set out
+
+###############
+set ylabel 'f<sup>(2)</sup>'
+
+set yrange [0:0.06]
+set yticks spacing 0.01
+set out 'variationF_mr=2_s=2_L=12.ps'
+plot 'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=4.500000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'circle' lw 1.2 lc 'red' title 't=4.5, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=4.500000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'circle' lw 0.3 lc 'red' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=5.500000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'square' lw 1.2 lc 'blue' title 't=5.5, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=5.500000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'square' lw 0.3 lc 'blue' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=6.500000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'diamond' lw 1.2 lc 'green' title 't=6.5, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=6.500000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'diamond' lw 0.3 lc 'green' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=8.000000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'delta' lw 1.2 lc 'black' title 't=8.0, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=2.000000_t=8.000000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'delta' lw 0.3 lc 'black' title ''
+set out
+
+set yrange [0:0.06]
+set yticks spacing 0.01
+set out 'variationF_mr=4_s=2_L=12.ps'
+plot 'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=4.500000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'circle' lw 1.2 lc 'red' title 't=4.5, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=4.500000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'circle' lw 0.3 lc 'red' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=5.500000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'square' lw 1.2 lc 'blue' title 't=5.5, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=5.500000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'square' lw 0.3 lc 'blue' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=6.500000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'diamond' lw 1.2 lc 'green' title 't=6.5, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=6.500000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'diamond' lw 0.3 lc 'green' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=8.000000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'delta' lw 1.2 lc 'black' title 't=8.0, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=4.000000_t=8.000000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'delta' lw 0.3 lc 'black' title ''
+set out
+
+set yrange [0:0.06]
+set yticks spacing 0.01
+set out 'variationF_mr=8_s=2_L=12.ps'
+plot 'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=4.500000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'circle' lw 1.2 lc 'red' title 't=4.5, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=4.500000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'circle' lw 0.3 lc 'red' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=5.500000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'square' lw 1.2 lc 'blue' title 't=5.5, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=5.500000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'square' lw 0.3 lc 'blue' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=6.500000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'diamond' lw 1.2 lc 'green' title 't=6.5, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=6.500000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'diamond' lw 0.3 lc 'green' title '', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=8.000000.txt' u (-L-dc/2+($1)*dc):($2) w p pt 'delta' lw 1.2 lc 'black' title 't=8.0, Specie:2', \
+     'dist_Nv=64_Nsph=6_Nrho=64_mr=8.000000_t=8.000000.txt.analytical' u (-L-dc/2+($1)*dc):($2) w l pt 'delta' lw 0.3 lc 'black' title ''
+set out

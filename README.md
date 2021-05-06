@@ -11,3 +11,5 @@ The Intellectual property (IP) rights of several universities prohibit public di
 ### Contents
 
 The research data contained in this repository is arranged by section number as per [PhD thesis](PhDThesis.pdf). Each section number is assigned a folder. The sub-section data is contained in the corresponding sub-folders.
+
+- [Section 4.1](Section 4.1): Multi-species Krook-Wu solution

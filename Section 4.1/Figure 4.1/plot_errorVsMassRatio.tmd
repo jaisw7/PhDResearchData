@@ -1,0 +1,56 @@
+# Script for generating 1-D tecplot output
+
+set xlabel 'N'
+set ylabel 'Error'
+set key at 85,90
+set xrange [16:96]
+set yrange [1e-8:1]
+set logscale y
+
+set out 'errorVsMassRatio_mr=1_L=12.ps'
+plot 'Linf_mr=1.0_M=6_Nrho=Nv.txt'  u ($1):($2) w lp pt 'circle' sf 'no' lw 0.3 lc 'red' title 'M=6, Species:1', \
+     'Linf_mr=1.0_M=6_Nrho=Nv.txt'  u ($1):($3) w lp pt 'circle' dt 'DashDot' lw 0.3 lc 'red' title 'M=6, Species:2', \
+     'Linf_mr=1.0_M=12_Nrho=Nv.txt'  u ($1):($2) w lp pt 'square' sf 'no' lw 0.3 lc 'blue' title 'M=12, Species:1', \
+     'Linf_mr=1.0_M=12_Nrho=Nv.txt'  u ($1):($3) w lp pt 'square' dt 'DashDot' lw 0.3 lc 'blue' title 'M=12, Species:2', \
+     'Linf_mr=1.0_M=32_Nrho=Nv.txt'  u ($1):($2) w lp pt 'rtri' sf 'no' lw 0.3 lc 'green' title 'M=32, Species:1', \
+     'Linf_mr=1.0_M=32_Nrho=Nv.txt'  u ($1):($3) w lp pt 'rtri' dt 'DashDot' lw 0.3 lc 'green' title 'M=32, Species:2'
+set out
+
+set out 'errorVsMassRatio_mr=2_L=12.ps'
+plot 'Linf_mr=2.0_M=6_Nrho=Nv.txt'  u ($1):($2) w lp pt 'circle' sf 'no' lw 0.3 lc 'red' title 'M=6, Species:1', \
+     'Linf_mr=2.0_M=6_Nrho=Nv.txt'  u ($1):($3) w lp pt 'circle' dt 'DashDot' lw 0.3 lc 'red' title 'M=6, Species:2', \
+     'Linf_mr=2.0_M=12_Nrho=Nv.txt'  u ($1):($2) w lp pt 'square' sf 'no' lw 0.3 lc 'blue' title 'M=12, Species:1', \
+     'Linf_mr=2.0_M=12_Nrho=Nv.txt'  u ($1):($3) w lp pt 'square' dt 'DashDot' lw 0.3 lc 'blue' title 'M=12, Species:2', \
+     'Linf_mr=2.0_M=32_Nrho=Nv.txt'  u ($1):($2) w lp pt 'rtri' sf 'no' lw 0.3 lc 'green' title 'M=32, Species:1', \
+     'Linf_mr=2.0_M=32_Nrho=Nv.txt'  u ($1):($3) w lp pt 'rtri' dt 'DashDot' lw 0.3 lc 'green' title 'M=32, Species:2'
+set out
+
+set out 'errorVsMassRatio_mr=4_L=12.ps'
+plot 'Linf_mr=4.0_M=6_Nrho=Nv.txt'  u ($1):($2) w lp pt 'circle' sf 'no' lw 0.3 lc 'red' title 'M=6, Species:1', \
+     'Linf_mr=4.0_M=6_Nrho=Nv.txt'  u ($1):($3) w lp pt 'circle' dt 'DashDot' lw 0.3 lc 'red' title 'M=6, Species:2', \
+     'Linf_mr=4.0_M=12_Nrho=Nv.txt'  u ($1):($2) w lp pt 'square' sf 'no' lw 0.3 lc 'blue' title 'M=12, Species:1', \
+     'Linf_mr=4.0_M=12_Nrho=Nv.txt'  u ($1):($3) w lp pt 'square' dt 'DashDot' lw 0.3 lc 'blue' title 'M=12, Species:2', \
+     'Linf_mr=4.0_M=32_Nrho=Nv.txt'  u ($1):($2) w lp pt 'rtri' sf 'no' lw 0.3 lc 'green' title 'M=32, Species:1', \
+     'Linf_mr=4.0_M=32_Nrho=Nv.txt'  u ($1):($3) w lp pt 'rtri' dt 'DashDot' lw 0.3 lc 'green' title 'M=32, Species:2'
+set out
+
+set key at 55,50
+set out 'errorVsMassRatio_mr=6_L=12.ps'
+plot 'Linf_mr=6.0_M=6_Nrho=Nv.txt'  u ($1):($2) w lp pt 'circle' sf 'no' lw 0.3 lc 'red' title 'M=6, Species:1', \
+     'Linf_mr=6.0_M=6_Nrho=Nv.txt'  u ($1):($3) w lp pt 'circle' dt 'DashDot' lw 0.3 lc 'red' title 'M=6, Species:2', \
+     'Linf_mr=6.0_M=12_Nrho=Nv.txt'  u ($1):($2) w lp pt 'square' sf 'no' lw 0.3 lc 'blue' title 'M=12, Species:1', \
+     'Linf_mr=6.0_M=12_Nrho=Nv.txt'  u ($1):($3) w lp pt 'square' dt 'DashDot' lw 0.3 lc 'blue' title 'M=12, Species:2', \
+     'Linf_mr=6.0_M=32_Nrho=Nv.txt'  u ($1):($2) w lp pt 'rtri' sf 'no' lw 0.3 lc 'green' title 'M=32, Species:1', \
+     'Linf_mr=6.0_M=32_Nrho=Nv.txt'  u ($1):($3) w lp pt 'rtri' dt 'DashDot' lw 0.3 lc 'green' title 'M=32, Species:2'
+set out
+
+set out 'errorVsMassRatio_mr=8_L=12.ps'
+plot 'Linf_mr=8.0_M=6_Nrho=Nv.txt'  u ($1):($2) w lp pt 'circle' sf 'no' lw 0.3 lc 'red' title 'M=6, Species:1', \
+     'Linf_mr=8.0_M=6_Nrho=Nv.txt'  u ($1):($3) w lp pt 'circle' dt 'DashDot' lw 0.3 lc 'red' title 'M=6, Species:2', \
+     'Linf_mr=8.0_M=12_Nrho=Nv.txt'  u ($1):($2) w lp pt 'square' sf 'no' lw 0.3 lc 'blue' title 'M=12, Species:1', \
+     'Linf_mr=8.0_M=12_Nrho=Nv.txt'  u ($1):($3) w lp pt 'square' dt 'DashDot' lw 0.3 lc 'blue' title 'M=12, Species:2', \
+     'Linf_mr=8.0_M=32_Nrho=Nv.txt'  u ($1):($2) w lp pt 'rtri' sf 'no' lw 0.3 lc 'green' title 'M=32, Species:1', \
+     'Linf_mr=8.0_M=32_Nrho=Nv.txt'  u ($1):($3) w lp pt 'rtri' dt 'DashDot' lw 0.3 lc 'green' title 'M=32, Species:2'
+set out
+
+
