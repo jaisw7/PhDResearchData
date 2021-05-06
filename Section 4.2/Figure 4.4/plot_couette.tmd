@@ -1,0 +1,37 @@
+# Script for generating 1-D tecplot output
+
+keyword "vw=50"
+keyword "H0=1e-3"
+
+set xlabel 'x (mm)'
+set xrange [0:1]
+
+set key at 60,90
+set yrange [-1:1]
+set yticks spacing 0.2
+set ylabel 'Normalized Velocity'
+set legend row_spacing 2
+set legend font "Helvetica,4"
+set out 'couette_U_s4k3v32m12_normalized_.ps'
+plot './dsmc_Kn0.5.dat' every 19 u ($2/1e-3):($8/vw) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'green' title '', \
+     './bulksol_dgfs_1d_couette-10.00.txt' u ($1/1e-3):($4/vw) w l nz 4 lc 'green' dt 'Solid' title 'u<sub>y</sub><sup>(1)</sup> / |u<sub>w</sub>|', \
+     './dsmc_Kn0.5.dat' every 19 u ($2/1e-3):($13/vw) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'black' title '', \
+     './bulksol_dgfs_1d_couette-10.00.txt' u ($1/1e-3):($11/vw) w l nz 4 lc 'black' dt 'Solid' title 'u<sub>y</sub><sup>(2)</sup> / |u<sub>w</sub>|'
+set out
+
+set key at 60,40
+set yrange [1.008:1.02]
+set yticks spacing 0.002
+set ylabel 'Normalized Temperature'
+set ylabel offset 8
+set legend font "Helvetica,4"
+keyword T0=273
+set out 'couette_T_s4k3v32m12_normalized_.ps'
+plot './dsmc_Kn0.5.dat' every 19 u ($2/1e-3):($14/T0) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'green' title '', \
+     './bulksol_dgfs_1d_couette-10.00.txt' u ($1/1e-3):($5/T0) w l nz 4 lc 'green' dt 'Solid' title 'T<sup>(1)</sup>/T<sub>0</sub>', \
+     './dsmc_Kn0.5.dat' every 19 u ($2/1e-3):($16/T0) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'black' title '', \
+     './bulksol_dgfs_1d_couette-10.00.txt' u ($1/1e-3):($12/T0) w l nz 4 lc 'black' dt 'Solid' title 'T<sup>(2)</sup>/T<sub>0</sub>'
+set out
+
+
+
