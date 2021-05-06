@@ -1,0 +1,134 @@
+# This is based on Kosuge et al. 2001, Eur. J. Mech B-Fluids 20, pp 87--126 
+# Shock-wave structure for a binary gas mixture: 
+# finite-difference analysis of the Boltzmann equation for hard-sphere molecules 
+
+set xrange [-10:10]
+set yrange [0:1.1]
+set yticks spacing 0.1
+set xticks spacing 5.0
+set xlabel 'x/<greek>l</greek><sub>-</sub>' 
+
+keyword massA=0.0039926794167
+keyword massB=0.000998169854175
+
+keyword UuA=1669.17106011 
+keyword UdA=973.683118396
+keyword UuB=1669.17106011 
+keyword UdB=973.683118396
+
+keyword TuA=223 
+keyword TdA=333.338541667
+keyword TuB=223 
+keyword TdB=333.338541667
+
+keyword ndenuA=2.89e+21 
+keyword ndendA=4.95428571429e+21
+keyword ndenuB=2.89e+21 
+keyword ndendB=4.95428571429e+21
+
+keyword ndenu=(ndenuA+ndenuB)
+keyword ndend=(ndendA+ndendB)
+
+keyword rhouA=1.91607e-05 
+keyword rhodA=3.28469142857e-05
+keyword rhouB=4.790175e-06  
+keyword rhodB=8.21172857143e-06
+
+keyword drefA=2.17e-10
+keyword NA=6.0221409e+23 
+
+# As per (15)
+keyword mfpu=1.0/(math.sqrt(2.0)*math.pi*drefA**2*(ndenuA+ndenuB))
+echo mfpu
+keyword nden_avg=(ndenu+ndend)/2.
+echo "avg. number density: ", nden_avg
+keyword nden_avg_norm=nden_avg/NA
+echo "avg. number density / NA: ", nden_avg_norm
+
+# you can look at the DGFS output files to find the location of average density
+#keyword S2=0.0072/mfp
+
+#################################
+# specie 1
+#################################
+
+#set label "$\bar{u}^{(1)}$" at -7,0.9 font 'Helvetica,20' tc 'black'
+#set label "$\bar{T}^{(1)}$" at 0,0.95 font 'Helvetica,20' tc 'blue'
+#set label "$\bar{n}^{(1)}$" at 3,0.8 font 'Helvetica,24' tc 'red'
+#set label "u <sup>(1)</sup>" at -8,0.85 font 'Helvetica,20' tc 'black'
+#set label "_" at -8,0.89 font 'Helvetica,20' tc 'black'
+#set label "T <sup>(1)</sup>" at 0,0.9 font 'Helvetica,20' tc 'blue'
+#set label "_" at 0,0.95 font 'Helvetica,20' tc 'blue'
+#set label "n <sup>(1)</sup>" at 3,0.75 font 'Helvetica,24' tc 'red'
+#set label "_" at 3,0.8 font 'Helvetica,24' tc 'red'
+
+set key at 85,60
+set legend row_spacing 1.5
+set legend font 'Helvetica,3.5'
+set label "_" at 7.7,0.28 font 'Helvetica,24' tc 'black'
+set xgridlines on 'yes' dt 'DashDotDot' lt 0.2 color 'LightGrey' 
+set ygridlines on 'yes' dt 'DashDotDot' lt 0.2 color 'LightGrey' 
+
+set out 'rhoTU_Ma=1.5_s16k3v64_c15_frac=0.5_mr=0.25_quarterNrho_specie1.ps'
+set ylabel 'Normalized quantity'
+keyword data=(0.002044425636, 0.0128805, 0.002219178607, 0.0130627)
+keyword S2=((data[2]-data[0])/(data[3]-data[1])*(nden_avg_norm-data[1])+data[0])/mfpu
+plot './Kosuge2001/ndenA_Ma=1.5_He_HS_Kosuge_nfracB=0.5_mr=0.25.dat' u ($1):($2) w p st 0.4 pt 'circle' sf 'no' lc 'red' title '', \
+     './s16k3v64m6_c15_Ma1.5_He_30mm_fracB0.5_mr0.25/normalShockKosuge1D_Ar_specie1_6300_sol_.txt' u ($1/mfpu-S2):(($2-rhouA)/(rhodA-rhouA)) w l nz 16 lc 'red' title 'n*<sup>(1)</sup>', \
+     './Kosuge2001/uA_Ma=1.5_He_HS_Kosuge_nfracB=0.5_mr=0.25.dat' u ($1):($2) w p st 0.4 pt 'square' sf 'no' lc 'black' title '', \
+     './s16k3v64m6_c15_Ma1.5_He_30mm_fracB0.5_mr0.25/normalShockKosuge1D_Ar_specie1_6300_sol_.txt' u ($1/mfpu-S2):(($3-UdA)/(UuA-UdA)) w l nz 16 lc 'black' title 'u*<sup>(1)</sup>', \
+     './Kosuge2001/TA_Ma=1.5_He_HS_Kosuge_nfracB=0.5_mr=0.25.dat' u ($1):($2) w p st 0.4 pt 'del' sf 'no' lc 'blue' title '', \
+     './s16k3v64m6_c15_Ma1.5_He_30mm_fracB0.5_mr0.25/normalShockKosuge1D_Ar_specie1_6300_sol_.txt' u ($1/mfpu-S2):(($5-TuA)/(TdA-TuA)) w l nz 16 lc 'blue' title 'T*<sup>(1)</sup>', \
+     './s16k3v64m6_c15_Ma1.5_He_30mm_fracB0.5_mr0.25/normalShockKosuge1D_Ar_specie1_6300_sol_.txt' u ($1/mfpu-S2):(($8-TuA)/(TdA-TuA)) w l nz 16 lc 'green' title 'T*<sub>||</sub><sup>(1)</sup>', \
+     './s16k3v64m6_c15_Ma1.5_He_30mm_fracB0.5_mr0.25/normalShockKosuge1D_Ar_specie1_6300_sol_.txt' u ($1/mfpu-S2):(($9-TuA)/(TdA-TuA)) w l nz 16 lc 'orange' title 'T*<sub>|</sub><sup>(1)</sup>'
+set out
+
+#unset label 1
+#unset label 1
+#unset label 1
+#unset label 1
+#unset label 1
+#unset label 1
+
+#########################################
+
+
+
+#################################
+# specie 2
+#################################
+
+#set label "$\bar{u}^{(2)}$" at -7,0.9 font 'Helvetica,20' tc 'black'
+#set label "$\bar{T}^{(2)}$" at 0,0.95 font 'Helvetica,20' tc 'blue'
+#set label "$\bar{n}^{(2)}$" at 3,0.8 font 'Helvetica,24' tc 'red'
+#set label "u <sup>(2)</sup>" at -8,0.85 font 'Helvetica,20' tc 'black'
+#set label "_" at -8,0.89 font 'Helvetica,20' tc 'black'
+#set label "T <sup>(2)</sup>" at 0,0.9 font 'Helvetica,20' tc 'blue'
+#set label "_" at 0,0.95 font 'Helvetica,20' tc 'blue'
+#set label "n <sup>(2)</sup>" at 3,0.75 font 'Helvetica,24' tc 'red'
+#set label "_" at 3,0.8 font 'Helvetica,24' tc 'red'
+
+set out 'rhoTU_Ma=1.5_s16k3v64_c15_frac=0.5_mr=0.25_quarterNrho_specie2.ps'
+set ylabel 'Normalized quantity'
+keyword data=(0.002044425636, 0.0128805, 0.002219178607, 0.0130627)
+keyword S2=((data[2]-data[0])/(data[3]-data[1])*(nden_avg_norm-data[1])+data[0])/mfpu
+plot './Kosuge2001/ndenB_Ma=1.5_He_HS_Kosuge_nfracB=0.5_mr=0.25.dat' u ($1):($2) w p st 0.4 pt 'circle' sf 'no' lc 'red' title '', \
+     './s16k3v64m6_c15_Ma1.5_He_30mm_fracB0.5_mr0.25/normalShockKosuge1D_Kr_specie2_6300_sol_.txt' u ($1/mfpu-S2):(($2-rhouB)/(rhodB-rhouB)) w l nz 16 lc 'red' title 'n*<sup>(2)</sup>', \
+     './Kosuge2001/uB_Ma=1.5_He_HS_Kosuge_nfracB=0.5_mr=0.25.dat' u ($1):($2) w p st 0.4 pt 'square' sf 'no' lc 'black' title '', \
+     './s16k3v64m6_c15_Ma1.5_He_30mm_fracB0.5_mr0.25/normalShockKosuge1D_Kr_specie2_6300_sol_.txt' u ($1/mfpu-S2):(($3-UdB)/(UuB-UdB)) w l nz 16 lc 'black' title 'u*<sup>(2)</sup>', \
+     './Kosuge2001/TB_Ma=1.5_He_HS_Kosuge_nfracB=0.5_mr=0.25.dat' u ($1):($2) w p st 0.4 pt 'del' sf 'no' lc 'blue' title '', \
+     './s16k3v64m6_c15_Ma1.5_He_30mm_fracB0.5_mr0.25/normalShockKosuge1D_Kr_specie2_6300_sol_.txt' u ($1/mfpu-S2):(($5-TuB)/(TdB-TuB)) w l nz 16 lc 'blue' title 'T*<sup>(2)</sup>', \
+     './s16k3v64m6_c15_Ma1.5_He_30mm_fracB0.5_mr0.25/normalShockKosuge1D_Kr_specie2_6300_sol_.txt' u ($1/mfpu-S2):(($8-TuB)/(TdB-TuB)) w l nz 16 lc 'green' title 'T*<sub>||</sub><sup>(2)</sup>', \
+     './s16k3v64m6_c15_Ma1.5_He_30mm_fracB0.5_mr0.25/normalShockKosuge1D_Kr_specie2_6300_sol_.txt' u ($1/mfpu-S2):(($9-TuB)/(TdB-TuB)) w l nz 16 lc 'orange' title 'T*<sub>|</sub><sup>(2)</sup>'
+set out
+
+#unset label 1
+#unset label 1
+#unset label 1
+#unset label 1
+#unset label 1
+#unset label 1
+
+#########################################
+
+
