@@ -1,0 +1,37 @@
+# script for generating plots over line
+
+set ylabel color 'black'
+set yticks color 'black'
+
+set xlabel 'dt'
+set ylabel 'Error'
+set key at 45,90
+set yrange [1e-13:1e-7]
+set xrange [4e-5:2e-3]
+set yticks format 'Exponential' 
+set xticks format 'Exponential' 
+set logscale x
+set logscale y
+
+keyword idx=np.array([16, 32, 64, 128, 256, 512]).reshape((-1,1))
+
+set out 'accuracy_bdf_bgk.ps'
+plot function("(x): mat=np.loadtxt('./data_accuracy_bgk.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):(1.8e-3*((0.1*2/$1/8)**(2.))) w l lw 0.3 lc 'red' dt 'Dashed' title 'Slope-2', \
+    function("(x): mat=np.loadtxt('./data_accuracy_bgk.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):(3*((0.1*2/$1/8)**(3.))) w l lw 0.3 lc 'blue' dt 'Dashed' title 'Slope-3',  \
+    function("(x): mat=np.loadtxt('./data_accuracy_bgk.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):($2) w lp lw 0.3 st 1 lc 'red' pt 'circle' title 'BDF-2', \
+    function("(x): mat=np.loadtxt('./data_accuracy_bgk.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):($3) w lp lw 0.3 st 1 lc 'blue' pt 'circle' title 'BDF-3' 
+set out
+
+set out 'accuracy_bdf_esbgk.ps'
+plot function("(x): mat=np.loadtxt('./data_accuracy_esbgk.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):(1.8e-3*((0.1*2/$1/8)**(2.))) w l lw 0.3 lc 'red' dt 'Dashed' title 'Slope-2', \
+    function("(x): mat=np.loadtxt('./data_accuracy_esbgk.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):(3*((0.1*2/$1/8)**(3.))) w l lw 0.3 lc 'blue' dt 'Dashed' title 'Slope-3',  \
+    function("(x): mat=np.loadtxt('./data_accuracy_esbgk.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):($2) w lp lw 0.3 st 1 lc 'red' pt 'circle' title 'BDF-2', \
+    function("(x): mat=np.loadtxt('./data_accuracy_esbgk.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):($3) w lp lw 0.3 st 1 lc 'blue' pt 'circle' title 'BDF-3' 
+set out
+
+set out 'accuracy_bdf_shakov.ps'
+plot function("(x): mat=np.loadtxt('./data_accuracy_shakov.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):(1.8e-3*((0.1*2/$1/8)**(2.))) w l lw 0.3 lc 'red' dt 'Dashed' title 'Slope-2', \
+    function("(x): mat=np.loadtxt('./data_accuracy_shakov.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):(3*((0.1*2/$1/8)**(3.))) w l lw 0.3 lc 'blue' dt 'Dashed' title 'Slope-3',  \
+    function("(x): mat=np.loadtxt('./data_accuracy_shakov.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):($2) w lp lw 0.3 st 1 lc 'red' pt 'circle' title 'BDF-2', \
+    function("(x): mat=np.loadtxt('./data_accuracy_shakov.txt').reshape((-1,6)).T; return np.hstack((idx, mat))") u (0.1*2/$1/8):($3) w lp lw 0.3 st 1 lc 'blue' pt 'circle' title 'BDF-3' 
+set out
