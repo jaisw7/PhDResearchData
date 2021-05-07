@@ -1,0 +1,126 @@
+############################# Some Comments ##################################
+
+#-- MIKRA Gen2 Simulations
+
+#-- /scratch/rice/i/isebasti/SPARTA/sparta-8Sep16/examples/mikra
+#-- Prepared by Aaron Pikus and modified by Israel B. Sebastião (Purdue AAE)
+#-- Updated: 10 Dec 2016 (v0: 07 Dec 2016)
+
+#-- Example of how to post-process data with grdi2tecplot.py script (-t for tecplot conversion)
+#-- module load paraview
+#-- pvpython grid2paraview.py grid.in grid_tec -xc 1000 -yc 1000 -t -r prop_grid.2000.dat
+
+#-- where grid.in, for the present cases, contains
+#-- dimension          2
+#-- create_box         0 600e-6 0 300e-6 -0.5 0.5
+#-- read_grid          mikra_parent.grid
+
+############################# Initialization ##################################
+
+variable           sdump equal 1000
+variable           nfix equal 200000  #10*${sdump}
+variable           gdump equal 1000000 
+variable           tdump equal 5000000 
+
+seed               12344
+dimension          2
+global             gridcut 0.0 comm/sort yes
+
+boundary		   r so p
+create_box         0 600e-6 0 300e-6 -0.5 0.5
+create_grid        300 150 1
+balance_grid       rcb cell
+fix                fbalance balance ${sdump} 1.1 rcb part
+
+global             nrho 94.50579e21 fnum 7.6e9 # ~50 particles/cell
+species            air.species N2
+mixture	           gas N2 vstream 0 0 0 temp 296
+mixture	           gas N2 frac 1.0
+
+surf_collide       diffuse_substrate diffuse 296 1.0
+bound_modify	   ylo collide diffuse_substrate
+
+#python2 ~/sparta/sparta-27Jul17/bin/surf_create.py hobody20.dat rect 310e-6 4e-6 360e-6 54e-6 50 50
+#python2 ~/sparta/sparta-27Jul17/bin/surf_create.py coldbody20.dat rect 240e-6 4e-6 290e-6 54e-6 50 50
+read_surf          coldbody20.dat group coldbody #trans 250e-6 5e-6 0 clip
+read_surf          hotbody20.dat group hotbody  #trans 310e-6 5e-6 0 clip
+
+surf_collide       diffuse_cold diffuse 306 1.0
+surf_collide       diffuse_hot  diffuse 356 1.0
+
+surf_modify	       coldbody collide diffuse_cold
+surf_modify        hotbody  collide diffuse_hot
+
+global             surfpush yes #yes
+
+collide	           vss gas air.vss
+create_particles   gas n 0 #4500000
+fix                mycheck grid/check ${sdump} silent #silent or warn or error
+fix	               in emit/face gas yhi
+timestep           1e-9
+
+compute            sfluxesColdBody surf coldbody gas fx fy etot
+fix                sfluxesColdBody ave/surf all 1 ${sdump} ${sdump} c_sfluxesColdBody[*] ave one
+compute            netfluxesColdBody reduce sum f_sfluxesColdBody[1] f_sfluxesColdBody[2] f_sfluxesColdBody[3]
+
+compute            sfluxesHotBody surf hotbody gas fx fy etot
+fix                sfluxesHotBody ave/surf all 1 ${sdump} ${sdump} c_sfluxesHotBody[*] ave one
+compute            netfluxesHotBody reduce sum f_sfluxesHotBody[1] f_sfluxesHotBody[2] f_sfluxesHotBody[3]
+
+compute            sumKe reduce sum ke
+stats_style	       step cpu ncoll nscoll np c_sumKe &
+                   c_netfluxesColdBody[1] c_netfluxesColdBody[2] c_netfluxesColdBody[3] &
+				   c_netfluxesHotBody[1]  c_netfluxesHotBody[2]  c_netfluxesHotBody[3]
+
+############################# Unsteady Regime #################################
+
+collide_modify     vremax ${sdump} yes
+
+stats              ${sdump}
+run                ${nfix}
+
+uncompute          sfluxesColdBody
+unfix              sfluxesColdBody
+uncompute          netfluxesColdBody
+
+uncompute          sfluxesHotBody
+unfix              sfluxesHotBody
+uncompute          netfluxesHotBody
+
+#write_grid         parent mikra_parent.grid
+#write_grid         geom mikra_geom.grid
+
+############################## Steady Regime ##################################
+
+collide_modify     vremax ${nfix} yes
+
+compute            cgrid grid all gas n nrho massrho ke u v
+compute            cthermal thermal/grid all gas temp press
+compute            cpflux stress/grid all gas momxy momxx momyy
+compute            ceflux heatflux/grid all gas heatx heaty
+fix                fgrid ave/grid all 1 ${nfix} ${nfix} c_cgrid[*] c_cthermal[*] c_cpflux[*] c_ceflux[*] ave running 
+dump               dgrid grid all ${gdump} 387N2_grid.*.dat id xlo ylo f_fgrid[*]
+dump_modify        dgrid pad 8 append no
+
+compute            csurf surf coldbody all n press px py shx shy etot fx fy ke
+fix                fsurf ave/surf all 1 ${nfix} ${nfix} c_csurf[*] ave one
+dump               dsurf surf coldbody ${nfix} 387N2_surfcold.*.dat v1x v1y v2x v2y f_fsurf[*]
+dump_modify        dsurf pad 8 append no
+
+compute            csurf2 surf hotbody all n press px py shx shy etot fx fy ke
+fix                fsurf2 ave/surf all 1 ${nfix} ${nfix} c_csurf2[*] ave one
+dump               dsurf2 surf hotbody ${nfix} 387N2_surfhot.*.dat v1x v1y v2x v2y f_fsurf2[*]
+dump_modify        dsurf2 pad 8 append no
+
+compute            sfluxesColdBody surf coldbody gas fx fy etot
+fix                sfluxesColdBody ave/surf all 1 ${nfix} ${nfix} c_sfluxesColdBody[*] ave one
+compute            netfluxesColdBody reduce sum f_sfluxesColdBody[1] f_sfluxesColdBody[2] f_sfluxesColdBody[3]
+
+compute            sfluxesHotBody surf hotbody gas fx fy etot
+fix                sfluxesHotBody ave/surf all 1 ${nfix} ${nfix} c_sfluxesHotBody[*] ave one
+compute            netfluxesHotBody reduce sum f_sfluxesHotBody[1] f_sfluxesHotBody[2] f_sfluxesHotBody[3]
+
+stats              ${nfix}
+run                ${tdump}
+
+############################ End of Simulation ################################

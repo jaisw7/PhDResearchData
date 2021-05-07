@@ -1,0 +1,16 @@
+############################# Some Comments ##################################
+
+#-- MIKRA Gen2 Simulations
+
+#-- /scratch/rice/i/isebasti/SPARTA/sparta-8Sep16/examples/mikra
+#-- Prepared by Aaron Pikus and modified by Israel B. Sebastião (Purdue AAE)
+#-- Updated: 10 Dec 2016 (v0: 07 Dec 2016)
+
+#-- Example of how to post-process data with grdi2tecplot.py script (-t for tecplot conversion)
+#-- module load paraview
+#-- pvpython grid2paraview.py grid.in grid_tec -xc 1000 -yc 1000 -t -r prop_grid.2000.dat
+
+#-- where grid.in, for the present cases, contains
+dimension          2
+create_box         0 600e-6 0 300e-6 -0.5 0.5
+create_grid        300 150 1

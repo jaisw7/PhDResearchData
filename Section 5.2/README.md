@@ -1,0 +1,1 @@
+This folder contains data for the multi-species flow in Micro In-Plane Knudsen Radiometric Actuator (MIKRA). See the *Raw Data* folder for tecplot files from which various figures have been generated. 
