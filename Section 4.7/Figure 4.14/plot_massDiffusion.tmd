@@ -1,0 +1,50 @@
+# Script for generating 1-D tecplot output
+
+set xlabel 'x (mm)'
+set key at 90,90
+set xrange [0:1]
+
+set yrange [0:1]
+set ylabel 'Concentration'
+set out 'massDiffusion_nfrac.ps'
+plot './dsmc/Kn=0.5_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):($5/($5+$10)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArKr_s4k3v32m12/massDiffusion1D_ArKr_2000_sol_.txt' u ($1/1e-3):($2/6.63/($2/6.63+$9/13.91)) w l nz 4 lc 'blue' dt 'Solid' title 'Case MD-01, n<sup>(1)</sup>/n', \
+     './dsmc/Kn=0.5_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):($10/($5+$10)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArKr_s4k3v32m12/massDiffusion1D_ArKr_2000_sol_.txt' u ($1/1e-3):($9/13.91/($2/6.63+$9/13.91)) w l nz 4 lc 'blue' dt 'DashDot' title 'Case MD-01, n<sup>(2)</sup>/n', \
+     './dsmc/Kn=0.1_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):($5/($5+$10)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArKr_s4k3v32m12/massDiffusion1D_ArKr_3100_sol_.txt' u ($1/1e-3):($2/6.63/($2/6.63+$9/13.91)) w l nz 4 lc 'red' pt 4 dt 'Solid' title 'Case MD-02, n<sup>(1)</sup>/n', \
+     './dsmc/Kn=0.1_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):($10/($5+$10)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArKr_s4k3v32m12/massDiffusion1D_ArKr_3100_sol_.txt' u ($1/1e-3):($9/13.91/($2/6.63+$9/13.91)) w l nz 4 lc 'red' pt 4 dt 'DashDot' title 'Case MD-02, n<sup>(2)</sup>/n'
+set out
+
+set key at 70,90
+set yrange [20:210]
+set yticks spacing 30
+set ylabel 'Diffusion velocity (m/s)'
+set out 'massDiffusion_vD.ps'
+plot './dsmc/Kn=0.5_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):($7-($6*$7+$11*$12)/($6+$11)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArKr_s4k3v32m12/massDiffusion1D_ArKr_2000_sol_.txt' u ($1/1e-3):(($3-($2*$3+$9*$10)/($2+$9))) w l nz 4 lc 'blue' dt 'Solid' title 'Case MD-01, v<sub>D</sub><sup>(1)</sup>', \
+     './dsmc/Kn=0.5_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):(-($12-($6*$7+$11*$12)/($6+$11))) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArKr_s4k3v32m12/massDiffusion1D_ArKr_2000_sol_.txt' u ($1/1e-3):(-($10-($2*$3+$9*$10)/($2+$9))) w l nz 4 lc 'blue' dt 'DashDot' title 'Case MD-01, -v<sub>D</sub><sup>(2)</sup>', \
+     './dsmc/Kn=0.1_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):($7-($6*$7+$11*$12)/($6+$11)) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArKr_s4k3v32m12/massDiffusion1D_ArKr_3100_sol_.txt' u ($1/1e-3):(($3-($2*$3+$9*$10)/($2+$9))) w l nz 4 lc 'red' pt 4 dt 'Solid' title 'Case MD-02, v<sub>D</sub><sup>(1)</sup>', \
+     './dsmc/Kn=0.1_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):(-($12-($6*$7+$11*$12)/($6+$11))) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArKr_s4k3v32m12/massDiffusion1D_ArKr_3100_sol_.txt' u ($1/1e-3):(-($10-($2*$3+$9*$10)/($2+$9))) w l nz 4 lc 'red' pt 4 dt 'DashDot' title 'Case MD-02, -v<sub>D</sub><sup>(2)</sup>'
+set out
+
+set yrange [210:280]
+set key at 65,35
+set yticks spacing 10
+set ylabel 'Temperature (K)'
+set out 'massDiffusion_T.ps'
+plot './dsmc/Kn=0.5_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):($14) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArKr_s4k3v32m12/massDiffusion1D_ArKr_2000_sol_.txt' u ($1/1e-3):($5) w l nz 4 lc 'blue' dt 'Solid' title 'Case MD-01, T<sup>(1)</sup>', \
+     './dsmc/Kn=0.5_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):($16) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'blue' title '', \
+     './Kn=0.5_ArKr_s4k3v32m12/massDiffusion1D_ArKr_2000_sol_.txt' u ($1/1e-3):($12) w l nz 4 lc 'blue' dt 'DashDot' title 'Case MD-01, T<sup>(2)</sup>', \
+     './dsmc/Kn=0.1_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):($14) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArKr_s4k3v32m12/massDiffusion1D_ArKr_3100_sol_.txt' u ($1/1e-3):($5) w l nz 4 lc 'red' pt 4 dt 'Solid' title 'Case MD-02, T<sup>(1)</sup>', \
+     './dsmc/Kn=0.1_fracAr0.68_fracKr0.32_alpha=1.4/prop_grid.3000000.txt' every 19 u ($2/1e-3):($16) w p pt 6 sf 'no' st 0.3 lw 1.2 lc 'red' title '', \
+     './Kn=0.1_ArKr_s4k3v32m12/massDiffusion1D_ArKr_3100_sol_.txt' u ($1/1e-3):($12) w l nz 4 lc 'red' pt 4 dt 'DashDot' title 'Case MD-02, T<sup>(2)</sup>'
+set out
+
+

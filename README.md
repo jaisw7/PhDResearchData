@@ -18,3 +18,4 @@ The research data contained in this repository is arranged by section number as 
 - Section 4.4: Multi-species oscillatory Couette flow
 - Section 4.5: Multi-species normal shock
 - Section 4.6: Multi-species self-diffusion
+- Section 4.7: Multi-species mass-diffusion
