@@ -1,0 +1,47 @@
+# script for generating plots over line
+
+set ylabel color 'black'
+set yticks color 'black'
+
+set out 'rho_esbgk.ps'
+set xlabel 'x (mm)'
+set ylabel '<greek>r</greek> (kg/m<sup>3</sup>)'
+set key at 75,80
+set ylabel offset 10
+set yrange [0:0.000011]
+set xrange [-5:5]
+set yticks spacing .000001
+set xticks spacing 1
+plot './bdf111-s512k3v32/temp-2.80.txt' u 1:($2) w l lc 'red' lw .2 t 'A-ESBGK', \
+     './NavierStokes/sets/0.007/combined.xy' u 1:($4) w l lw .2 lc 'black' t 'C-NS', \
+     './Euler/sets/0.007/combined.xy' u 1:($4) w l lw .2 lc 'blue' t 'C-Euler'
+set out
+
+set out 'rhou_esbgk.ps'
+set xlabel 'x (mm)'
+set ylabel '<greek>r</greek>u (kg/m<sup>2</sup>/s)'
+set key at 75,40
+set ylabel offset 9
+set yrange [-0.0005:0.0015]
+set xrange [-5:5]
+set yticks spacing .0005
+set xticks spacing 1
+plot './bdf111-s512k3v32/temp-2.80.txt' u 1:($2*$3) w l lc 'red' lw .2 t 'A-ESBGK', \
+     './NavierStokes/sets/0.007/combined.xy' u 1:($4*$6) w l lw .2 lc 'black' t 'C-NS', \
+     './Euler/sets/0.007/combined.xy' u 1:($4*$6) w l lw .2 lc 'blue' t 'C-Euler'
+set out
+
+set out 'energy_esbgk.ps'
+set xlabel 'x (mm)'
+set ylabel 'E (kg/m/s)'
+set key at 75,60
+set ylabel offset 6
+set yrange [0.:1.6]
+set xrange [-5:5]
+set yticks spacing .2
+set xticks spacing 1
+plot './bdf111-s512k3v32/temp-2.80.txt' u 1:($2*$5*287/(2./3.)+.5*$2*$3*$3) w l lc 'red' lw .2 t 'A-ESBGK', \
+     './NavierStokes/sets/0.007/combined.xy' u 1:($4*$2*287/(2./3.)+.5*$4*$6*$6) w l lw .2 lc 'black' t 'C-NS', \
+     './Euler/sets/0.007/combined.xy' u 1:($4*$2*287/(2./3.)+.5*$4*$6*$6) w l lw .2 lc 'blue' t 'C-Euler'
+set out
+
