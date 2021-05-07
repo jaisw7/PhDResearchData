@@ -1,0 +1,121 @@
+############################# Some Comments ##################################
+
+#-- MIKRA N2-H2O Simulations
+#-- Prepared by Aaron Pikus. Shashank Jaiswal reused it for multi-species DGFS benchmark study
+
+############################# Initialization ##################################
+
+variable           sdump equal 1000
+variable           ndump equal 200000  #10*${sdump}
+variable           tdump equal 5000000 #2*${ndump}
+
+seed               12345
+dimension          2
+global             gridcut 0.0 comm/sort yes
+
+boundary		   r so p
+create_box         0 600e-6 0 300e-6 -0.5 0.5
+create_grid        300 150 1
+balance_grid       rcb cell
+fix                fbalance balance ${sdump} 1.1 rcb part
+
+global             nrho 3.78609166856369e22 fnum 5E8 #3e9 # ~50 particles/cell
+species            air.species N2 H2O
+mixture	           gas N2 H2O vstream 0 0 0 temp 296
+mixture	           gas N2 frac 0.05
+mixture	           gas H2O frac 0.95
+
+surf_collide       diffuse_substrate diffuse 296 1.0
+bound_modify	   ylo collide diffuse_substrate
+
+read_surf          coldbody20.dat group coldbody #trans 250e-6 5e-6 0 clip
+read_surf          hotbody20.dat group hotbody  #trans 310e-6 5e-6 0 clip
+
+surf_collide       diffuse_cold diffuse 306 1.0
+surf_collide       diffuse_hot  diffuse 363 1.0
+
+surf_modify	       coldbody collide diffuse_cold
+surf_modify        hotbody  collide diffuse_hot
+
+global             surfpush yes #yes
+
+collide	           vss gas air.vss
+create_particles   gas n 0 #4500000
+fix                mycheck grid/check ${sdump} silent #silent or warn or error
+fix	               in emit/face gas yhi
+timestep           1e-9
+
+compute            sfluxesColdBody surf coldbody gas fx fy etot
+fix                sfluxesColdBody ave/surf all 1 ${sdump} ${sdump} c_sfluxesColdBody[*] ave one
+compute            netfluxesColdBody reduce sum f_sfluxesColdBody[1] f_sfluxesColdBody[2] f_sfluxesColdBody[3]
+
+compute            sfluxesHotBody surf hotbody gas fx fy etot
+fix                sfluxesHotBody ave/surf all 1 ${sdump} ${sdump} c_sfluxesHotBody[*] ave one
+compute            netfluxesHotBody reduce sum f_sfluxesHotBody[1] f_sfluxesHotBody[2] f_sfluxesHotBody[3]
+
+compute            sumKe reduce sum ke
+stats_style	       step cpu ncoll nscoll np c_sumKe &
+                   c_netfluxesColdBody[1] c_netfluxesColdBody[2] c_netfluxesColdBody[3] &
+				   c_netfluxesHotBody[1]  c_netfluxesHotBody[2]  c_netfluxesHotBody[3]
+
+############################# Unsteady Regime #################################
+
+collide_modify     vremax ${sdump} yes
+
+stats              ${sdump}
+run                ${ndump}
+
+uncompute          sfluxesColdBody
+unfix              sfluxesColdBody
+uncompute          netfluxesColdBody
+
+uncompute          sfluxesHotBody
+unfix              sfluxesHotBody
+uncompute          netfluxesHotBody
+
+#write_grid         parent mikra_parent.grid
+#write_grid         geom mikra_geom.grid
+
+############################## Steady Regime ##################################
+
+collide_modify     vremax ${ndump} yes
+
+compute            cgrid grid all gas n nrho massrho ke u v
+compute            cthermal thermal/grid all gas temp press
+compute            cpflux stress/grid all gas momxy #momxx momyy
+compute            ceflux heatflux/grid all gas heatx heaty
+fix                fgrid ave/grid all 1 ${ndump} ${ndump} c_cgrid[*] c_cthermal[*] c_cpflux[*] c_ceflux[*] ave running #Aaron used 100000
+dump               dgrid grid all ${ndump} 155N2H2O_grid_vhs_apr18.*.dat id xlo ylo f_fgrid[*] 
+dump_modify        dgrid pad 8 append no
+
+compute            cgrid1 grid all species n nrho massrho ke u v
+compute            cthermal1 thermal/grid all species temp press
+compute            cpflux1 stress/grid all species momxy #momxx momyy
+compute            ceflux1 heatflux/grid all species heatx heaty
+fix                fgrid1 ave/grid all 1 ${ndump} ${ndump} c_cgrid1[*] c_cthermal1[*] c_cpflux1[*] c_ceflux1[*] ave running #Aaron used 100000
+dump               dgrid1 grid all ${ndump} 155N2H2O_gridspecies_vhs_apr18.*.dat id xlo ylo f_fgrid1[*]
+dump_modify        dgrid1 pad 8 append no
+
+
+compute            csurf surf hotbody gas n press px py shx shy ke erot evib etot fx fy
+fix                fsurf ave/surf all 1 ${ndump} ${ndump} c_csurf[*] ave one  #Aaron used 100000
+dump               dsurf surf hotbody ${ndump} 155N2H2O_hotbody_vhs_apr18.*.dat v1x v1y v2x v2y f_fsurf[*]
+dump_modify        dsurf pad 8 append no
+
+compute            csurf2 surf coldbody gas n press px py shx shy ke erot evib etot fx fy
+fix                fsurf2 ave/surf all 1 ${ndump} ${ndump} c_csurf2[*] ave one  #Aaron used 100000
+dump               dsurf2 surf coldbody ${ndump} 155N2H2O_coldbody_vhs_apr18.*.dat v1x v1y v2x v2y f_fsurf2[*]
+dump_modify        dsurf2 pad 8 append no
+
+compute            sfluxesColdBody surf coldbody gas fx fy etot
+fix                sfluxesColdBody ave/surf all 1 ${ndump} ${ndump} c_sfluxesColdBody[*] ave one
+compute            netfluxesColdBody reduce sum f_sfluxesColdBody[1] f_sfluxesColdBody[2] f_sfluxesColdBody[3]
+
+compute            sfluxesHotBody surf hotbody gas fx fy etot
+fix                sfluxesHotBody ave/surf all 1 ${ndump} ${ndump} c_sfluxesHotBody[*] ave one
+compute            netfluxesHotBody reduce sum f_sfluxesHotBody[1] f_sfluxesHotBody[2] f_sfluxesHotBody[3]
+
+stats              ${ndump}
+run                ${tdump}
+
+############################ End of Simulation ################################
