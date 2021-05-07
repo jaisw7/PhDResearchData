@@ -21,3 +21,4 @@ The research data contained in this repository is arranged by section number as 
 - Section 4.7: Multi-species mass-diffusion
 - Section 4.10: Single-species Sod shock tube problem
 - Section 4.11: Single-species flow around a micro-electronic chip
+- Section 4.12: Single-species flow in short micro-channels

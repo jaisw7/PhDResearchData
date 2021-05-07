@@ -1,0 +1,71 @@
+# script for generating plots over line
+
+keyword molarMass=28.016e-3
+keyword NA=6.0221409e+23
+keyword kB=1.38064852e-23
+keyword m=molarMass/NA
+keyword H0=1e-6
+keyword pm={'X':1, 'Y':2, 'Z':3, 'Rho':4, 'Ux':5, 'Uy':6, 'T':7, 'Qx':8, 'Qy': 9, 'Pxx':10, 'Pxy':11, 'Pyy':12, 'p':13}   
+keyword sm={'X':1, 'Y':2, 'id':3, 'xlo':4, 'ylo':5, 'xhi':6, 'yhi':7, 'n':8, 'nden':9, 'Rho':10, 'Ux':11, 'Uy':12, 'T':13, 'p': 14, 'Pxy':15, 'Pxx':16, 'Pyy':17, 'Qx':18, 'Qy':19}
+
+#---- On vertical centerline
+# For DGFS: species = (H2O, N2); DSMC: species = (N2, H2O)
+
+set ylabel color 'blue'
+set y2label color 'red'
+set yticks color 'blue'
+set y2ticks color 'red'
+
+set out 'nden_T_hor_centerline.ps'
+set xlabel 'x (<greek>m</greek>m)'
+set ylabel 'Number density (m<sup>-3</sup>)'
+set ylabel offset 10
+set y2label 'Temperature (K)'
+set y2label offset 9
+set key at 70,90
+set xrange [0:9]
+set yrange [3e+24:7e+24]
+set yticks spacing 0.5e+24
+plot 'dgfs.txt' using ($1*H0/1e-6):($4/4.65216614e-26) w l pt 'circle' lw 0.3 lc 'blue' dt 'Solid' title 'DGFS' yidx 0, \
+     'dsmc.txt' using ($1/1e-6):sm['nden'] every 8 w p pt 'circle' lw 1.5 lc 'blue' title 'DSMC' yidx 0, \
+     'dgfs.txt' using ($1*H0/1e-6):pm['T'] w l pt 'grad' lw 0.3 lc 'red' dt 'DashDot' title '' yidx 1, \
+     'dsmc.txt' using ($1/1e-6):sm['T'] every 8 w p pt 'grad' lw 1.5 lc 'red' title '' yidx 1
+set y2range [300:600]
+set y2ticks spacing 50
+set out
+
+set out 'Speed_Pxy_hor_centerline.ps'
+set xlabel 'x (<greek>m</greek>m)'
+set ylabel 'Speed (m/s)'
+set ylabel offset 10
+set y2label 'P<sub>xy</sub> (N/m<sup>2</sup>)'
+set y2label offset 9
+set key at 70,90
+set xrange [0:9]
+set yrange [0:11]
+set yticks spacing 1
+plot 'dgfs.txt' using ($1*H0/1e-6):(np.sqrt($5**2+$6**2)) w l pt 'circle' lw 0.3 lc 'blue' dt 'Solid' title 'DGFS' yidx 0, \
+     'dsmc.txt' using ($1/1e-6):np.sqrt($11**2+$12**2) every 8 w p pt 'circle' lw 1.5 lc 'blue' title 'DSMC' yidx 0, \
+     'dgfs.txt' using ($1*H0/1e-6):pm['Pxy'] w l pt 'grad' lw 0.3 lc 'red' dt 'DashDot' title '' yidx 1, \
+     'dsmc.txt' using ($1/1e-6):sm['Pxy'] every 8 w p pt 'grad' lw 1.5 lc 'red' title '' yidx 1
+set y2range [-30:30]
+set y2ticks spacing 5
+set out
+
+set out 'Qx_Qy_hor_centerline.ps'
+set xlabel 'x (<greek>m</greek>m)'
+set ylabel 'Q<sub>x</sub> (W/m<sup>2</sup>)'
+set ylabel offset 1
+set y2label 'Q<sub>y</sub> (W/m<sup>2</sup>)'
+set y2label offset 9
+set key at 50,90
+set xrange [0:9]
+set yrange [0:1.2e6]
+set yticks spacing 2e5
+plot 'dgfs.txt' using ($1*H0/1e-6):pm['Qx'] w l pt 'circle' lw 0.3 lc 'blue' dt 'Solid' title 'DGFS' yidx 0, \
+     'dsmc.txt' using ($1/1e-6):sm['Qx'] every 8 w p pt 'circle' lw 1.5 lc 'blue' title 'DSMC' yidx 0, \
+     'dgfs.txt' using ($1*H0/1e-6):pm['Qy'] w l pt 'grad' lw 0.3 lc 'red' dt 'DashDot' title '' yidx 1, \
+     'dsmc.txt' using ($1/1e-6):sm['Qy'] every 8 w p pt 'grad' lw 1.5 lc 'red' title '' yidx 1
+set y2range [-100:100]
+set y2ticks spacing 20
+set out
