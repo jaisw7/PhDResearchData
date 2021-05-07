@@ -8,15 +8,15 @@ The figures have been named in a format Kn=A/B\_C.pdf where
 - C=boltz is the Boltzmann scattering kernel. 
 
 The individal figure files can be found at  
-- [Fig. 4.20(a)](Kn=1e-1/rho_boltz.pdf)
-- [Fig. 4.20(b)](Kn=1e-1/rhou_boltz.pdf)
-- [Fig. 4.20(c)](Kn=1e-1/energy_boltz.pdf)
-- [Fig. 4.20(d)](Kn=1e-2/rho_boltz.pdf)
-- [Fig. 4.20(e)](Kn=1e-2/rhou_boltz.pdf)
-- [Fig. 4.20(f)](Kn=1e-2/energy_boltz.pdf)
-- [Fig. 4.20(g)](Kn=1e-3/rho_boltz.pdf)
-- [Fig. 4.20(h)](Kn=1e-3/rhou_boltz.pdf)
-- [Fig. 4.20(i)](Kn=1e-3/energy_boltz.pdf)
+- [Fig. 4.21(a)](Kn=1e-1/rho_boltz.pdf)
+- [Fig. 4.21(b)](Kn=1e-1/rhou_boltz.pdf)
+- [Fig. 4.21(c)](Kn=1e-1/energy_boltz.pdf)
+- [Fig. 4.21(d)](Kn=1e-2/rho_boltz.pdf)
+- [Fig. 4.21(e)](Kn=1e-2/rhou_boltz.pdf)
+- [Fig. 4.21(f)](Kn=1e-2/energy_boltz.pdf)
+- [Fig. 4.21(g)](Kn=1e-3/rho_boltz.pdf)
+- [Fig. 4.21(h)](Kn=1e-3/rhou_boltz.pdf)
+- [Fig. 4.21(i)](Kn=1e-3/energy_boltz.pdf)
 
 ### Data files:  
 
