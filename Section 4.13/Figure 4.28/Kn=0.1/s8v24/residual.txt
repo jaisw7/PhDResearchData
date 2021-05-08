@@ -1,0 +1,1330 @@
+
+ Velocity mesh -----------------------------
+Nrho:  6
+velocityMesh: (-5.0 5.0)
+n0, u0: (1.678881970644135e+22 337.05486534428223)
+216 Batches of Size 64
+
+ Velocity mesh -----------------------------
+Nrho:  6
+velocityMesh: (-5.0 5.0)
+n0, u0: (1.678881970644135e+22 337.05486534428223)
+216 Batches of Size 64
+
+Reading initial condition for soln-bcs-back
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-back
+
+Reading initial condition for soln-bcs-bottom
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+
+Reading initial condition for soln-bcs-back
+Finished initial condition precomputation for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-back
+
+Reading initial condition for soln-bcs-right
+bulk-property: input calculated
+
+Reading initial condition for soln-bcs-bottom
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-right
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-top
+
+Reading initial condition for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475028594
+x-velocity: 50.0 49.99999999706181
+y-velocity: 0.0 1.4124810922267678e-14
+z-velocity: 0.0 1.624158298908204e-14
+temperature: 273.0 272.99999998365814
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-front
+Finished initial condition precomputation for soln-bcs-top
+
+Reading initial condition for soln-bcs-left
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-left
+
+Reading initial condition for soln-bcs-top
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475028594
+x-velocity: 50.0 49.99999999706181
+y-velocity: 0.0 1.4124810922267678e-14
+z-velocity: 0.0 1.624158298908204e-14
+temperature: 273.0 272.99999998365814
+Finished initial condition precomputation for soln-bcs-top
+Jac (min: 0.00024414062499763267, max: 0.00024414062500263553)
+Jac (min: 0.0002441406249978994, max: 0.0002441406250020694)
+Finished initializing the BaseSystem
+
+ Scattering model -----------------------------
+Kn: 0.07709795421290123
+prefactor: 0.997812132033151
+Finished initializing the BaseSystem
+Time-step for unit CFL: [0.00104167]
+The actual time-step will depend on DG order CFL
+
+ Scattering model -----------------------------
+Kn: 0.07709795421290123
+prefactor: 0.997812132033151
+Finished scattering model precomputation
+
+Reading initial condition for soln-ics
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-ics
+Finished scattering model precomputation
+
+Reading initial condition for soln-ics
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-ics
+  dgfsresidualstd :  1.500e-02, 6.747e-05
+  dgfsresidualstd :  3.000e-02, 4.564e-05
+  dgfsresidualstd :  4.500e-02, 3.460e-05
+  dgfsresidualstd :  6.000e-02, 2.792e-05
+  dgfsresidualstd :  7.500e-02, 2.354e-05
+  dgfsresidualstd :  9.000e-02, 2.050e-05
+  dgfsresidualstd :  1.050e-01, 1.830e-05
+  dgfsresidualstd :  1.200e-01, 1.664e-05
+  dgfsresidualstd :  1.350e-01, 1.531e-05
+  dgfsresidualstd :  1.500e-01, 1.416e-05
+  dgfsresidualstd :  1.650e-01, 1.314e-05
+  dgfsresidualstd :  1.800e-01, 1.223e-05
+  dgfsresidualstd :  1.950e-01, 1.142e-05
+  dgfsresidualstd :  2.100e-01, 1.071e-05
+  dgfsresidualstd :  2.250e-01, 1.009e-05
+  dgfsresidualstd :  2.400e-01, 9.563e-06
+  dgfsresidualstd :  2.550e-01, 9.114e-06
+  dgfsresidualstd :  2.700e-01, 8.739e-06
+  dgfsresidualstd :  2.850e-01, 8.424e-06
+  dgfsresidualstd :  3.000e-01, 8.152e-06
+  dgfsresidualstd :  3.150e-01, 7.909e-06
+  dgfsresidualstd :  3.300e-01, 7.686e-06
+  dgfsresidualstd :  3.450e-01, 7.477e-06
+  dgfsresidualstd :  3.600e-01, 7.279e-06
+  dgfsresidualstd :  3.750e-01, 7.093e-06
+  dgfsresidualstd :  3.900e-01, 6.919e-06
+  dgfsresidualstd :  4.050e-01, 6.757e-06
+  dgfsresidualstd :  4.200e-01, 6.606e-06
+  dgfsresidualstd :  4.350e-01, 6.466e-06
+  dgfsresidualstd :  4.500e-01, 6.337e-06
+  dgfsresidualstd :  4.650e-01, 6.217e-06
+  dgfsresidualstd :  4.800e-01, 6.106e-06
+  dgfsresidualstd :  4.950e-01, 6.003e-06
+  dgfsresidualstd :  5.099e-01, 5.908e-06
+  dgfsresidualstd :  5.249e-01, 5.818e-06
+  dgfsresidualstd :  5.399e-01, 5.734e-06
+  dgfsresidualstd :  5.549e-01, 5.655e-06
+  dgfsresidualstd :  5.699e-01, 5.580e-06
+  dgfsresidualstd :  5.849e-01, 5.509e-06
+  dgfsresidualstd :  5.999e-01, 5.442e-06
+  dgfsresidualstd :  6.149e-01, 5.376e-06
+  dgfsresidualstd :  6.299e-01, 5.313e-06
+  dgfsresidualstd :  6.449e-01, 5.252e-06
+  dgfsresidualstd :  6.599e-01, 5.191e-06
+  dgfsresidualstd :  6.749e-01, 5.131e-06
+  dgfsresidualstd :  6.899e-01, 5.072e-06
+  dgfsresidualstd :  7.049e-01, 5.013e-06
+  dgfsresidualstd :  7.199e-01, 4.953e-06
+  dgfsresidualstd :  7.349e-01, 4.893e-06
+  dgfsresidualstd :  7.499e-01, 4.833e-06
+  dgfsresidualstd :  7.649e-01, 4.772e-06
+  dgfsresidualstd :  7.799e-01, 4.710e-06
+  dgfsresidualstd :  7.949e-01, 4.647e-06
+  dgfsresidualstd :  8.099e-01, 4.583e-06
+  dgfsresidualstd :  8.249e-01, 4.518e-06
+  dgfsresidualstd :  8.399e-01, 4.453e-06
+  dgfsresidualstd :  8.549e-01, 4.386e-06
+  dgfsresidualstd :  8.699e-01, 4.319e-06
+  dgfsresidualstd :  8.849e-01, 4.251e-06
+  dgfsresidualstd :  8.999e-01, 4.182e-06
+  dgfsresidualstd :  9.149e-01, 4.112e-06
+  dgfsresidualstd :  9.299e-01, 4.042e-06
+  dgfsresidualstd :  9.449e-01, 3.971e-06
+  dgfsresidualstd :  9.599e-01, 3.900e-06
+  dgfsresidualstd :  9.749e-01, 3.828e-06
+  dgfsresidualstd :  9.899e-01, 3.756e-06
+  dgfsresidualstd :  1.005e+00, 3.684e-06
+  dgfsresidualstd :  1.020e+00, 3.612e-06
+  dgfsresidualstd :  1.035e+00, 3.539e-06
+  dgfsresidualstd :  1.050e+00, 3.467e-06
+  dgfsresidualstd :  1.065e+00, 3.395e-06
+  dgfsresidualstd :  1.080e+00, 3.322e-06
+  dgfsresidualstd :  1.095e+00, 3.251e-06
+  dgfsresidualstd :  1.110e+00, 3.179e-06
+  dgfsresidualstd :  1.125e+00, 3.108e-06
+  dgfsresidualstd :  1.140e+00, 3.037e-06
+  dgfsresidualstd :  1.155e+00, 2.967e-06
+  dgfsresidualstd :  1.170e+00, 2.898e-06
+  dgfsresidualstd :  1.185e+00, 2.829e-06
+  dgfsresidualstd :  1.200e+00, 2.761e-06
+  dgfsresidualstd :  1.215e+00, 2.693e-06
+  dgfsresidualstd :  1.230e+00, 2.627e-06
+  dgfsresidualstd :  1.245e+00, 2.561e-06
+  dgfsresidualstd :  1.260e+00, 2.496e-06
+  dgfsresidualstd :  1.275e+00, 2.432e-06
+  dgfsresidualstd :  1.290e+00, 2.369e-06
+  dgfsresidualstd :  1.305e+00, 2.307e-06
+  dgfsresidualstd :  1.320e+00, 2.246e-06
+  dgfsresidualstd :  1.335e+00, 2.186e-06
+  dgfsresidualstd :  1.350e+00, 2.127e-06
+  dgfsresidualstd :  1.365e+00, 2.069e-06
+  dgfsresidualstd :  1.380e+00, 2.013e-06
+  dgfsresidualstd :  1.395e+00, 1.957e-06
+  dgfsresidualstd :  1.410e+00, 1.903e-06
+  dgfsresidualstd :  1.425e+00, 1.850e-06
+  dgfsresidualstd :  1.440e+00, 1.798e-06
+  dgfsresidualstd :  1.455e+00, 1.747e-06
+  dgfsresidualstd :  1.470e+00, 1.698e-06
+  dgfsresidualstd :  1.485e+00, 1.650e-06
+  dgfsresidualstd :  1.500e+00, 1.603e-06
+  dgfsresidualstd :  1.515e+00, 1.558e-06
+  dgfsresidualstd :  1.530e+00, 1.514e-06
+  dgfsresidualstd :  1.545e+00, 1.471e-06
+  dgfsresidualstd :  1.560e+00, 1.430e-06
+  dgfsresidualstd :  1.575e+00, 1.390e-06
+  dgfsresidualstd :  1.590e+00, 1.352e-06
+  dgfsresidualstd :  1.605e+00, 1.315e-06
+  dgfsresidualstd :  1.620e+00, 1.279e-06
+  dgfsresidualstd :  1.635e+00, 1.245e-06
+  dgfsresidualstd :  1.650e+00, 1.212e-06
+  dgfsresidualstd :  1.665e+00, 1.181e-06
+  dgfsresidualstd :  1.680e+00, 1.152e-06
+  dgfsresidualstd :  1.695e+00, 1.123e-06
+  dgfsresidualstd :  1.710e+00, 1.097e-06
+  dgfsresidualstd :  1.725e+00, 1.071e-06
+  dgfsresidualstd :  1.740e+00, 1.047e-06
+  dgfsresidualstd :  1.755e+00, 1.025e-06
+  dgfsresidualstd :  1.770e+00, 1.004e-06
+  dgfsresidualstd :  1.785e+00, 9.842e-07
+  dgfsresidualstd :  1.800e+00, 9.659e-07
+  dgfsresidualstd :  1.815e+00, 9.488e-07
+  dgfsresidualstd :  1.830e+00, 9.329e-07
+  dgfsresidualstd :  1.845e+00, 9.182e-07
+  dgfsresidualstd :  1.860e+00, 9.046e-07
+  dgfsresidualstd :  1.875e+00, 8.922e-07
+  dgfsresidualstd :  1.890e+00, 8.807e-07
+  dgfsresidualstd :  1.905e+00, 8.701e-07
+  dgfsresidualstd :  1.920e+00, 8.605e-07
+  dgfsresidualstd :  1.935e+00, 8.516e-07
+  dgfsresidualstd :  1.950e+00, 8.435e-07
+  dgfsresidualstd :  1.965e+00, 8.361e-07
+  dgfsresidualstd :  1.980e+00, 8.293e-07
+  dgfsresidualstd :  1.995e+00, 8.230e-07
+  dgfsresidualstd :  2.010e+00, 8.172e-07
+  dgfsresidualstd :  2.025e+00, 8.117e-07
+  dgfsresidualstd :  2.040e+00, 8.066e-07
+  dgfsresidualstd :  2.055e+00, 8.018e-07
+  dgfsresidualstd :  2.070e+00, 7.972e-07
+  dgfsresidualstd :  2.085e+00, 7.928e-07
+  dgfsresidualstd :  2.100e+00, 7.885e-07
+  dgfsresidualstd :  2.115e+00, 7.843e-07
+  dgfsresidualstd :  2.130e+00, 7.801e-07
+  dgfsresidualstd :  2.145e+00, 7.759e-07
+  dgfsresidualstd :  2.160e+00, 7.717e-07
+  dgfsresidualstd :  2.175e+00, 7.674e-07
+  dgfsresidualstd :  2.190e+00, 7.629e-07
+  dgfsresidualstd :  2.205e+00, 7.584e-07
+  dgfsresidualstd :  2.220e+00, 7.537e-07
+  dgfsresidualstd :  2.235e+00, 7.487e-07
+  dgfsresidualstd :  2.250e+00, 7.436e-07
+  dgfsresidualstd :  2.265e+00, 7.383e-07
+  dgfsresidualstd :  2.280e+00, 7.328e-07
+  dgfsresidualstd :  2.295e+00, 7.270e-07
+  dgfsresidualstd :  2.310e+00, 7.209e-07
+  dgfsresidualstd :  2.325e+00, 7.146e-07
+  dgfsresidualstd :  2.340e+00, 7.081e-07
+  dgfsresidualstd :  2.355e+00, 7.013e-07
+  dgfsresidualstd :  2.370e+00, 6.942e-07
+  dgfsresidualstd :  2.385e+00, 6.869e-07
+  dgfsresidualstd :  2.400e+00, 6.793e-07
+  dgfsresidualstd :  2.415e+00, 6.714e-07
+  dgfsresidualstd :  2.430e+00, 6.633e-07
+  dgfsresidualstd :  2.445e+00, 6.549e-07
+  dgfsresidualstd :  2.460e+00, 6.463e-07
+  dgfsresidualstd :  2.475e+00, 6.375e-07
+  dgfsresidualstd :  2.490e+00, 6.284e-07
+  dgfsresidualstd :  2.505e+00, 6.192e-07
+  dgfsresidualstd :  2.520e+00, 6.098e-07
+  dgfsresidualstd :  2.535e+00, 6.001e-07
+  dgfsresidualstd :  2.550e+00, 5.902e-07
+  dgfsresidualstd :  2.565e+00, 5.802e-07
+  dgfsresidualstd :  2.580e+00, 5.701e-07
+  dgfsresidualstd :  2.595e+00, 5.597e-07
+  dgfsresidualstd :  2.610e+00, 5.493e-07
+  dgfsresidualstd :  2.625e+00, 5.387e-07
+  dgfsresidualstd :  2.640e+00, 5.281e-07
+  dgfsresidualstd :  2.655e+00, 5.173e-07
+  dgfsresidualstd :  2.670e+00, 5.065e-07
+  dgfsresidualstd :  2.685e+00, 4.956e-07
+  dgfsresidualstd :  2.700e+00, 4.846e-07
+  dgfsresidualstd :  2.715e+00, 4.737e-07
+  dgfsresidualstd :  2.730e+00, 4.627e-07
+  dgfsresidualstd :  2.745e+00, 4.517e-07
+  dgfsresidualstd :  2.760e+00, 4.407e-07
+  dgfsresidualstd :  2.775e+00, 4.298e-07
+  dgfsresidualstd :  2.790e+00, 4.189e-07
+  dgfsresidualstd :  2.805e+00, 4.080e-07
+  dgfsresidualstd :  2.820e+00, 3.973e-07
+  dgfsresidualstd :  2.835e+00, 3.866e-07
+  dgfsresidualstd :  2.850e+00, 3.760e-07
+  dgfsresidualstd :  2.865e+00, 3.655e-07
+  dgfsresidualstd :  2.880e+00, 3.552e-07
+  dgfsresidualstd :  2.895e+00, 3.450e-07
+  dgfsresidualstd :  2.910e+00, 3.349e-07
+  dgfsresidualstd :  2.925e+00, 3.250e-07
+  dgfsresidualstd :  2.940e+00, 3.153e-07
+  dgfsresidualstd :  2.955e+00, 3.058e-07
+  dgfsresidualstd :  2.970e+00, 2.966e-07
+  dgfsresidualstd :  2.985e+00, 2.875e-07
+  dgfsresidualstd :  3.000e+00, 2.787e-07
+  dgfsresidualstd :  3.014e+00, 2.701e-07
+  dgfsresidualstd :  3.029e+00, 2.618e-07
+  dgfsresidualstd :  3.044e+00, 2.538e-07
+  dgfsresidualstd :  3.059e+00, 2.460e-07
+  dgfsresidualstd :  3.074e+00, 2.385e-07
+  dgfsresidualstd :  3.089e+00, 2.313e-07
+  dgfsresidualstd :  3.104e+00, 2.244e-07
+  dgfsresidualstd :  3.119e+00, 2.179e-07
+  dgfsresidualstd :  3.134e+00, 2.116e-07
+  dgfsresidualstd :  3.149e+00, 2.057e-07
+  dgfsresidualstd :  3.164e+00, 2.002e-07
+  dgfsresidualstd :  3.179e+00, 1.949e-07
+  dgfsresidualstd :  3.194e+00, 1.900e-07
+  dgfsresidualstd :  3.209e+00, 1.854e-07
+  dgfsresidualstd :  3.224e+00, 1.812e-07
+  dgfsresidualstd :  3.239e+00, 1.773e-07
+  dgfsresidualstd :  3.254e+00, 1.737e-07
+  dgfsresidualstd :  3.269e+00, 1.704e-07
+  dgfsresidualstd :  3.284e+00, 1.674e-07
+  dgfsresidualstd :  3.299e+00, 1.648e-07
+  dgfsresidualstd :  3.314e+00, 1.624e-07
+  dgfsresidualstd :  3.329e+00, 1.602e-07
+  dgfsresidualstd :  3.344e+00, 1.583e-07
+  dgfsresidualstd :  3.359e+00, 1.566e-07
+  dgfsresidualstd :  3.374e+00, 1.552e-07
+  dgfsresidualstd :  3.389e+00, 1.539e-07
+  dgfsresidualstd :  3.404e+00, 1.528e-07
+  dgfsresidualstd :  3.419e+00, 1.519e-07
+  dgfsresidualstd :  3.434e+00, 1.511e-07
+  dgfsresidualstd :  3.449e+00, 1.504e-07
+  dgfsresidualstd :  3.464e+00, 1.498e-07
+  dgfsresidualstd :  3.479e+00, 1.493e-07
+  dgfsresidualstd :  3.494e+00, 1.488e-07
+  dgfsresidualstd :  3.509e+00, 1.484e-07
+  dgfsresidualstd :  3.524e+00, 1.480e-07
+  dgfsresidualstd :  3.539e+00, 1.477e-07
+  dgfsresidualstd :  3.554e+00, 1.474e-07
+  dgfsresidualstd :  3.569e+00, 1.470e-07
+  dgfsresidualstd :  3.584e+00, 1.467e-07
+  dgfsresidualstd :  3.599e+00, 1.463e-07
+  dgfsresidualstd :  3.614e+00, 1.459e-07
+  dgfsresidualstd :  3.629e+00, 1.455e-07
+  dgfsresidualstd :  3.644e+00, 1.450e-07
+  dgfsresidualstd :  3.659e+00, 1.445e-07
+  dgfsresidualstd :  3.674e+00, 1.440e-07
+  dgfsresidualstd :  3.689e+00, 1.433e-07
+  dgfsresidualstd :  3.704e+00, 1.427e-07
+  dgfsresidualstd :  3.719e+00, 1.419e-07
+  dgfsresidualstd :  3.734e+00, 1.411e-07
+  dgfsresidualstd :  3.749e+00, 1.402e-07
+  dgfsresidualstd :  3.764e+00, 1.393e-07
+  dgfsresidualstd :  3.779e+00, 1.383e-07
+  dgfsresidualstd :  3.794e+00, 1.372e-07
+  dgfsresidualstd :  3.809e+00, 1.361e-07
+  dgfsresidualstd :  3.824e+00, 1.349e-07
+  dgfsresidualstd :  3.839e+00, 1.336e-07
+  dgfsresidualstd :  3.854e+00, 1.323e-07
+  dgfsresidualstd :  3.869e+00, 1.309e-07
+  dgfsresidualstd :  3.884e+00, 1.294e-07
+  dgfsresidualstd :  3.899e+00, 1.279e-07
+  dgfsresidualstd :  3.914e+00, 1.264e-07
+  dgfsresidualstd :  3.929e+00, 1.247e-07
+  dgfsresidualstd :  3.944e+00, 1.231e-07
+  dgfsresidualstd :  3.959e+00, 1.213e-07
+  dgfsresidualstd :  3.974e+00, 1.196e-07
+  dgfsresidualstd :  3.989e+00, 1.177e-07
+  dgfsresidualstd :  4.004e+00, 1.159e-07
+  dgfsresidualstd :  4.019e+00, 1.140e-07
+  dgfsresidualstd :  4.034e+00, 1.121e-07
+  dgfsresidualstd :  4.049e+00, 1.101e-07
+  dgfsresidualstd :  4.064e+00, 1.081e-07
+  dgfsresidualstd :  4.079e+00, 1.061e-07
+  dgfsresidualstd :  4.094e+00, 1.040e-07
+  dgfsresidualstd :  4.109e+00, 1.020e-07
+  dgfsresidualstd :  4.124e+00, 9.989e-08
+  dgfsresidualstd :  4.139e+00, 9.779e-08
+  dgfsresidualstd :  4.154e+00, 9.568e-08
+  dgfsresidualstd :  4.169e+00, 9.356e-08
+  dgfsresidualstd :  4.184e+00, 9.144e-08
+  dgfsresidualstd :  4.199e+00, 8.932e-08
+  dgfsresidualstd :  4.214e+00, 8.719e-08
+  dgfsresidualstd :  4.229e+00, 8.507e-08
+  dgfsresidualstd :  4.244e+00, 8.296e-08
+  dgfsresidualstd :  4.259e+00, 8.086e-08
+  dgfsresidualstd :  4.274e+00, 7.877e-08
+  dgfsresidualstd :  4.289e+00, 7.669e-08
+  dgfsresidualstd :  4.304e+00, 7.464e-08
+  dgfsresidualstd :  4.319e+00, 7.261e-08
+  dgfsresidualstd :  4.334e+00, 7.060e-08
+  dgfsresidualstd :  4.349e+00, 6.862e-08
+  dgfsresidualstd :  4.364e+00, 6.666e-08
+  dgfsresidualstd :  4.379e+00, 6.474e-08
+  dgfsresidualstd :  4.394e+00, 6.286e-08
+  dgfsresidualstd :  4.409e+00, 6.101e-08
+  dgfsresidualstd :  4.424e+00, 5.921e-08
+  dgfsresidualstd :  4.439e+00, 5.745e-08
+  dgfsresidualstd :  4.454e+00, 5.573e-08
+  dgfsresidualstd :  4.469e+00, 5.406e-08
+  dgfsresidualstd :  4.484e+00, 5.244e-08
+  dgfsresidualstd :  4.499e+00, 5.087e-08
+  dgfsresidualstd :  4.514e+00, 4.936e-08
+  dgfsresidualstd :  4.529e+00, 4.791e-08
+  dgfsresidualstd :  4.544e+00, 4.650e-08
+  dgfsresidualstd :  4.559e+00, 4.516e-08
+  dgfsresidualstd :  4.574e+00, 4.388e-08
+  dgfsresidualstd :  4.589e+00, 4.266e-08
+  dgfsresidualstd :  4.604e+00, 4.151e-08
+  dgfsresidualstd :  4.619e+00, 4.041e-08
+  dgfsresidualstd :  4.634e+00, 3.939e-08
+  dgfsresidualstd :  4.649e+00, 3.842e-08
+  dgfsresidualstd :  4.664e+00, 3.752e-08
+  dgfsresidualstd :  4.679e+00, 3.669e-08
+  dgfsresidualstd :  4.694e+00, 3.592e-08
+  dgfsresidualstd :  4.709e+00, 3.521e-08
+  dgfsresidualstd :  4.724e+00, 3.456e-08
+  dgfsresidualstd :  4.739e+00, 3.397e-08
+  dgfsresidualstd :  4.754e+00, 3.343e-08
+  dgfsresidualstd :  4.769e+00, 3.295e-08
+  dgfsresidualstd :  4.784e+00, 3.252e-08
+  dgfsresidualstd :  4.799e+00, 3.214e-08
+  dgfsresidualstd :  4.814e+00, 3.181e-08
+  dgfsresidualstd :  4.829e+00, 3.151e-08
+  dgfsresidualstd :  4.844e+00, 3.126e-08
+  dgfsresidualstd :  4.859e+00, 3.103e-08
+  dgfsresidualstd :  4.874e+00, 3.084e-08
+  dgfsresidualstd :  4.889e+00, 3.068e-08
+  dgfsresidualstd :  4.904e+00, 3.054e-08
+  dgfsresidualstd :  4.919e+00, 3.042e-08
+  dgfsresidualstd :  4.934e+00, 3.032e-08
+  dgfsresidualstd :  4.949e+00, 3.023e-08
+  dgfsresidualstd :  4.964e+00, 3.015e-08
+  dgfsresidualstd :  4.979e+00, 3.008e-08
+  dgfsresidualstd :  4.994e+00, 3.002e-08
+  dgfsresidualstd :  5.009e+00, 2.996e-08
+  dgfsresidualstd :  5.024e+00, 2.990e-08
+  dgfsresidualstd :  5.039e+00, 2.984e-08
+  dgfsresidualstd :  5.054e+00, 2.978e-08
+  dgfsresidualstd :  5.069e+00, 2.972e-08
+  dgfsresidualstd :  5.084e+00, 2.964e-08
+  dgfsresidualstd :  5.099e+00, 2.957e-08
+  dgfsresidualstd :  5.114e+00, 2.948e-08
+  dgfsresidualstd :  5.129e+00, 2.939e-08
+  dgfsresidualstd :  5.144e+00, 2.928e-08
+  dgfsresidualstd :  5.159e+00, 2.917e-08
+  dgfsresidualstd :  5.174e+00, 2.905e-08
+  dgfsresidualstd :  5.189e+00, 2.891e-08
+  dgfsresidualstd :  5.204e+00, 2.876e-08
+  dgfsresidualstd :  5.219e+00, 2.860e-08
+  dgfsresidualstd :  5.234e+00, 2.843e-08
+
+ Velocity mesh -----------------------------
+
+ Velocity mesh -----------------------------Nrho:  6
+velocityMesh: (-5.0 5.0)
+n0, u0: (1.678881970644135e+22 337.05486534428223)
+216 Batches of Size 64
+
+Nrho:  6
+velocityMesh: (-5.0 5.0)
+n0, u0: (1.678881970644135e+22 337.05486534428223)
+216 Batches of Size 64
+
+Reading initial condition for soln-bcs-back
+bulk-property: input calculated
+
+Reading initial condition for soln-bcs-back
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-back
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-back
+
+Reading initial condition for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-bottom
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-bottom
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-front
+
+Reading initial condition for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-front
+Finished initial condition precomputation for soln-bcs-front
+
+Reading initial condition for soln-bcs-left
+
+Reading initial condition for soln-bcs-right
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-left
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-right
+
+Reading initial condition for soln-bcs-top
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475028594
+x-velocity: 50.0 49.99999999706181
+y-velocity: 0.0 1.4124810922267678e-14
+z-velocity: 0.0 1.624158298908204e-14
+temperature: 273.0 272.99999998365814
+Finished initial condition precomputation for soln-bcs-top
+
+Reading initial condition for soln-bcs-top
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475028594
+x-velocity: 50.0 49.99999999706181
+y-velocity: 0.0 1.4124810922267678e-14
+z-velocity: 0.0 1.624158298908204e-14
+temperature: 273.0 272.99999998365814
+Finished initial condition precomputation for soln-bcs-top
+Jac (min: 0.00024414062499763267, max: 0.00024414062500263553)
+Jac (min: 0.0002441406249978994, max: 0.0002441406250020694)
+Finished initializing the BaseSystem
+Finished initializing the BaseSystem
+
+ Scattering model -----------------------------
+Kn: 0.07709795421290123
+Time-step for unit CFL: [0.00104167]
+The actual time-step will depend on DG order CFL
+
+ Scattering model -----------------------------
+Kn: 0.07709795421290123
+prefactor: 0.997812132033151
+prefactor: 0.997812132033151
+Finished scattering model precomputation
+Finished scattering model precomputation
+  dgfsresidualstd :  5.015e+00, 2.994e-08
+  dgfsresidualstd :  5.030e+00, 2.988e-08
+  dgfsresidualstd :  5.045e+00, 2.982e-08
+  dgfsresidualstd :  5.060e+00, 2.975e-08
+  dgfsresidualstd :  5.075e+00, 2.969e-08
+  dgfsresidualstd :  5.090e+00, 2.961e-08
+  dgfsresidualstd :  5.105e+00, 2.953e-08
+  dgfsresidualstd :  5.120e+00, 2.945e-08
+  dgfsresidualstd :  5.135e+00, 2.935e-08
+  dgfsresidualstd :  5.150e+00, 2.924e-08
+  dgfsresidualstd :  5.165e+00, 2.912e-08
+  dgfsresidualstd :  5.180e+00, 2.899e-08
+  dgfsresidualstd :  5.195e+00, 2.885e-08
+  dgfsresidualstd :  5.210e+00, 2.870e-08
+  dgfsresidualstd :  5.225e+00, 2.854e-08
+  dgfsresidualstd :  5.240e+00, 2.836e-08
+  dgfsresidualstd :  5.255e+00, 2.817e-08
+  dgfsresidualstd :  5.270e+00, 2.797e-08
+  dgfsresidualstd :  5.285e+00, 2.776e-08
+  dgfsresidualstd :  5.300e+00, 2.754e-08
+  dgfsresidualstd :  5.315e+00, 2.730e-08
+  dgfsresidualstd :  5.330e+00, 2.706e-08
+  dgfsresidualstd :  5.345e+00, 2.680e-08
+  dgfsresidualstd :  5.360e+00, 2.653e-08
+  dgfsresidualstd :  5.375e+00, 2.625e-08
+  dgfsresidualstd :  5.390e+00, 2.597e-08
+  dgfsresidualstd :  5.405e+00, 2.567e-08
+  dgfsresidualstd :  5.420e+00, 2.537e-08
+  dgfsresidualstd :  5.435e+00, 2.505e-08
+  dgfsresidualstd :  5.450e+00, 2.473e-08
+  dgfsresidualstd :  5.465e+00, 2.440e-08
+  dgfsresidualstd :  5.480e+00, 2.407e-08
+  dgfsresidualstd :  5.495e+00, 2.373e-08
+  dgfsresidualstd :  5.510e+00, 2.339e-08
+  dgfsresidualstd :  5.525e+00, 2.304e-08
+  dgfsresidualstd :  5.540e+00, 2.268e-08
+  dgfsresidualstd :  5.555e+00, 2.233e-08
+  dgfsresidualstd :  5.570e+00, 2.197e-08
+  dgfsresidualstd :  5.585e+00, 2.161e-08
+  dgfsresidualstd :  5.600e+00, 2.124e-08
+  dgfsresidualstd :  5.615e+00, 2.088e-08
+  dgfsresidualstd :  5.630e+00, 2.052e-08
+  dgfsresidualstd :  5.645e+00, 2.015e-08
+  dgfsresidualstd :  5.660e+00, 1.979e-08
+  dgfsresidualstd :  5.675e+00, 1.943e-08
+  dgfsresidualstd :  5.690e+00, 1.907e-08
+  dgfsresidualstd :  5.705e+00, 1.872e-08
+  dgfsresidualstd :  5.720e+00, 1.837e-08
+  dgfsresidualstd :  5.735e+00, 1.802e-08
+  dgfsresidualstd :  5.750e+00, 1.768e-08
+  dgfsresidualstd :  5.765e+00, 1.734e-08
+  dgfsresidualstd :  5.780e+00, 1.701e-08
+  dgfsresidualstd :  5.795e+00, 1.669e-08
+  dgfsresidualstd :  5.810e+00, 1.637e-08
+  dgfsresidualstd :  5.825e+00, 1.606e-08
+  dgfsresidualstd :  5.840e+00, 1.576e-08
+  dgfsresidualstd :  5.855e+00, 1.546e-08
+  dgfsresidualstd :  5.870e+00, 1.518e-08
+  dgfsresidualstd :  5.885e+00, 1.490e-08
+  dgfsresidualstd :  5.900e+00, 1.464e-08
+  dgfsresidualstd :  5.915e+00, 1.438e-08
+  dgfsresidualstd :  5.930e+00, 1.413e-08
+  dgfsresidualstd :  5.945e+00, 1.390e-08
+  dgfsresidualstd :  5.960e+00, 1.367e-08
+  dgfsresidualstd :  5.975e+00, 1.346e-08
+  dgfsresidualstd :  5.990e+00, 1.325e-08
+  dgfsresidualstd :  6.005e+00, 1.306e-08
+  dgfsresidualstd :  6.020e+00, 1.288e-08
+  dgfsresidualstd :  6.035e+00, 1.271e-08
+  dgfsresidualstd :  6.050e+00, 1.254e-08
+  dgfsresidualstd :  6.065e+00, 1.239e-08
+  dgfsresidualstd :  6.080e+00, 1.225e-08
+  dgfsresidualstd :  6.095e+00, 1.212e-08
+  dgfsresidualstd :  6.110e+00, 1.200e-08
+  dgfsresidualstd :  6.125e+00, 1.189e-08
+  dgfsresidualstd :  6.140e+00, 1.179e-08
+  dgfsresidualstd :  6.155e+00, 1.170e-08
+  dgfsresidualstd :  6.170e+00, 1.161e-08
+  dgfsresidualstd :  6.185e+00, 1.154e-08
+  dgfsresidualstd :  6.200e+00, 1.147e-08
+  dgfsresidualstd :  6.215e+00, 1.141e-08
+  dgfsresidualstd :  6.230e+00, 1.135e-08
+  dgfsresidualstd :  6.245e+00, 1.130e-08
+  dgfsresidualstd :  6.260e+00, 1.126e-08
+  dgfsresidualstd :  6.275e+00, 1.122e-08
+  dgfsresidualstd :  6.290e+00, 1.119e-08
+  dgfsresidualstd :  6.305e+00, 1.116e-08
+  dgfsresidualstd :  6.320e+00, 1.114e-08
+  dgfsresidualstd :  6.335e+00, 1.112e-08
+  dgfsresidualstd :  6.350e+00, 1.110e-08
+  dgfsresidualstd :  6.365e+00, 1.108e-08
+  dgfsresidualstd :  6.380e+00, 1.107e-08
+  dgfsresidualstd :  6.395e+00, 1.106e-08
+  dgfsresidualstd :  6.410e+00, 1.105e-08
+  dgfsresidualstd :  6.425e+00, 1.104e-08
+  dgfsresidualstd :  6.440e+00, 1.103e-08
+  dgfsresidualstd :  6.455e+00, 1.103e-08
+  dgfsresidualstd :  6.470e+00, 1.102e-08
+  dgfsresidualstd :  6.485e+00, 1.102e-08
+  dgfsresidualstd :  6.500e+00, 1.101e-08
+  dgfsresidualstd :  6.515e+00, 1.100e-08
+  dgfsresidualstd :  6.530e+00, 1.100e-08
+  dgfsresidualstd :  6.545e+00, 1.099e-08
+  dgfsresidualstd :  6.560e+00, 1.098e-08
+  dgfsresidualstd :  6.575e+00, 1.097e-08
+  dgfsresidualstd :  6.590e+00, 1.096e-08
+  dgfsresidualstd :  6.605e+00, 1.095e-08
+  dgfsresidualstd :  6.620e+00, 1.094e-08
+  dgfsresidualstd :  6.635e+00, 1.093e-08
+  dgfsresidualstd :  6.650e+00, 1.091e-08
+  dgfsresidualstd :  6.665e+00, 1.090e-08
+  dgfsresidualstd :  6.680e+00, 1.088e-08
+  dgfsresidualstd :  6.695e+00, 1.086e-08
+  dgfsresidualstd :  6.710e+00, 1.085e-08
+  dgfsresidualstd :  6.725e+00, 1.083e-08
+  dgfsresidualstd :  6.740e+00, 1.080e-08
+  dgfsresidualstd :  6.755e+00, 1.078e-08
+  dgfsresidualstd :  6.770e+00, 1.076e-08
+  dgfsresidualstd :  6.785e+00, 1.074e-08
+  dgfsresidualstd :  6.800e+00, 1.071e-08
+  dgfsresidualstd :  6.815e+00, 1.069e-08
+  dgfsresidualstd :  6.830e+00, 1.066e-08
+  dgfsresidualstd :  6.845e+00, 1.063e-08
+  dgfsresidualstd :  6.860e+00, 1.060e-08
+  dgfsresidualstd :  6.875e+00, 1.057e-08
+  dgfsresidualstd :  6.890e+00, 1.054e-08
+  dgfsresidualstd :  6.905e+00, 1.051e-08
+  dgfsresidualstd :  6.920e+00, 1.048e-08
+  dgfsresidualstd :  6.935e+00, 1.045e-08
+  dgfsresidualstd :  6.950e+00, 1.042e-08
+  dgfsresidualstd :  6.965e+00, 1.039e-08
+  dgfsresidualstd :  6.980e+00, 1.036e-08
+  dgfsresidualstd :  6.995e+00, 1.033e-08
+  dgfsresidualstd :  7.010e+00, 1.030e-08
+  dgfsresidualstd :  7.025e+00, 1.027e-08
+  dgfsresidualstd :  7.040e+00, 1.024e-08
+  dgfsresidualstd :  7.055e+00, 1.021e-08
+  dgfsresidualstd :  7.070e+00, 1.018e-08
+  dgfsresidualstd :  7.085e+00, 1.015e-08
+  dgfsresidualstd :  7.100e+00, 1.012e-08
+  dgfsresidualstd :  7.115e+00, 1.009e-08
+  dgfsresidualstd :  7.130e+00, 1.006e-08
+  dgfsresidualstd :  7.145e+00, 1.003e-08
+  dgfsresidualstd :  7.160e+00, 1.000e-08
+  dgfsresidualstd :  7.175e+00, 9.976e-09
+  dgfsresidualstd :  7.190e+00, 9.950e-09
+  dgfsresidualstd :  7.205e+00, 9.925e-09
+  dgfsresidualstd :  7.220e+00, 9.900e-09
+  dgfsresidualstd :  7.235e+00, 9.876e-09
+  dgfsresidualstd :  7.250e+00, 9.853e-09
+  dgfsresidualstd :  7.265e+00, 9.831e-09
+  dgfsresidualstd :  7.280e+00, 9.809e-09
+  dgfsresidualstd :  7.295e+00, 9.789e-09
+  dgfsresidualstd :  7.310e+00, 9.769e-09
+  dgfsresidualstd :  7.325e+00, 9.750e-09
+  dgfsresidualstd :  7.340e+00, 9.732e-09
+  dgfsresidualstd :  7.355e+00, 9.715e-09
+  dgfsresidualstd :  7.370e+00, 9.698e-09
+  dgfsresidualstd :  7.385e+00, 9.683e-09
+  dgfsresidualstd :  7.400e+00, 9.668e-09
+  dgfsresidualstd :  7.415e+00, 9.654e-09
+  dgfsresidualstd :  7.430e+00, 9.641e-09
+  dgfsresidualstd :  7.445e+00, 9.629e-09
+  dgfsresidualstd :  7.460e+00, 9.617e-09
+  dgfsresidualstd :  7.475e+00, 9.606e-09
+  dgfsresidualstd :  7.490e+00, 9.596e-09
+  dgfsresidualstd :  7.504e+00, 9.587e-09
+  dgfsresidualstd :  7.519e+00, 9.578e-09
+  dgfsresidualstd :  7.534e+00, 9.570e-09
+  dgfsresidualstd :  7.549e+00, 9.562e-09
+  dgfsresidualstd :  7.564e+00, 9.555e-09
+  dgfsresidualstd :  7.579e+00, 9.549e-09
+  dgfsresidualstd :  7.594e+00, 9.543e-09
+  dgfsresidualstd :  7.609e+00, 9.538e-09
+  dgfsresidualstd :  7.624e+00, 9.533e-09
+  dgfsresidualstd :  7.639e+00, 9.529e-09
+  dgfsresidualstd :  7.654e+00, 9.525e-09
+  dgfsresidualstd :  7.669e+00, 9.521e-09
+  dgfsresidualstd :  7.684e+00, 9.518e-09
+  dgfsresidualstd :  7.699e+00, 9.515e-09
+  dgfsresidualstd :  7.714e+00, 9.513e-09
+  dgfsresidualstd :  7.729e+00, 9.510e-09
+  dgfsresidualstd :  7.744e+00, 9.508e-09
+  dgfsresidualstd :  7.759e+00, 9.507e-09
+  dgfsresidualstd :  7.774e+00, 9.505e-09
+  dgfsresidualstd :  7.789e+00, 9.504e-09
+  dgfsresidualstd :  7.804e+00, 9.503e-09
+  dgfsresidualstd :  7.819e+00, 9.502e-09
+  dgfsresidualstd :  7.834e+00, 9.501e-09
+  dgfsresidualstd :  7.849e+00, 9.500e-09
+  dgfsresidualstd :  7.864e+00, 9.500e-09
+  dgfsresidualstd :  7.879e+00, 9.499e-09
+  dgfsresidualstd :  7.894e+00, 9.499e-09
+  dgfsresidualstd :  7.909e+00, 9.499e-09
+  dgfsresidualstd :  7.924e+00, 9.499e-09
+  dgfsresidualstd :  7.939e+00, 9.498e-09
+  dgfsresidualstd :  7.954e+00, 9.498e-09
+  dgfsresidualstd :  7.969e+00, 9.498e-09
+  dgfsresidualstd :  7.984e+00, 9.498e-09
+  dgfsresidualstd :  7.999e+00, 9.498e-09
+  dgfsresidualstd :  8.014e+00, 9.497e-09
+  dgfsresidualstd :  8.029e+00, 9.497e-09
+  dgfsresidualstd :  8.044e+00, 9.497e-09
+  dgfsresidualstd :  8.059e+00, 9.497e-09
+  dgfsresidualstd :  8.074e+00, 9.497e-09
+  dgfsresidualstd :  8.089e+00, 9.496e-09
+  dgfsresidualstd :  8.104e+00, 9.496e-09
+  dgfsresidualstd :  8.119e+00, 9.496e-09
+  dgfsresidualstd :  8.134e+00, 9.495e-09
+  dgfsresidualstd :  8.149e+00, 9.495e-09
+  dgfsresidualstd :  8.164e+00, 9.494e-09
+  dgfsresidualstd :  8.179e+00, 9.494e-09
+  dgfsresidualstd :  8.194e+00, 9.493e-09
+  dgfsresidualstd :  8.209e+00, 9.493e-09
+  dgfsresidualstd :  8.224e+00, 9.492e-09
+  dgfsresidualstd :  8.239e+00, 9.491e-09
+  dgfsresidualstd :  8.254e+00, 9.491e-09
+  dgfsresidualstd :  8.269e+00, 9.490e-09
+  dgfsresidualstd :  8.284e+00, 9.489e-09
+  dgfsresidualstd :  8.299e+00, 9.488e-09
+  dgfsresidualstd :  8.314e+00, 9.487e-09
+  dgfsresidualstd :  8.329e+00, 9.487e-09
+  dgfsresidualstd :  8.344e+00, 9.486e-09
+  dgfsresidualstd :  8.359e+00, 9.485e-09
+  dgfsresidualstd :  8.374e+00, 9.484e-09
+  dgfsresidualstd :  8.389e+00, 9.483e-09
+  dgfsresidualstd :  8.404e+00, 9.482e-09
+  dgfsresidualstd :  8.419e+00, 9.481e-09
+  dgfsresidualstd :  8.434e+00, 9.480e-09
+  dgfsresidualstd :  8.449e+00, 9.479e-09
+  dgfsresidualstd :  8.464e+00, 9.478e-09
+  dgfsresidualstd :  8.479e+00, 9.477e-09
+  dgfsresidualstd :  8.494e+00, 9.477e-09
+  dgfsresidualstd :  8.509e+00, 9.476e-09
+  dgfsresidualstd :  8.524e+00, 9.475e-09
+  dgfsresidualstd :  8.539e+00, 9.474e-09
+  dgfsresidualstd :  8.554e+00, 9.473e-09
+  dgfsresidualstd :  8.569e+00, 9.472e-09
+  dgfsresidualstd :  8.584e+00, 9.471e-09
+  dgfsresidualstd :  8.599e+00, 9.470e-09
+  dgfsresidualstd :  8.614e+00, 9.470e-09
+  dgfsresidualstd :  8.629e+00, 9.469e-09
+  dgfsresidualstd :  8.644e+00, 9.468e-09
+  dgfsresidualstd :  8.659e+00, 9.467e-09
+  dgfsresidualstd :  8.674e+00, 9.467e-09
+  dgfsresidualstd :  8.689e+00, 9.466e-09
+  dgfsresidualstd :  8.704e+00, 9.465e-09
+  dgfsresidualstd :  8.719e+00, 9.465e-09
+  dgfsresidualstd :  8.734e+00, 9.464e-09
+  dgfsresidualstd :  8.749e+00, 9.463e-09
+  dgfsresidualstd :  8.764e+00, 9.463e-09
+  dgfsresidualstd :  8.779e+00, 9.462e-09
+  dgfsresidualstd :  8.794e+00, 9.462e-09
+  dgfsresidualstd :  8.809e+00, 9.461e-09
+  dgfsresidualstd :  8.824e+00, 9.461e-09
+  dgfsresidualstd :  8.839e+00, 9.461e-09
+  dgfsresidualstd :  8.854e+00, 9.460e-09
+  dgfsresidualstd :  8.869e+00, 9.460e-09
+  dgfsresidualstd :  8.884e+00, 9.459e-09
+  dgfsresidualstd :  8.899e+00, 9.459e-09
+  dgfsresidualstd :  8.914e+00, 9.459e-09
+  dgfsresidualstd :  8.929e+00, 9.459e-09
+  dgfsresidualstd :  8.944e+00, 9.458e-09
+  dgfsresidualstd :  8.959e+00, 9.458e-09
+  dgfsresidualstd :  8.974e+00, 9.458e-09
+  dgfsresidualstd :  8.989e+00, 9.458e-09
+  dgfsresidualstd :  9.004e+00, 9.458e-09
+  dgfsresidualstd :  9.019e+00, 9.457e-09
+  dgfsresidualstd :  9.034e+00, 9.457e-09
+  dgfsresidualstd :  9.049e+00, 9.457e-09
+  dgfsresidualstd :  9.064e+00, 9.457e-09
+  dgfsresidualstd :  9.079e+00, 9.457e-09
+  dgfsresidualstd :  9.094e+00, 9.457e-09
+  dgfsresidualstd :  9.109e+00, 9.457e-09
+  dgfsresidualstd :  9.124e+00, 9.457e-09
+  dgfsresidualstd :  9.139e+00, 9.457e-09
+  dgfsresidualstd :  9.154e+00, 9.457e-09
+  dgfsresidualstd :  9.169e+00, 9.457e-09
+  dgfsresidualstd :  9.184e+00, 9.457e-09
+  dgfsresidualstd :  9.199e+00, 9.457e-09
+  dgfsresidualstd :  9.214e+00, 9.457e-09
+  dgfsresidualstd :  9.229e+00, 9.457e-09
+  dgfsresidualstd :  9.244e+00, 9.457e-09
+  dgfsresidualstd :  9.259e+00, 9.457e-09
+  dgfsresidualstd :  9.274e+00, 9.457e-09
+  dgfsresidualstd :  9.289e+00, 9.457e-09
+  dgfsresidualstd :  9.304e+00, 9.457e-09
+  dgfsresidualstd :  9.319e+00, 9.457e-09
+  dgfsresidualstd :  9.334e+00, 9.457e-09
+  dgfsresidualstd :  9.349e+00, 9.457e-09
+  dgfsresidualstd :  9.364e+00, 9.456e-09
+  dgfsresidualstd :  9.379e+00, 9.456e-09
+  dgfsresidualstd :  9.394e+00, 9.456e-09
+  dgfsresidualstd :  9.409e+00, 9.456e-09
+  dgfsresidualstd :  9.424e+00, 9.456e-09
+  dgfsresidualstd :  9.439e+00, 9.456e-09
+  dgfsresidualstd :  9.454e+00, 9.456e-09
+  dgfsresidualstd :  9.469e+00, 9.456e-09
+  dgfsresidualstd :  9.484e+00, 9.456e-09
+  dgfsresidualstd :  9.499e+00, 9.456e-09
+  dgfsresidualstd :  9.514e+00, 9.456e-09
+  dgfsresidualstd :  9.529e+00, 9.456e-09
+  dgfsresidualstd :  9.544e+00, 9.456e-09
+  dgfsresidualstd :  9.559e+00, 9.456e-09
+  dgfsresidualstd :  9.574e+00, 9.456e-09
+  dgfsresidualstd :  9.589e+00, 9.456e-09
+  dgfsresidualstd :  9.604e+00, 9.456e-09
+  dgfsresidualstd :  9.619e+00, 9.456e-09
+  dgfsresidualstd :  9.634e+00, 9.456e-09
+  dgfsresidualstd :  9.649e+00, 9.456e-09
+  dgfsresidualstd :  9.664e+00, 9.456e-09
+  dgfsresidualstd :  9.679e+00, 9.456e-09
+  dgfsresidualstd :  9.694e+00, 9.455e-09
+  dgfsresidualstd :  9.709e+00, 9.455e-09
+  dgfsresidualstd :  9.724e+00, 9.455e-09
+  dgfsresidualstd :  9.739e+00, 9.455e-09
+  dgfsresidualstd :  9.754e+00, 9.455e-09
+  dgfsresidualstd :  9.769e+00, 9.455e-09
+  dgfsresidualstd :  9.784e+00, 9.455e-09
+  dgfsresidualstd :  9.799e+00, 9.455e-09
+  dgfsresidualstd :  9.814e+00, 9.455e-09
+  dgfsresidualstd :  9.829e+00, 9.455e-09
+  dgfsresidualstd :  9.844e+00, 9.455e-09
+  dgfsresidualstd :  9.859e+00, 9.454e-09
+  dgfsresidualstd :  9.874e+00, 9.454e-09
+  dgfsresidualstd :  9.889e+00, 9.454e-09
+  dgfsresidualstd :  9.904e+00, 9.454e-09
+  dgfsresidualstd :  9.919e+00, 9.454e-09
+  dgfsresidualstd :  9.934e+00, 9.454e-09
+  dgfsresidualstd :  9.949e+00, 9.454e-09
+  dgfsresidualstd :  9.964e+00, 9.454e-09
+  dgfsresidualstd :  9.979e+00, 9.454e-09
+  dgfsresidualstd :  9.994e+00, 9.453e-09
+  dgfsresidualstd :  1.001e+01, 9.453e-09
+  dgfsresidualstd :  1.002e+01, 9.453e-09
+  dgfsresidualstd :  1.004e+01, 9.453e-09
+  dgfsresidualstd :  1.005e+01, 9.453e-09
+  dgfsresidualstd :  1.007e+01, 9.453e-09
+  dgfsresidualstd :  1.008e+01, 9.453e-09
+  dgfsresidualstd :  1.010e+01, 9.453e-09
+  dgfsresidualstd :  1.011e+01, 9.453e-09
+  dgfsresidualstd :  1.013e+01, 9.453e-09
+  dgfsresidualstd :  1.014e+01, 9.453e-09
+  dgfsresidualstd :  1.016e+01, 9.452e-09
+  dgfsresidualstd :  1.017e+01, 9.452e-09
+  dgfsresidualstd :  1.019e+01, 9.452e-09
+  dgfsresidualstd :  1.020e+01, 9.452e-09
+  dgfsresidualstd :  1.022e+01, 9.452e-09
+  dgfsresidualstd :  1.023e+01, 9.452e-09
+  dgfsresidualstd :  1.025e+01, 9.452e-09
+WARNING: Please use tecplot in PBS interactive jobs. Otherwise, there will be a
+license error. For more info see 'module help tecplot' 
+WARNING: Please use tecplot in PBS interactive jobs. Otherwise, there will be a
+license error. For more info see 'module help tecplot' 
+slurmstepd: error: *** JOB 162680 ON gilbreth-b011 CANCELLED AT 2021-03-02T23:01:01 DUE TO TIME LIMIT ***
+
+ Velocity mesh -----------------------------
+ Velocity mesh -----------------------------
+Nrho:  6
+velocityMesh: (-5.0 5.0)
+n0, u0: (1.678881970644135e+22 337.05486534428223)
+216 Batches of Size 64
+
+Nrho:  6
+velocityMesh: (-5.0 5.0)
+n0, u0: (1.678881970644135e+22 337.05486534428223)
+216 Batches of Size 64
+
+Reading initial condition for soln-bcs-back
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-back
+
+Reading initial condition for soln-bcs-back
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+
+Reading initial condition for soln-bcs-bottom
+Finished initial condition precomputation for soln-bcs-back
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-bottom
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-front
+
+Reading initial condition for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-front
+
+Reading initial condition for soln-bcs-right
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+
+Reading initial condition for soln-bcs-left
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-right
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475029823
+x-velocity: 0.0 2.1744168873062304e-14
+y-velocity: 0.0 1.5658198492661276e-14
+z-velocity: 0.0 1.0827721992709417e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-bcs-left
+
+Reading initial condition for soln-bcs-top
+
+Reading initial condition for soln-bcs-top
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475028594
+x-velocity: 50.0 49.99999999706181
+y-velocity: 0.0 1.4124810922267678e-14
+z-velocity: 0.0 1.624158298908204e-14
+temperature: 273.0 272.99999998365814
+bulk-property: input calculated
+mass-density: 0.001114024475032453 0.001114024475028594
+x-velocity: 50.0 49.99999999706181
+y-velocity: 0.0 1.4124810922267678e-14
+z-velocity: 0.0 1.624158298908204e-14
+temperature: 273.0 272.99999998365814
+Finished initial condition precomputation for soln-bcs-top
+Finished initial condition precomputation for soln-bcs-top
+Jac (min: 0.0002441406249978994, max: 0.0002441406250020694)
+Jac (min: 0.00024414062499763267, max: 0.00024414062500263553)
+Finished initializing the BaseSystem
+Finished initializing the BaseSystem
+
+ Scattering model -----------------------------
+Time-step for unit CFL: [0.00104167]
+The actual time-step will depend on DG order CFL
+Kn: 0.07709795421290123
+
+ Scattering model -----------------------------
+Kn: 0.07709795421290123
+prefactor: 0.997812132033151
+prefactor: 0.997812132033151
+Finished scattering model precomputation
+Finished scattering model precomputation
+  dgfsresidualstd :  1.001e+01, 9.453e-09
+  dgfsresidualstd :  1.003e+01, 9.453e-09
+  dgfsresidualstd :  1.004e+01, 9.453e-09
+  dgfsresidualstd :  1.006e+01, 9.453e-09
+  dgfsresidualstd :  1.007e+01, 9.453e-09
+  dgfsresidualstd :  1.009e+01, 9.453e-09
+  dgfsresidualstd :  1.010e+01, 9.453e-09
+  dgfsresidualstd :  1.012e+01, 9.453e-09
+  dgfsresidualstd :  1.013e+01, 9.453e-09
+  dgfsresidualstd :  1.015e+01, 9.453e-09
+  dgfsresidualstd :  1.016e+01, 9.452e-09
+  dgfsresidualstd :  1.018e+01, 9.452e-09
+  dgfsresidualstd :  1.019e+01, 9.452e-09
+  dgfsresidualstd :  1.021e+01, 9.452e-09
+  dgfsresidualstd :  1.022e+01, 9.452e-09
+  dgfsresidualstd :  1.024e+01, 9.452e-09
+  dgfsresidualstd :  1.025e+01, 9.452e-09
+  dgfsresidualstd :  1.027e+01, 9.452e-09
+  dgfsresidualstd :  1.028e+01, 9.452e-09
+  dgfsresidualstd :  1.030e+01, 9.452e-09
+  dgfsresidualstd :  1.031e+01, 9.452e-09
+  dgfsresidualstd :  1.033e+01, 9.452e-09
+  dgfsresidualstd :  1.034e+01, 9.452e-09
+  dgfsresidualstd :  1.036e+01, 9.452e-09
+  dgfsresidualstd :  1.037e+01, 9.452e-09
+  dgfsresidualstd :  1.039e+01, 9.452e-09
+  dgfsresidualstd :  1.040e+01, 9.451e-09
+  dgfsresidualstd :  1.042e+01, 9.451e-09
+  dgfsresidualstd :  1.043e+01, 9.451e-09
+  dgfsresidualstd :  1.045e+01, 9.451e-09
+  dgfsresidualstd :  1.046e+01, 9.451e-09
+  dgfsresidualstd :  1.048e+01, 9.451e-09
+  dgfsresidualstd :  1.049e+01, 9.451e-09
+  dgfsresidualstd :  1.051e+01, 9.451e-09
+  dgfsresidualstd :  1.052e+01, 9.451e-09
+  dgfsresidualstd :  1.054e+01, 9.451e-09
+  dgfsresidualstd :  1.055e+01, 9.451e-09
+  dgfsresidualstd :  1.057e+01, 9.451e-09
+  dgfsresidualstd :  1.058e+01, 9.451e-09
+  dgfsresidualstd :  1.060e+01, 9.451e-09
+  dgfsresidualstd :  1.061e+01, 9.451e-09
+  dgfsresidualstd :  1.063e+01, 9.451e-09
+  dgfsresidualstd :  1.064e+01, 9.451e-09
+  dgfsresidualstd :  1.066e+01, 9.451e-09
+  dgfsresidualstd :  1.067e+01, 9.451e-09
+  dgfsresidualstd :  1.069e+01, 9.451e-09
+  dgfsresidualstd :  1.070e+01, 9.451e-09
+  dgfsresidualstd :  1.072e+01, 9.451e-09
+  dgfsresidualstd :  1.073e+01, 9.451e-09
+  dgfsresidualstd :  1.075e+01, 9.451e-09
+  dgfsresidualstd :  1.076e+01, 9.451e-09
+  dgfsresidualstd :  1.078e+01, 9.451e-09
+  dgfsresidualstd :  1.079e+01, 9.451e-09
+  dgfsresidualstd :  1.081e+01, 9.451e-09
+  dgfsresidualstd :  1.082e+01, 9.451e-09
+  dgfsresidualstd :  1.084e+01, 9.451e-09
+  dgfsresidualstd :  1.085e+01, 9.451e-09
+  dgfsresidualstd :  1.087e+01, 9.451e-09
+  dgfsresidualstd :  1.088e+01, 9.451e-09
+  dgfsresidualstd :  1.090e+01, 9.451e-09
+  dgfsresidualstd :  1.091e+01, 9.451e-09
+  dgfsresidualstd :  1.093e+01, 9.451e-09
+  dgfsresidualstd :  1.094e+01, 9.451e-09
+  dgfsresidualstd :  1.096e+01, 9.451e-09
+  dgfsresidualstd :  1.097e+01, 9.451e-09
+  dgfsresidualstd :  1.099e+01, 9.451e-09
+  dgfsresidualstd :  1.100e+01, 9.451e-09
+  dgfsresidualstd :  1.102e+01, 9.451e-09
+  dgfsresidualstd :  1.103e+01, 9.451e-09
+  dgfsresidualstd :  1.105e+01, 9.451e-09
+  dgfsresidualstd :  1.106e+01, 9.451e-09
+  dgfsresidualstd :  1.108e+01, 9.451e-09
+  dgfsresidualstd :  1.109e+01, 9.451e-09
+  dgfsresidualstd :  1.111e+01, 9.451e-09
+  dgfsresidualstd :  1.112e+01, 9.451e-09
+  dgfsresidualstd :  1.114e+01, 9.451e-09
+  dgfsresidualstd :  1.115e+01, 9.451e-09
+  dgfsresidualstd :  1.117e+01, 9.451e-09
+  dgfsresidualstd :  1.118e+01, 9.451e-09
+  dgfsresidualstd :  1.120e+01, 9.451e-09
+  dgfsresidualstd :  1.121e+01, 9.451e-09
+  dgfsresidualstd :  1.123e+01, 9.451e-09
+  dgfsresidualstd :  1.124e+01, 9.451e-09
+  dgfsresidualstd :  1.126e+01, 9.451e-09
+  dgfsresidualstd :  1.127e+01, 9.451e-09
+  dgfsresidualstd :  1.129e+01, 9.451e-09
+  dgfsresidualstd :  1.130e+01, 9.451e-09
+  dgfsresidualstd :  1.132e+01, 9.451e-09
+  dgfsresidualstd :  1.133e+01, 9.451e-09
+  dgfsresidualstd :  1.135e+01, 9.451e-09
+  dgfsresidualstd :  1.136e+01, 9.451e-09
+  dgfsresidualstd :  1.138e+01, 9.451e-09
+  dgfsresidualstd :  1.139e+01, 9.451e-09
+  dgfsresidualstd :  1.141e+01, 9.451e-09
+  dgfsresidualstd :  1.142e+01, 9.451e-09
+  dgfsresidualstd :  1.144e+01, 9.451e-09
+  dgfsresidualstd :  1.145e+01, 9.451e-09
+  dgfsresidualstd :  1.147e+01, 9.451e-09
+  dgfsresidualstd :  1.148e+01, 9.451e-09
+  dgfsresidualstd :  1.150e+01, 9.451e-09
+  dgfsresidualstd :  1.151e+01, 9.451e-09
+  dgfsresidualstd :  1.153e+01, 9.451e-09
+  dgfsresidualstd :  1.154e+01, 9.451e-09
+  dgfsresidualstd :  1.156e+01, 9.451e-09
+  dgfsresidualstd :  1.157e+01, 9.451e-09
+  dgfsresidualstd :  1.159e+01, 9.451e-09
+  dgfsresidualstd :  1.160e+01, 9.451e-09
+  dgfsresidualstd :  1.162e+01, 9.451e-09
+  dgfsresidualstd :  1.163e+01, 9.451e-09
+  dgfsresidualstd :  1.165e+01, 9.451e-09
+  dgfsresidualstd :  1.166e+01, 9.451e-09
+  dgfsresidualstd :  1.168e+01, 9.451e-09
+  dgfsresidualstd :  1.169e+01, 9.451e-09
+  dgfsresidualstd :  1.171e+01, 9.451e-09
+  dgfsresidualstd :  1.172e+01, 9.451e-09
+  dgfsresidualstd :  1.174e+01, 9.451e-09
+  dgfsresidualstd :  1.175e+01, 9.451e-09
+  dgfsresidualstd :  1.177e+01, 9.451e-09
+  dgfsresidualstd :  1.178e+01, 9.451e-09
+  dgfsresidualstd :  1.180e+01, 9.451e-09
+  dgfsresidualstd :  1.181e+01, 9.451e-09
+  dgfsresidualstd :  1.183e+01, 9.451e-09
+  dgfsresidualstd :  1.184e+01, 9.451e-09
+  dgfsresidualstd :  1.186e+01, 9.451e-09
+  dgfsresidualstd :  1.187e+01, 9.451e-09
+  dgfsresidualstd :  1.189e+01, 9.451e-09
+  dgfsresidualstd :  1.190e+01, 9.451e-09
+  dgfsresidualstd :  1.192e+01, 9.451e-09
+  dgfsresidualstd :  1.193e+01, 9.451e-09
+  dgfsresidualstd :  1.195e+01, 9.451e-09
+  dgfsresidualstd :  1.196e+01, 9.451e-09
+  dgfsresidualstd :  1.198e+01, 9.451e-09
+  dgfsresidualstd :  1.199e+01, 9.451e-09
+  dgfsresidualstd :  1.201e+01, 9.451e-09
+  dgfsresidualstd :  1.202e+01, 9.451e-09
+  dgfsresidualstd :  1.204e+01, 9.451e-09
+  dgfsresidualstd :  1.205e+01, 9.451e-09
+  dgfsresidualstd :  1.207e+01, 9.451e-09
+  dgfsresidualstd :  1.208e+01, 9.451e-09
+  dgfsresidualstd :  1.210e+01, 9.451e-09
+  dgfsresidualstd :  1.211e+01, 9.451e-09
+  dgfsresidualstd :  1.213e+01, 9.451e-09
+  dgfsresidualstd :  1.214e+01, 9.451e-09
+  dgfsresidualstd :  1.216e+01, 9.451e-09
+  dgfsresidualstd :  1.217e+01, 9.451e-09
+  dgfsresidualstd :  1.219e+01, 9.451e-09
+  dgfsresidualstd :  1.220e+01, 9.451e-09
+  dgfsresidualstd :  1.222e+01, 9.451e-09
+  dgfsresidualstd :  1.223e+01, 9.451e-09
+  dgfsresidualstd :  1.225e+01, 9.451e-09
+  dgfsresidualstd :  1.226e+01, 9.451e-09
+  dgfsresidualstd :  1.228e+01, 9.451e-09
+  dgfsresidualstd :  1.229e+01, 9.451e-09
+  dgfsresidualstd :  1.231e+01, 9.451e-09
+  dgfsresidualstd :  1.232e+01, 9.451e-09
+  dgfsresidualstd :  1.234e+01, 9.451e-09
+  dgfsresidualstd :  1.235e+01, 9.451e-09
+  dgfsresidualstd :  1.237e+01, 9.451e-09
+  dgfsresidualstd :  1.238e+01, 9.451e-09
+  dgfsresidualstd :  1.240e+01, 9.451e-09
+  dgfsresidualstd :  1.241e+01, 9.451e-09
+  dgfsresidualstd :  1.243e+01, 9.451e-09
+  dgfsresidualstd :  1.244e+01, 9.451e-09
+  dgfsresidualstd :  1.246e+01, 9.451e-09
+  dgfsresidualstd :  1.247e+01, 9.451e-09
+  dgfsresidualstd :  1.249e+01, 9.451e-09
+  dgfsresidualstd :  1.250e+01, 9.451e-09
+  dgfsresidualstd :  1.252e+01, 9.451e-09
+  dgfsresidualstd :  1.253e+01, 9.451e-09
+  dgfsresidualstd :  1.255e+01, 9.451e-09
+  dgfsresidualstd :  1.256e+01, 9.451e-09
+  dgfsresidualstd :  1.258e+01, 9.451e-09
+  dgfsresidualstd :  1.259e+01, 9.451e-09
+  dgfsresidualstd :  1.261e+01, 9.451e-09
+  dgfsresidualstd :  1.262e+01, 9.451e-09
+  dgfsresidualstd :  1.264e+01, 9.451e-09
+  dgfsresidualstd :  1.265e+01, 9.451e-09
+  dgfsresidualstd :  1.267e+01, 9.451e-09
+  dgfsresidualstd :  1.268e+01, 9.451e-09
+  dgfsresidualstd :  1.270e+01, 9.451e-09
+  dgfsresidualstd :  1.271e+01, 9.451e-09
+  dgfsresidualstd :  1.273e+01, 9.451e-09
+  dgfsresidualstd :  1.274e+01, 9.451e-09
+  dgfsresidualstd :  1.276e+01, 9.451e-09
+  dgfsresidualstd :  1.277e+01, 9.451e-09
+  dgfsresidualstd :  1.279e+01, 9.451e-09
+  dgfsresidualstd :  1.280e+01, 9.451e-09
+  dgfsresidualstd :  1.282e+01, 9.451e-09
+  dgfsresidualstd :  1.283e+01, 9.451e-09
+  dgfsresidualstd :  1.285e+01, 9.451e-09
+  dgfsresidualstd :  1.286e+01, 9.451e-09
+  dgfsresidualstd :  1.288e+01, 9.451e-09
+  dgfsresidualstd :  1.289e+01, 9.451e-09
+  dgfsresidualstd :  1.291e+01, 9.451e-09
+  dgfsresidualstd :  1.292e+01, 9.451e-09
+  dgfsresidualstd :  1.294e+01, 9.451e-09
+  dgfsresidualstd :  1.295e+01, 9.451e-09
+  dgfsresidualstd :  1.297e+01, 9.451e-09
+  dgfsresidualstd :  1.298e+01, 9.451e-09
+  dgfsresidualstd :  1.300e+01, 9.451e-09
+  dgfsresidualstd :  1.301e+01, 9.451e-09
+  dgfsresidualstd :  1.303e+01, 9.451e-09
+  dgfsresidualstd :  1.304e+01, 9.451e-09
+  dgfsresidualstd :  1.306e+01, 9.451e-09
+  dgfsresidualstd :  1.307e+01, 9.451e-09
+  dgfsresidualstd :  1.309e+01, 9.451e-09
+  dgfsresidualstd :  1.310e+01, 9.451e-09
+  dgfsresidualstd :  1.312e+01, 9.451e-09
+  dgfsresidualstd :  1.313e+01, 9.451e-09
+  dgfsresidualstd :  1.315e+01, 9.451e-09
+  dgfsresidualstd :  1.316e+01, 9.451e-09
+  dgfsresidualstd :  1.318e+01, 9.451e-09
+  dgfsresidualstd :  1.319e+01, 9.451e-09
+  dgfsresidualstd :  1.321e+01, 9.451e-09
+  dgfsresidualstd :  1.322e+01, 9.451e-09
+  dgfsresidualstd :  1.324e+01, 9.451e-09
+  dgfsresidualstd :  1.325e+01, 9.451e-09
+  dgfsresidualstd :  1.327e+01, 9.451e-09
+  dgfsresidualstd :  1.328e+01, 9.451e-09
+  dgfsresidualstd :  1.330e+01, 9.451e-09
+  dgfsresidualstd :  1.331e+01, 9.451e-09
+  dgfsresidualstd :  1.333e+01, 9.451e-09
+  dgfsresidualstd :  1.334e+01, 9.451e-09
+  dgfsresidualstd :  1.336e+01, 9.451e-09
+  dgfsresidualstd :  1.337e+01, 9.451e-09
+  dgfsresidualstd :  1.339e+01, 9.451e-09
+  dgfsresidualstd :  1.340e+01, 9.451e-09
+  dgfsresidualstd :  1.342e+01, 9.451e-09
+  dgfsresidualstd :  1.343e+01, 9.451e-09
+  dgfsresidualstd :  1.345e+01, 9.451e-09
+  dgfsresidualstd :  1.346e+01, 9.451e-09
+  dgfsresidualstd :  1.348e+01, 9.451e-09
+  dgfsresidualstd :  1.349e+01, 9.451e-09
+  dgfsresidualstd :  1.351e+01, 9.451e-09
+  dgfsresidualstd :  1.352e+01, 9.451e-09
+  dgfsresidualstd :  1.354e+01, 9.451e-09
+  dgfsresidualstd :  1.355e+01, 9.451e-09
+  dgfsresidualstd :  1.357e+01, 9.451e-09
+  dgfsresidualstd :  1.358e+01, 9.451e-09
+  dgfsresidualstd :  1.360e+01, 9.451e-09
+  dgfsresidualstd :  1.361e+01, 9.451e-09
+  dgfsresidualstd :  1.363e+01, 9.451e-09
+  dgfsresidualstd :  1.364e+01, 9.451e-09
+  dgfsresidualstd :  1.366e+01, 9.451e-09
+  dgfsresidualstd :  1.367e+01, 9.451e-09
+  dgfsresidualstd :  1.369e+01, 9.451e-09
+  dgfsresidualstd :  1.370e+01, 9.451e-09
+  dgfsresidualstd :  1.372e+01, 9.451e-09
+  dgfsresidualstd :  1.373e+01, 9.451e-09
+  dgfsresidualstd :  1.375e+01, 9.451e-09
+  dgfsresidualstd :  1.376e+01, 9.451e-09
+  dgfsresidualstd :  1.378e+01, 9.451e-09
+  dgfsresidualstd :  1.379e+01, 9.451e-09
+  dgfsresidualstd :  1.381e+01, 9.451e-09

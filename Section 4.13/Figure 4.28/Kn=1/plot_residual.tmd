@@ -1,0 +1,20 @@
+# script for generating plots over line
+
+set ylabel color 'black'
+set yticks color 'black'
+
+set datafile separator ","
+
+set logscale y
+set out 'residual.ps'
+set xlabel 'Non-dimensional time: t/t<sub>0</sub>'
+set ylabel 'Residual: |f<sup>n+1</sup> - f<sup>n</sup>|/|f<sup>n</sup>|'
+set key at 85,85
+set yrange [1e-9:1e-3]
+set xrange [0:6]
+set xticks spacing 1
+plot system("grep 'dgfsresidualstd' s8v24/residual.txt | cut -d ':' -f2-") u 1:2 w l lw 0.3 lc 'red' dt 'Solid' title '8<sup>3</sup>, 24<sup>3</sup>', \
+	system("grep 'dgfsresidualstd' s8v32/residual.txt | cut -d ':' -f2-") u 1:2 w l lw 0.3 lc 'red' dt 'Dashed' st 0.3 sf 'no' pt 'circle' title '8<sup>3</sup>, 32<sup>3</sup>', \
+	system("grep 'dgfsresidualstd' s4v24/residual.txt | cut -d ':' -f2-") u 1:2 w l lw 0.3 lc 'black' dt 'Solid' title '4<sup>3</sup>, 24<sup>3</sup>', \
+	system("grep 'dgfsresidualstd' s4v32/residual.txt | cut -d ':' -f2-") u 1:2 w l lw 0.3 lc 'black' dt 'Dashed' st 0.3 sf 'no' pt 'circle' title '4<sup>3</sup>, 32<sup>3</sup>'
+set out

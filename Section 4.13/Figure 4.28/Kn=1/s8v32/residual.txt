@@ -1,0 +1,760 @@
+
+ Velocity mesh -----------------------------
+
+ Velocity mesh -----------------------------
+Nrho:  6
+velocityMesh: (-6.0 6.0)
+n0, u0: (1.678881970644135e+21 337.05486534428223)
+512 Batches of Size 64
+Nrho:  6
+velocityMesh: (-6.0 6.0)
+n0, u0: (1.678881970644135e+21 337.05486534428223)
+512 Batches of Size 64
+
+Reading initial condition for soln-bcs-back
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-back
+
+Reading initial condition for soln-bcs-back
+
+Reading initial condition for soln-bcs-bottom
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-back
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-bottom
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-front
+
+Reading initial condition for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+
+Reading initial condition for soln-bcs-right
+Finished initial condition precomputation for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-right
+
+Reading initial condition for soln-bcs-left
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+
+Reading initial condition for soln-bcs-top
+Finished initial condition precomputation for soln-bcs-left
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324529
+x-velocity: 50.0 49.99999999999989
+y-velocity: 0.0 2.3961397335878567e-16
+z-velocity: 0.0 7.893409332666526e-15
+temperature: 273.0 272.99999999999966
+Finished initial condition precomputation for soln-bcs-top
+
+Reading initial condition for soln-bcs-top
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324529
+x-velocity: 50.0 49.99999999999989
+y-velocity: 0.0 2.3961397335878567e-16
+z-velocity: 0.0 7.893409332666526e-15
+temperature: 273.0 272.99999999999966
+Finished initial condition precomputation for soln-bcs-top
+Jac (min: 0.00024414062499763267, max: 0.00024414062500263553)
+Jac (min: 0.0002441406249978994, max: 0.0002441406250020694)
+Finished initializing the BaseSystem
+Finished initializing the BaseSystem
+
+ Scattering model -----------------------------
+Kn: 0.7709795421290124
+prefactor: 0.09978121320331508
+Time-step for unit CFL: [0.00086806]
+The actual time-step will depend on DG order CFL
+
+ Scattering model -----------------------------
+Kn: 0.7709795421290124
+prefactor: 0.09978121320331508
+Finished scattering model precomputation
+Finished scattering model precomputation
+
+Reading initial condition for soln-ics
+
+Reading initial condition for soln-ics
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+Finished initial condition precomputation for soln-ics
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-ics
+  dgfsresidualstd :  1.500e-02, 7.110e-05
+  dgfsresidualstd :  3.000e-02, 4.957e-05
+  dgfsresidualstd :  4.500e-02, 3.910e-05
+  dgfsresidualstd :  6.000e-02, 3.378e-05
+  dgfsresidualstd :  7.500e-02, 3.140e-05
+  dgfsresidualstd :  9.000e-02, 3.024e-05
+  dgfsresidualstd :  1.050e-01, 2.920e-05
+  dgfsresidualstd :  1.200e-01, 2.805e-05
+  dgfsresidualstd :  1.350e-01, 2.698e-05
+  dgfsresidualstd :  1.500e-01, 2.608e-05
+  dgfsresidualstd :  1.650e-01, 2.528e-05
+  dgfsresidualstd :  1.800e-01, 2.455e-05
+  dgfsresidualstd :  1.950e-01, 2.387e-05
+  dgfsresidualstd :  2.100e-01, 2.325e-05
+  dgfsresidualstd :  2.250e-01, 2.265e-05
+  dgfsresidualstd :  2.400e-01, 2.195e-05
+  dgfsresidualstd :  2.550e-01, 2.098e-05
+  dgfsresidualstd :  2.700e-01, 1.961e-05
+  dgfsresidualstd :  2.850e-01, 1.791e-05
+  dgfsresidualstd :  3.000e-01, 1.625e-05
+  dgfsresidualstd :  3.150e-01, 1.521e-05
+  dgfsresidualstd :  3.300e-01, 1.511e-05
+  dgfsresidualstd :  3.450e-01, 1.566e-05
+  dgfsresidualstd :  3.600e-01, 1.627e-05
+  dgfsresidualstd :  3.750e-01, 1.653e-05
+  dgfsresidualstd :  3.900e-01, 1.637e-05
+  dgfsresidualstd :  4.050e-01, 1.591e-05
+  dgfsresidualstd :  4.200e-01, 1.531e-05
+  dgfsresidualstd :  4.350e-01, 1.471e-05
+  dgfsresidualstd :  4.500e-01, 1.416e-05
+  dgfsresidualstd :  4.650e-01, 1.367e-05
+  dgfsresidualstd :  4.800e-01, 1.323e-05
+  dgfsresidualstd :  4.950e-01, 1.283e-05
+  dgfsresidualstd :  5.099e-01, 1.245e-05
+  dgfsresidualstd :  5.249e-01, 1.208e-05
+  dgfsresidualstd :  5.399e-01, 1.172e-05
+  dgfsresidualstd :  5.549e-01, 1.139e-05
+  dgfsresidualstd :  5.699e-01, 1.112e-05
+  dgfsresidualstd :  5.849e-01, 1.095e-05
+  dgfsresidualstd :  5.999e-01, 1.086e-05
+  dgfsresidualstd :  6.149e-01, 1.082e-05
+  dgfsresidualstd :  6.299e-01, 1.073e-05
+  dgfsresidualstd :  6.449e-01, 1.054e-05
+  dgfsresidualstd :  6.599e-01, 1.022e-05
+  dgfsresidualstd :  6.749e-01, 9.796e-06
+  dgfsresidualstd :  6.899e-01, 9.336e-06
+  dgfsresidualstd :  7.049e-01, 8.912e-06
+  dgfsresidualstd :  7.199e-01, 8.579e-06
+  dgfsresidualstd :  7.349e-01, 8.347e-06
+  dgfsresidualstd :  7.499e-01, 8.190e-06
+  dgfsresidualstd :  7.649e-01, 8.065e-06
+  dgfsresidualstd :  7.799e-01, 7.939e-06
+  dgfsresidualstd :  7.949e-01, 7.797e-06
+  dgfsresidualstd :  8.099e-01, 7.643e-06
+  dgfsresidualstd :  8.249e-01, 7.488e-06
+  dgfsresidualstd :  8.399e-01, 7.340e-06
+  dgfsresidualstd :  8.549e-01, 7.199e-06
+  dgfsresidualstd :  8.699e-01, 7.060e-06
+  dgfsresidualstd :  8.849e-01, 6.912e-06
+  dgfsresidualstd :  8.999e-01, 6.749e-06
+  dgfsresidualstd :  9.149e-01, 6.571e-06
+  dgfsresidualstd :  9.299e-01, 6.387e-06
+  dgfsresidualstd :  9.449e-01, 6.208e-06
+  dgfsresidualstd :  9.599e-01, 6.046e-06
+  dgfsresidualstd :  9.749e-01, 5.908e-06
+  dgfsresidualstd :  9.899e-01, 5.794e-06
+  dgfsresidualstd :  1.005e+00, 5.699e-06
+  dgfsresidualstd :  1.020e+00, 5.613e-06
+  dgfsresidualstd :  1.035e+00, 5.529e-06
+  dgfsresidualstd :  1.050e+00, 5.440e-06
+  dgfsresidualstd :  1.065e+00, 5.344e-06
+  dgfsresidualstd :  1.080e+00, 5.240e-06
+  dgfsresidualstd :  1.095e+00, 5.130e-06
+  dgfsresidualstd :  1.110e+00, 5.016e-06
+  dgfsresidualstd :  1.125e+00, 4.901e-06
+  dgfsresidualstd :  1.140e+00, 4.788e-06
+  dgfsresidualstd :  1.155e+00, 4.680e-06
+  dgfsresidualstd :  1.170e+00, 4.580e-06
+  dgfsresidualstd :  1.185e+00, 4.487e-06
+  dgfsresidualstd :  1.200e+00, 4.403e-06
+  dgfsresidualstd :  1.215e+00, 4.326e-06
+  dgfsresidualstd :  1.230e+00, 4.254e-06
+  dgfsresidualstd :  1.245e+00, 4.185e-06
+  dgfsresidualstd :  1.260e+00, 4.117e-06
+  dgfsresidualstd :  1.275e+00, 4.047e-06
+  dgfsresidualstd :  1.290e+00, 3.974e-06
+  dgfsresidualstd :  1.305e+00, 3.898e-06
+  dgfsresidualstd :  1.320e+00, 3.819e-06
+  dgfsresidualstd :  1.335e+00, 3.738e-06
+  dgfsresidualstd :  1.350e+00, 3.656e-06
+  dgfsresidualstd :  1.365e+00, 3.576e-06
+  dgfsresidualstd :  1.380e+00, 3.498e-06
+  dgfsresidualstd :  1.395e+00, 3.423e-06
+  dgfsresidualstd :  1.410e+00, 3.352e-06
+  dgfsresidualstd :  1.425e+00, 3.284e-06
+  dgfsresidualstd :  1.440e+00, 3.219e-06
+  dgfsresidualstd :  1.455e+00, 3.156e-06
+  dgfsresidualstd :  1.470e+00, 3.093e-06
+  dgfsresidualstd :  1.485e+00, 3.031e-06
+  dgfsresidualstd :  1.500e+00, 2.968e-06
+  dgfsresidualstd :  1.515e+00, 2.906e-06
+  dgfsresidualstd :  1.530e+00, 2.843e-06
+  dgfsresidualstd :  1.545e+00, 2.780e-06
+  dgfsresidualstd :  1.560e+00, 2.717e-06
+  dgfsresidualstd :  1.575e+00, 2.654e-06
+  dgfsresidualstd :  1.590e+00, 2.593e-06
+  dgfsresidualstd :  1.605e+00, 2.532e-06
+  dgfsresidualstd :  1.620e+00, 2.473e-06
+  dgfsresidualstd :  1.635e+00, 2.416e-06
+  dgfsresidualstd :  1.650e+00, 2.359e-06
+  dgfsresidualstd :  1.665e+00, 2.304e-06
+
+ Velocity mesh -----------------------------
+Nrho:  6
+velocityMesh: (-6.0 6.0)
+n0, u0: (1.678881970644135e+21 337.05486534428223)
+512 Batches of Size 64
+
+ Velocity mesh -----------------------------
+Nrho:  6
+velocityMesh: (-6.0 6.0)
+n0, u0: (1.678881970644135e+21 337.05486534428223)
+512 Batches of Size 64
+
+Reading initial condition for soln-bcs-back
+
+Reading initial condition for soln-bcs-back
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-back
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-back
+
+Reading initial condition for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-bottom
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+Finished initial condition precomputation for soln-bcs-bottom
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-front
+
+Reading initial condition for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-front
+
+Reading initial condition for soln-bcs-right
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+
+Reading initial condition for soln-bcs-left
+Finished initial condition precomputation for soln-bcs-right
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+
+Reading initial condition for soln-bcs-top
+Finished initial condition precomputation for soln-bcs-left
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324529
+x-velocity: 50.0 49.99999999999989
+y-velocity: 0.0 2.3961397335878567e-16
+z-velocity: 0.0 7.893409332666526e-15
+temperature: 273.0 272.99999999999966
+Finished initial condition precomputation for soln-bcs-top
+
+Reading initial condition for soln-bcs-top
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324529
+x-velocity: 50.0 49.99999999999989
+y-velocity: 0.0 2.3961397335878567e-16
+z-velocity: 0.0 7.893409332666526e-15
+temperature: 273.0 272.99999999999966
+Finished initial condition precomputation for soln-bcs-top
+Jac (min: 0.0002441406249978994, max: 0.0002441406250020694)
+Jac (min: 0.00024414062499763267, max: 0.00024414062500263553)
+Finished initializing the BaseSystem
+
+ Scattering model -----------------------------
+Kn: 0.7709795421290124
+prefactor: 0.09978121320331508
+Finished initializing the BaseSystem
+Time-step for unit CFL: [0.00086806]
+The actual time-step will depend on DG order CFL
+
+ Scattering model -----------------------------
+Kn: 0.7709795421290124
+prefactor: 0.09978121320331508
+Finished scattering model precomputation
+Finished scattering model precomputation
+  dgfsresidualstd :  2.515e+00, 5.265e-07
+  dgfsresidualstd :  2.530e+00, 5.129e-07
+  dgfsresidualstd :  2.545e+00, 4.997e-07
+  dgfsresidualstd :  2.560e+00, 4.868e-07
+  dgfsresidualstd :  2.575e+00, 4.743e-07
+  dgfsresidualstd :  2.590e+00, 4.622e-07
+  dgfsresidualstd :  2.605e+00, 4.504e-07
+  dgfsresidualstd :  2.620e+00, 4.389e-07
+  dgfsresidualstd :  2.635e+00, 4.278e-07
+  dgfsresidualstd :  2.650e+00, 4.169e-07
+  dgfsresidualstd :  2.665e+00, 4.064e-07
+  dgfsresidualstd :  2.680e+00, 3.962e-07
+  dgfsresidualstd :  2.695e+00, 3.863e-07
+  dgfsresidualstd :  2.710e+00, 3.767e-07
+  dgfsresidualstd :  2.725e+00, 3.673e-07
+  dgfsresidualstd :  2.740e+00, 3.583e-07
+  dgfsresidualstd :  2.755e+00, 3.495e-07
+  dgfsresidualstd :  2.770e+00, 3.410e-07
+  dgfsresidualstd :  2.785e+00, 3.327e-07
+  dgfsresidualstd :  2.800e+00, 3.247e-07
+  dgfsresidualstd :  2.815e+00, 3.170e-07
+  dgfsresidualstd :  2.830e+00, 3.094e-07
+  dgfsresidualstd :  2.845e+00, 3.022e-07
+  dgfsresidualstd :  2.860e+00, 2.951e-07
+  dgfsresidualstd :  2.875e+00, 2.882e-07
+  dgfsresidualstd :  2.890e+00, 2.816e-07
+  dgfsresidualstd :  2.905e+00, 2.751e-07
+  dgfsresidualstd :  2.920e+00, 2.689e-07
+  dgfsresidualstd :  2.935e+00, 2.628e-07
+  dgfsresidualstd :  2.950e+00, 2.569e-07
+  dgfsresidualstd :  2.965e+00, 2.511e-07
+  dgfsresidualstd :  2.980e+00, 2.455e-07
+  dgfsresidualstd :  2.995e+00, 2.401e-07
+  dgfsresidualstd :  3.010e+00, 2.349e-07
+  dgfsresidualstd :  3.025e+00, 2.297e-07
+  dgfsresidualstd :  3.040e+00, 2.247e-07
+  dgfsresidualstd :  3.055e+00, 2.198e-07
+  dgfsresidualstd :  3.070e+00, 2.150e-07
+  dgfsresidualstd :  3.085e+00, 2.104e-07
+  dgfsresidualstd :  3.100e+00, 2.058e-07
+  dgfsresidualstd :  3.115e+00, 2.014e-07
+  dgfsresidualstd :  3.130e+00, 1.971e-07
+  dgfsresidualstd :  3.145e+00, 1.928e-07
+  dgfsresidualstd :  3.160e+00, 1.887e-07
+  dgfsresidualstd :  3.175e+00, 1.846e-07
+  dgfsresidualstd :  3.190e+00, 1.807e-07
+  dgfsresidualstd :  3.205e+00, 1.768e-07
+  dgfsresidualstd :  3.220e+00, 1.730e-07
+  dgfsresidualstd :  3.235e+00, 1.693e-07
+  dgfsresidualstd :  3.250e+00, 1.656e-07
+  dgfsresidualstd :  3.265e+00, 1.621e-07
+  dgfsresidualstd :  3.280e+00, 1.586e-07
+  dgfsresidualstd :  3.295e+00, 1.552e-07
+  dgfsresidualstd :  3.310e+00, 1.519e-07
+  dgfsresidualstd :  3.325e+00, 1.486e-07
+  dgfsresidualstd :  3.340e+00, 1.454e-07
+  dgfsresidualstd :  3.355e+00, 1.423e-07
+  dgfsresidualstd :  3.370e+00, 1.392e-07
+  dgfsresidualstd :  3.385e+00, 1.363e-07
+  dgfsresidualstd :  3.400e+00, 1.334e-07
+  dgfsresidualstd :  3.415e+00, 1.305e-07
+  dgfsresidualstd :  3.430e+00, 1.277e-07
+  dgfsresidualstd :  3.445e+00, 1.250e-07
+  dgfsresidualstd :  3.460e+00, 1.223e-07
+  dgfsresidualstd :  3.475e+00, 1.197e-07
+  dgfsresidualstd :  3.490e+00, 1.172e-07
+  dgfsresidualstd :  3.505e+00, 1.147e-07
+  dgfsresidualstd :  3.520e+00, 1.122e-07
+  dgfsresidualstd :  3.535e+00, 1.098e-07
+  dgfsresidualstd :  3.550e+00, 1.075e-07
+  dgfsresidualstd :  3.565e+00, 1.052e-07
+  dgfsresidualstd :  3.580e+00, 1.029e-07
+  dgfsresidualstd :  3.595e+00, 1.007e-07
+  dgfsresidualstd :  3.610e+00, 9.856e-08
+  dgfsresidualstd :  3.625e+00, 9.644e-08
+  dgfsresidualstd :  3.640e+00, 9.436e-08
+  dgfsresidualstd :  3.655e+00, 9.233e-08
+  dgfsresidualstd :  3.670e+00, 9.033e-08
+  dgfsresidualstd :  3.685e+00, 8.838e-08
+  dgfsresidualstd :  3.700e+00, 8.646e-08
+  dgfsresidualstd :  3.715e+00, 8.458e-08
+  dgfsresidualstd :  3.730e+00, 8.274e-08
+  dgfsresidualstd :  3.745e+00, 8.094e-08
+  dgfsresidualstd :  3.760e+00, 7.917e-08
+  dgfsresidualstd :  3.775e+00, 7.744e-08
+  dgfsresidualstd :  3.790e+00, 7.575e-08
+  dgfsresidualstd :  3.805e+00, 7.408e-08
+  dgfsresidualstd :  3.820e+00, 7.245e-08
+  dgfsresidualstd :  3.835e+00, 7.086e-08
+  dgfsresidualstd :  3.850e+00, 6.929e-08
+  dgfsresidualstd :  3.865e+00, 6.776e-08
+  dgfsresidualstd :  3.880e+00, 6.626e-08
+  dgfsresidualstd :  3.895e+00, 6.479e-08
+  dgfsresidualstd :  3.910e+00, 6.335e-08
+  dgfsresidualstd :  3.925e+00, 6.194e-08
+  dgfsresidualstd :  3.940e+00, 6.055e-08
+  dgfsresidualstd :  3.955e+00, 5.920e-08
+  dgfsresidualstd :  3.970e+00, 5.788e-08
+  dgfsresidualstd :  3.985e+00, 5.658e-08
+  dgfsresidualstd :  4.000e+00, 5.531e-08
+  dgfsresidualstd :  4.015e+00, 5.407e-08
+  dgfsresidualstd :  4.030e+00, 5.285e-08
+  dgfsresidualstd :  4.045e+00, 5.165e-08
+  dgfsresidualstd :  4.060e+00, 5.048e-08
+  dgfsresidualstd :  4.075e+00, 4.933e-08
+  dgfsresidualstd :  4.090e+00, 4.821e-08
+  dgfsresidualstd :  4.105e+00, 4.711e-08
+  dgfsresidualstd :  4.120e+00, 4.603e-08
+  dgfsresidualstd :  4.135e+00, 4.497e-08
+  dgfsresidualstd :  4.150e+00, 4.394e-08
+
+ Velocity mesh -----------------------------
+
+ Velocity mesh -----------------------------Nrho:  6
+velocityMesh: (-6.0 6.0)
+n0, u0: (1.678881970644135e+21 337.05486534428223)
+512 Batches of Size 64
+
+Nrho:  6
+velocityMesh: (-6.0 6.0)
+n0, u0: (1.678881970644135e+21 337.05486534428223)
+512 Batches of Size 64
+
+Reading initial condition for soln-bcs-back
+
+Reading initial condition for soln-bcs-back
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-back
+Finished initial condition precomputation for soln-bcs-back
+
+Reading initial condition for
+Reading initial condition for soln-bcs-bottom
+ soln-bcs-bottom
+bulk-property: input calculated
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-bottom
+Finished initial condition precomputation for soln-bcs-bottom
+
+Reading initial condition for soln-bcs-front
+
+Reading initial condition for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-front
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-front
+
+Reading initial condition for soln-bcs-left
+
+Reading initial condition for soln-bcs-right
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-left
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324532
+x-velocity: 0.0 2.263895914033831e-16
+y-velocity: 0.0 -1.7524802135853012e-15
+z-velocity: 0.0 0.0
+temperature: 273.0 272.9999999999997
+Finished initial condition precomputation for soln-bcs-right
+
+Reading initial condition for soln-bcs-top
+
+Reading initial condition for soln-bcs-top
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324529
+x-velocity: 50.0 49.99999999999989
+y-velocity: 0.0 2.3961397335878567e-16
+z-velocity: 0.0 7.893409332666526e-15
+temperature: 273.0 272.99999999999966
+Finished initial condition precomputation for soln-bcs-top
+bulk-property: input calculated
+mass-density: 0.00011140244750324529 0.00011140244750324529
+x-velocity: 50.0 49.99999999999989
+y-velocity: 0.0 2.3961397335878567e-16
+z-velocity: 0.0 7.893409332666526e-15
+temperature: 273.0 272.99999999999966
+Finished initial condition precomputation for soln-bcs-top
+Jac (min: 0.0002441406249978994, max: 0.0002441406250020694)
+Jac (min: 0.00024414062499763267, max: 0.00024414062500263553)
+Finished initializing the BaseSystem
+
+ Scattering model -----------------------------
+Kn: 0.7709795421290124
+prefactor: 0.09978121320331508
+Finished initializing the BaseSystem
+Time-step for unit CFL: [0.00086806]
+The actual time-step will depend on DG order CFL
+
+ Scattering model -----------------------------
+Kn: 0.7709795421290124
+prefactor: 0.09978121320331508
+Finished scattering model precomputation
+Finished scattering model precomputation
+  dgfsresidualstd :  4.015e+00, 5.404e-08
+  dgfsresidualstd :  4.030e+00, 5.282e-08
+  dgfsresidualstd :  4.045e+00, 5.163e-08
+  dgfsresidualstd :  4.060e+00, 5.046e-08
+  dgfsresidualstd :  4.075e+00, 4.931e-08
+  dgfsresidualstd :  4.090e+00, 4.819e-08
+  dgfsresidualstd :  4.105e+00, 4.709e-08
+  dgfsresidualstd :  4.120e+00, 4.601e-08
+  dgfsresidualstd :  4.135e+00, 4.495e-08
+  dgfsresidualstd :  4.150e+00, 4.392e-08
+  dgfsresidualstd :  4.165e+00, 4.290e-08
+  dgfsresidualstd :  4.180e+00, 4.191e-08
+  dgfsresidualstd :  4.195e+00, 4.094e-08
+  dgfsresidualstd :  4.210e+00, 3.999e-08
+  dgfsresidualstd :  4.225e+00, 3.905e-08
+  dgfsresidualstd :  4.240e+00, 3.814e-08
+  dgfsresidualstd :  4.255e+00, 3.725e-08
+  dgfsresidualstd :  4.270e+00, 3.637e-08
+  dgfsresidualstd :  4.285e+00, 3.552e-08
+  dgfsresidualstd :  4.300e+00, 3.468e-08
+  dgfsresidualstd :  4.315e+00, 3.386e-08
+  dgfsresidualstd :  4.330e+00, 3.306e-08
+  dgfsresidualstd :  4.345e+00, 3.228e-08
+  dgfsresidualstd :  4.360e+00, 3.151e-08
+  dgfsresidualstd :  4.375e+00, 3.077e-08
+  dgfsresidualstd :  4.390e+00, 3.004e-08
+  dgfsresidualstd :  4.405e+00, 2.933e-08
+  dgfsresidualstd :  4.420e+00, 2.863e-08
+  dgfsresidualstd :  4.435e+00, 2.796e-08
+  dgfsresidualstd :  4.450e+00, 2.729e-08
+  dgfsresidualstd :  4.465e+00, 2.665e-08
+  dgfsresidualstd :  4.480e+00, 2.602e-08
+  dgfsresidualstd :  4.495e+00, 2.540e-08
+  dgfsresidualstd :  4.510e+00, 2.481e-08
+  dgfsresidualstd :  4.525e+00, 2.422e-08
+  dgfsresidualstd :  4.540e+00, 2.365e-08
+  dgfsresidualstd :  4.555e+00, 2.310e-08
+  dgfsresidualstd :  4.570e+00, 2.255e-08
+  dgfsresidualstd :  4.585e+00, 2.202e-08
+  dgfsresidualstd :  4.600e+00, 2.150e-08
+  dgfsresidualstd :  4.615e+00, 2.100e-08
+  dgfsresidualstd :  4.630e+00, 2.051e-08
+  dgfsresidualstd :  4.645e+00, 2.002e-08
+  dgfsresidualstd :  4.660e+00, 1.956e-08
+  dgfsresidualstd :  4.675e+00, 1.910e-08
+  dgfsresidualstd :  4.690e+00, 1.865e-08
+  dgfsresidualstd :  4.705e+00, 1.821e-08
+  dgfsresidualstd :  4.720e+00, 1.779e-08
+  dgfsresidualstd :  4.735e+00, 1.737e-08
+  dgfsresidualstd :  4.750e+00, 1.697e-08
+  dgfsresidualstd :  4.765e+00, 1.657e-08
+  dgfsresidualstd :  4.780e+00, 1.619e-08
+  dgfsresidualstd :  4.795e+00, 1.581e-08
+  dgfsresidualstd :  4.810e+00, 1.544e-08
+  dgfsresidualstd :  4.825e+00, 1.509e-08
+  dgfsresidualstd :  4.840e+00, 1.474e-08
+  dgfsresidualstd :  4.855e+00, 1.440e-08
+  dgfsresidualstd :  4.870e+00, 1.407e-08
+  dgfsresidualstd :  4.885e+00, 1.375e-08
+  dgfsresidualstd :  4.900e+00, 1.344e-08
+  dgfsresidualstd :  4.915e+00, 1.313e-08
+  dgfsresidualstd :  4.930e+00, 1.284e-08
+  dgfsresidualstd :  4.945e+00, 1.255e-08
+  dgfsresidualstd :  4.960e+00, 1.227e-08
+  dgfsresidualstd :  4.975e+00, 1.200e-08
+  dgfsresidualstd :  4.990e+00, 1.174e-08
+  dgfsresidualstd :  5.005e+00, 1.149e-08
+  dgfsresidualstd :  5.020e+00, 1.124e-08
+  dgfsresidualstd :  5.035e+00, 1.100e-08
+  dgfsresidualstd :  5.050e+00, 1.076e-08
+  dgfsresidualstd :  5.065e+00, 1.054e-08
+  dgfsresidualstd :  5.080e+00, 1.032e-08
+  dgfsresidualstd :  5.095e+00, 1.011e-08
+  dgfsresidualstd :  5.110e+00, 9.903e-09
+  dgfsresidualstd :  5.125e+00, 9.704e-09
+  dgfsresidualstd :  5.140e+00, 9.511e-09
+  dgfsresidualstd :  5.155e+00, 9.324e-09
+  dgfsresidualstd :  5.170e+00, 9.144e-09
+  dgfsresidualstd :  5.185e+00, 8.969e-09
+  dgfsresidualstd :  5.200e+00, 8.800e-09
+  dgfsresidualstd :  5.215e+00, 8.636e-09
+  dgfsresidualstd :  5.230e+00, 8.478e-09
+  dgfsresidualstd :  5.245e+00, 8.325e-09
+  dgfsresidualstd :  5.260e+00, 8.177e-09
+  dgfsresidualstd :  5.275e+00, 8.035e-09
+  dgfsresidualstd :  5.290e+00, 7.896e-09
+  dgfsresidualstd :  5.305e+00, 7.763e-09
+  dgfsresidualstd :  5.320e+00, 7.634e-09
+  dgfsresidualstd :  5.335e+00, 7.510e-09
+  dgfsresidualstd :  5.350e+00, 7.389e-09
+  dgfsresidualstd :  5.365e+00, 7.273e-09
+  dgfsresidualstd :  5.380e+00, 7.162e-09
+  dgfsresidualstd :  5.395e+00, 7.054e-09
+  dgfsresidualstd :  5.410e+00, 6.949e-09
+  dgfsresidualstd :  5.425e+00, 6.849e-09
+  dgfsresidualstd :  5.440e+00, 6.752e-09
+  dgfsresidualstd :  5.455e+00, 6.659e-09
+  dgfsresidualstd :  5.470e+00, 6.569e-09
+  dgfsresidualstd :  5.485e+00, 6.482e-09
+  dgfsresidualstd :  5.500e+00, 6.399e-09
+  dgfsresidualstd :  5.515e+00, 6.319e-09
+  dgfsresidualstd :  5.530e+00, 6.242e-09
+  dgfsresidualstd :  5.545e+00, 6.167e-09
+  dgfsresidualstd :  5.560e+00, 6.096e-09
+  dgfsresidualstd :  5.575e+00, 6.027e-09
+  dgfsresidualstd :  5.590e+00, 5.961e-09
+  dgfsresidualstd :  5.605e+00, 5.897e-09
+  dgfsresidualstd :  5.620e+00, 5.836e-09
+  dgfsresidualstd :  5.635e+00, 5.778e-09
+  dgfsresidualstd :  5.650e+00, 5.722e-09
+  dgfsresidualstd :  5.665e+00, 5.668e-09
+  dgfsresidualstd :  5.680e+00, 5.616e-09
+  dgfsresidualstd :  5.695e+00, 5.566e-09
+  dgfsresidualstd :  5.710e+00, 5.519e-09
+  dgfsresidualstd :  5.725e+00, 5.473e-09
+  dgfsresidualstd :  5.740e+00, 5.429e-09
+  dgfsresidualstd :  5.755e+00, 5.388e-09
+  dgfsresidualstd :  5.770e+00, 5.348e-09
+  dgfsresidualstd :  5.785e+00, 5.309e-09
+  dgfsresidualstd :  5.800e+00, 5.273e-09
+  dgfsresidualstd :  5.815e+00, 5.238e-09
+  dgfsresidualstd :  5.830e+00, 5.204e-09
+  dgfsresidualstd :  5.845e+00, 5.172e-09
+  dgfsresidualstd :  5.860e+00, 5.142e-09
+  dgfsresidualstd :  5.875e+00, 5.112e-09
+  dgfsresidualstd :  5.890e+00, 5.085e-09
+  dgfsresidualstd :  5.905e+00, 5.058e-09
+  dgfsresidualstd :  5.920e+00, 5.033e-09
+  dgfsresidualstd :  5.935e+00, 5.008e-09
+  dgfsresidualstd :  5.950e+00, 4.985e-09
+  dgfsresidualstd :  5.965e+00, 4.963e-09
+  dgfsresidualstd :  5.980e+00, 4.942e-09
+  dgfsresidualstd :  5.995e+00, 4.923e-09
+  dgfsresidualstd :  6.010e+00, 4.904e-09
+  dgfsresidualstd :  6.025e+00, 4.886e-09
+  dgfsresidualstd :  6.040e+00, 4.868e-09
+  dgfsresidualstd :  6.055e+00, 4.852e-09
+  dgfsresidualstd :  6.070e+00, 4.837e-09
+  dgfsresidualstd :  6.085e+00, 4.822e-09
+  dgfsresidualstd :  6.100e+00, 4.808e-09
+  dgfsresidualstd :  6.115e+00, 4.794e-09
+  dgfsresidualstd :  6.130e+00, 4.782e-09
+  dgfsresidualstd :  6.145e+00, 4.770e-09
+  dgfsresidualstd :  6.160e+00, 4.758e-09
+  dgfsresidualstd :  6.175e+00, 4.747e-09
+  dgfsresidualstd :  6.190e+00, 4.737e-09
+  dgfsresidualstd :  6.205e+00, 4.727e-09
+  dgfsresidualstd :  6.220e+00, 4.718e-09
+  dgfsresidualstd :  6.235e+00, 4.709e-09
+  dgfsresidualstd :  6.250e+00, 4.701e-09
+  dgfsresidualstd :  6.265e+00, 4.693e-09
+  dgfsresidualstd :  6.280e+00, 4.685e-09
+  dgfsresidualstd :  6.295e+00, 4.678e-09
+  dgfsresidualstd :  6.310e+00, 4.672e-09
+  dgfsresidualstd :  6.325e+00, 4.665e-09
+  dgfsresidualstd :  6.340e+00, 4.659e-09
+  dgfsresidualstd :  6.355e+00, 4.653e-09
+  dgfsresidualstd :  6.370e+00, 4.648e-09
+  dgfsresidualstd :  6.385e+00, 4.643e-09
+  dgfsresidualstd :  6.400e+00, 4.638e-09
+  dgfsresidualstd :  6.415e+00, 4.633e-09
+  dgfsresidualstd :  6.430e+00, 4.629e-09
+  dgfsresidualstd :  6.445e+00, 4.624e-09
+  dgfsresidualstd :  6.460e+00, 4.620e-09
+  dgfsresidualstd :  6.475e+00, 4.617e-09
+  dgfsresidualstd :  6.490e+00, 4.613e-09
+  dgfsresidualstd :  6.504e+00, 4.610e-09

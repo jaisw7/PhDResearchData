@@ -12,17 +12,18 @@ The Intellectual property (IP) rights of several _public_ universities prohibit 
 
 The research data contained in this repository is arranged by section number as per [PhD thesis](PhDThesis.pdf). Each section number is assigned a folder. The sub-section data is contained in the corresponding sub-folders.
 
-- Section 4.1: Multi-species Krook-Wu solution
-- Section 4.2: Multi-species Couette flow
-- Section 4.3: Multi-species Fourier heat transfer
-- Section 4.4: Multi-species oscillatory Couette flow
-- Section 4.5: Multi-species normal shock
-- Section 4.6: Multi-species self-diffusion
-- Section 4.7: Multi-species mass-diffusion
-- Section 4.8: Single-species spatial and temporal accuracy test for a range of Knudsen numbers
-- Section 4.9: Single-species Couette flow for a range of Knudsen numbers
-- Section 4.10: Single-species Sod shock tube problem
-- Section 4.11: Single-species flow around a micro-electronic chip
-- Section 4.12: Single-species flow in short micro-channels
-- Section 5.2: Single-species flow in Micro In-Plane Knudsen Radiometric Actuator (MIKRA)
-- Section 5.3: Multi-species flow in MIKRA
+- Section 4.1: 1D/3V Multi-species Krook-Wu solution
+- Section 4.2: 1D/3V Multi-species Couette flow
+- Section 4.3: 1D/3V Multi-species Fourier heat transfer
+- Section 4.4: 1D/3V Multi-species oscillatory Couette flow
+- Section 4.5: 1D/3V Multi-species normal shock
+- Section 4.6: 1D/3V Multi-species self-diffusion
+- Section 4.7: 1D/3V Multi-species mass-diffusion
+- Section 4.8: 1D/3V Single-species spatial and temporal accuracy test for a range of Knudsen numbers
+- Section 4.9: 1D/3V Single-species Couette flow for a range of Knudsen numbers
+- Section 4.10: 1D/3V Single-species Sod shock tube problem
+- Section 4.11: 2D/3V Single-species flow around a micro-electronic chip
+- Section 4.12: 2D/3V Single-species flow in short micro-channels
+- Section 4.12: 3D/3V Single-species Lid-driven cavity flow
+- Section 5.2: 2D/3V Single-species flow in Micro In-Plane Knudsen Radiometric Actuator (MIKRA)
+- Section 5.3: 2D/3V Multi-species flow in MIKRA
