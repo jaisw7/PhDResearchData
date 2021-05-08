@@ -1,0 +1,57 @@
+# script for generating plots over line
+
+set ylabel color 'black'
+set yticks color 'black'
+
+
+set out 'IMEX-BGK_T.ps'
+set xlabel 'x (mm)'
+set ylabel 'T (K)'
+set key at 75,40
+set yrange [260:350]
+set xrange [0:1]
+set yticks spacing 10
+plot 'Kn=0.037/dsmc_Kn0.037.dat' u ($2/1e-3):9 w l lw 0.3 lc 'blue' dt 'Solid' title 'Kn=3.7e-2', \
+     'Kn=0.037/dgfs_bgk.txt' using ($1/1e-3):($5) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'blue' title '', \
+     'Kn=0.00037/dsmc_Kn0.00037.dat' u ($2/1e-3):9 w l lw 0.3 lc 'red' dt 'Solid' title 'Kn=3.7e-4', \
+     'Kn=0.00037/dgfs_bgk.txt' using ($1/1e-3):($5) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'red' title '', \
+     'Kn=0.0000037/navierStokes_Kn0.0000037.dat' u ($1/1e-3):2 w l lw 0.3 lc 'green' dt 'Solid' title 'Kn=3.7e-6', \
+     'Kn=0.0000037/dgfs_bgk.txt' using ($1/1e-3):($5) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'green' title ''
+set label 'IMEX-BDF BDF-1 BGK' at 0.1,345 font 'Helvetica,18'
+set out
+unset label 1
+
+set out 'IMEX-ESBGK_T.ps'
+set xlabel 'x (mm)'
+set ylabel 'T (K)'
+set key at 75,40
+set yrange [260:350]
+set xrange [0:1]
+set yticks spacing 10
+plot 'Kn=0.037/dsmc_Kn0.037.dat' u ($2/1e-3):9 w l lw 0.3 lc 'blue' dt 'Solid' title 'Kn=3.7e-2', \
+     'Kn=0.037/dgfs_esbgk.txt' using ($1/1e-3):($5) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'blue' title '', \
+     'Kn=0.00037/dsmc_Kn0.00037.dat' u ($2/1e-3):9 w l lw 0.3 lc 'red' dt 'Solid' title 'Kn=3.7e-4', \
+     'Kn=0.00037/dgfs_esbgk.txt' using ($1/1e-3):($5) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'red' title '', \
+     'Kn=0.0000037/navierStokes_Kn0.0000037.dat' u ($1/1e-3):2 w l lw 0.3 lc 'green' dt 'Solid' title 'Kn=3.7e-6', \
+     'Kn=0.0000037/dgfs_esbgk.txt' using ($1/1e-3):($5) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'green' title ''
+set label 'IMEX-BDF BDF-1 ESBGK' at 0.1,345 font 'Helvetica,18'
+set out
+unset label 1
+
+set out 'IMEX-Shakov_T.ps'
+set xlabel 'x (mm)'
+set ylabel 'T (K)'
+set key at 75,40
+set yrange [260:350]
+set xrange [0:1]
+set yticks spacing 10
+plot 'Kn=0.037/dsmc_Kn0.037.dat' u ($2/1e-3):9 w l lw 0.3 lc 'blue' dt 'Solid' title 'Kn=3.7e-2', \
+     'Kn=0.037/dgfs_shakov.txt' using ($1/1e-3):($5) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'blue' title '', \
+     'Kn=0.00037/dsmc_Kn0.00037.dat' u ($2/1e-3):9 w l lw 0.3 lc 'red' dt 'Solid' title 'Kn=3.7e-4', \
+     'Kn=0.00037/dgfs_shakov.txt' using ($1/1e-3):($5) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'red' title '', \
+     'Kn=0.0000037/navierStokes_Kn0.0000037.dat' u ($1/1e-3):2 w l lw 0.3 lc 'green' dt 'Solid' title 'Kn=3.7e-6', \
+     'Kn=0.0000037/dgfs_shakov.txt' using ($1/1e-3):($5) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'green' title ''
+set label 'IMEX-BDF BDF-1 Shakov' at 0.1,345 font 'Helvetica,18'
+set out
+unset label 1
+

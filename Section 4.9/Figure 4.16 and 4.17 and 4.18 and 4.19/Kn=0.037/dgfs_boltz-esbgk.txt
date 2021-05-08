@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------
+[[58779,1],0]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: deepspeed2
+
+Another transport will be used instead, although this may result in
+lower performance.
+--------------------------------------------------------------------------
+Local rank 0
+Elements per proc 2
+Nrho:  6
+velocityMesh: (-5.0 5.0)
+n0, u0: (3.466197214714714e+22 337.05486534428223)
+Kn: 0.037343046942653654
+prefactor: 2.0600695542253606
+prefactorBGK: 18.309546298815523
+prefactorESBGK: 12.206364199210345
+Finished scattering model precomputation
+bulk-property: input calculated
+mass-density: 0.0023 0.0022999999988014223
+x-velocity: 0.0 1.274953812364893e-14
+y-velocity: -249.99999999999997 -249.99999921633028
+z-velocity: 0.0 1.4923871609242873e-14
+temperature: 273.0 272.9999981455923
+Finished initial condition precomputation for soln-bcs-xlo
+bulk-property: input calculated
+mass-density: 0.0023 0.0022999999988014223
+x-velocity: 0.0 2.224626136388071e-14
+y-velocity: 249.99999999999997 249.99999921633034
+z-velocity: 0.0 1.4564367733429618e-14
+temperature: 273.0 272.9999981455924
+Finished initial condition precomputation for soln-bcs-xhi
+bulk-property: input calculated
+mass-density: 0.0023 0.00229999999999457
+x-velocity: 0.0 2.1767343634186897e-14
+y-velocity: 0.0 1.6579453566885737e-14
+z-velocity: 0.0 1.441712402591972e-14
+temperature: 273.0 272.9999999885357
+Finished initial condition precomputation for soln-ics
+residual at t =  0.01 0.014977049847297967
+residual at t =  9.999999999999831 1.0719955727594382e-05
+residual at t =  20.000000000000327 9.742689896224195e-07
+residual at t =  30.00000000000189 1.0051138355427004e-06
+Nsteps 3000 , elapsed time 22.31831896584481 s
