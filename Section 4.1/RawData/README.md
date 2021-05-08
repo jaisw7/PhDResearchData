@@ -1,7 +1,7 @@
 This folder contains a self contained Python script to run multi-species BKW solution on GPUs.
 
 This is a Python-3 script that you can run by typing 
-> python bkwbi_vss_cufft 1.0 16 6 4 gj 4.0 64
+> python bkwbi_vss_cufft.py 1.0 16 6 4 gj 4.0 64
 
 The script needs seven inputs:
 - mr mass ratio of the two species
