@@ -24,6 +24,6 @@ The research data contained in this repository is arranged by section number as 
 - Section 4.10: 1D/3V Single-species Sod shock tube problem
 - Section 4.11: 2D/3V Single-species flow around a micro-electronic chip
 - Section 4.12: 2D/3V Single-species flow in short micro-channels
-- Section 4.12: 3D/3V Single-species Lid-driven cavity flow
+- Section 4.13: 3D/3V Single-species Lid-driven cavity flow
 - Section 5.2: 2D/3V Single-species flow in Micro In-Plane Knudsen Radiometric Actuator (MIKRA)
 - Section 5.3: 2D/3V Multi-species flow in MIKRA
