@@ -1,0 +1,93 @@
+# script for generating plots over line
+
+keyword molarMass=39.96e-3
+keyword NA=6.0221409e+23
+keyword kB=1.38064852e-23
+keyword m=molarMass/NA
+keyword H0=1e-3
+keyword pm={'X':1, 'Y':2, 'Z':3, 'rho':4, 'Ux':5, 'Uy':6, 'Uz':7, 'T':8, 'Qx':9, 'Qy': 10, 'Qz': 11, 'Pxx':12, 'Pxy':13, 'Pxz':14, 'Pyy':15, 'Pyz':16, 'Pzz':17, 'P':18, 'Xmm':19, 'Ymm':20, 'Zmm':21, 's':22}   
+keyword sm={'X':1, 'Y':2, 'Z':3, 'id':4, 'xlo':5, 'ylo':6, 'xhi':7, 'yhi':8, 'n':9, 'nden':10, 'rho':11, 'Ux':12, 'Uy':13, 'T':14, 'P':15, 'Pxy':16, 'Pyz':17, 'Pxz':18, 'Pxx':19, 'Pyy':20, 'Pzz':21, 'Qx': 22, 'Qy':23, 'Qz':24, 'Xmm':25, 'Ymm':26, 'Zmm':27, 's': 28}
+
+set out 'Pxx_diag.ps'
+set xlabel 'Arc length (mm)'
+set ylabel 'P<sub>xx</sub> (N/m<sup>2</sup>)'
+set key at 90,90
+set yrange [60:80]
+set xrange [0:1e-3]
+set yticks spacing 5
+plot 's8v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxx'] w l pt 'circle' sf 'no' st 0.3 lw 0.3 lc 'black' dt 'Solid' title '8<sup>3</sup>, 24<sup>3</sup>', \
+     's8v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxx'] w l pt 'square' lw 0.3 lc 'blue' dt 'Dashed' title '8<sup>3</sup>, 32<sup>3</sup>', \
+     's4v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxx'] w l pt 'grad' lw 0.3 lc 'green' dt 'DashDot' title '4<sup>3</sup>, 24<sup>3</sup>', \
+     's4v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxx'] w l pt 'diamond' lw 0.3 lc 'red' dt 'DashDotDot' title '4<sup>3</sup>, 32<sup>3</sup>', \
+     'dsmc/data_line_1,1,0-0,0,1.txt' using sm['s']:sm['Pxx'] every 5 w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'black' title ''
+set out
+
+set out 'Pxy_diag.ps'
+set xlabel 'Arc length (mm)'
+set ylabel 'P<sub>xy</sub> (N/m<sup>2</sup>)'
+set key at 90,60
+set yrange [-4.0:0.4]
+set xrange [0:1e-3]
+set yticks spacing 0.4
+plot 's8v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxy'] w l pt 'circle' sf 'no' st 0.3 lw 0.3 lc 'black' dt 'Solid' title '8<sup>3</sup>, 24<sup>3</sup>', \
+     's8v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxy'] w l pt 'square' lw 0.3 lc 'blue' dt 'Dashed' title '8<sup>3</sup>, 32<sup>3</sup>', \
+     's4v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxy'] w l pt 'grad' lw 0.3 lc 'green' dt 'DashDot' title '4<sup>3</sup>, 24<sup>3</sup>', \
+     's4v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxy'] w l pt 'diamond' lw 0.3 lc 'red' dt 'DashDotDot' title '4<sup>3</sup>, 32<sup>3</sup>', \
+     'dsmc/data_line_1,1,0-0,0,1.txt' using sm['s']:sm['Pxy'] every 5 w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'black' title ''
+set out
+
+set out 'Pyy_diag.ps'
+set xlabel 'Arc length (mm)'
+set ylabel 'P<sub>yy</sub> (N/m<sup>2</sup>)'
+set key at 90,90
+set yrange [60:75]
+set xrange [0:1e-3]
+set yticks spacing 5
+plot 's8v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pyy'] w l pt 'circle' sf 'no' st 0.3 lw 0.3 lc 'black' dt 'Solid' title '8<sup>3</sup>, 24<sup>3</sup>', \
+     's8v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pyy'] w l pt 'square' lw 0.3 lc 'blue' dt 'Dashed' title '8<sup>3</sup>, 32<sup>3</sup>', \
+     's4v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pyy'] w l pt 'grad' lw 0.3 lc 'green' dt 'DashDot' title '4<sup>3</sup>, 24<sup>3</sup>', \
+     's4v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pyy'] w l pt 'diamond' lw 0.3 lc 'red' dt 'DashDotDot' title '4<sup>3</sup>, 32<sup>3</sup>', \
+     'dsmc/data_line_1,1,0-0,0,1.txt' using sm['s']:sm['Pyy'] every 5 w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'black' title ''
+set out
+
+set out 'Pxz_diag.ps'
+set xlabel 'Arc length (mm)'
+set ylabel 'P<sub>xz</sub> (N/m<sup>2</sup>)'
+set key at 90,90
+set yrange [-0.35:0.15]
+set xrange [0:1e-3]
+set yticks spacing 0.05
+plot 's8v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxz'] w l pt 'circle' sf 'no' st 0.3 lw 0.3 lc 'black' dt 'Solid' title '8<sup>3</sup>, 24<sup>3</sup>', \
+     's8v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxz'] w l pt 'square' lw 0.3 lc 'blue' dt 'Dashed' title '8<sup>3</sup>, 32<sup>3</sup>', \
+     's4v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxz'] w l pt 'grad' lw 0.3 lc 'green' dt 'DashDot' title '4<sup>3</sup>, 24<sup>3</sup>', \
+     's4v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pxz'] w l pt 'diamond' lw 0.3 lc 'red' dt 'DashDotDot' title '4<sup>3</sup>, 32<sup>3</sup>', \
+     'dsmc/data_line_1,1,0-0,0,1.txt' using sm['s']:sm['Pxz'] every 5 w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'black' title ''
+set out
+
+set out 'Pyz_diag.ps'
+set xlabel 'Arc length (mm)'
+set ylabel 'P<sub>yz</sub> (N/m<sup>2</sup>)'
+set key at 90,90
+set yrange [-0.3:0.7]
+set xrange [0:1e-3]
+set yticks spacing 0.1
+plot 's8v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pyz'] w l pt 'circle' sf 'no' st 0.3 lw 0.3 lc 'black' dt 'Solid' title '8<sup>3</sup>, 24<sup>3</sup>', \
+     's8v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pyz'] w l pt 'square' lw 0.3 lc 'blue' dt 'Dashed' title '8<sup>3</sup>, 32<sup>3</sup>', \
+     's4v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pyz'] w l pt 'grad' lw 0.3 lc 'green' dt 'DashDot' title '4<sup>3</sup>, 24<sup>3</sup>', \
+     's4v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pyz'] w l pt 'diamond' lw 0.3 lc 'red' dt 'DashDotDot' title '4<sup>3</sup>, 32<sup>3</sup>', \
+     'dsmc/data_line_1,1,0-0,0,1.txt' using sm['s']:sm['Pyz'] every 5 w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'black' title ''
+set out
+
+set out 'Pzz_diag.ps'
+set xlabel 'Arc length (mm)'
+set ylabel 'P<sub>zz</sub> (N/m<sup>2</sup>)'
+set key at 90,90
+set yrange [60:75]
+set xrange [0:1e-3]
+set yticks spacing 5
+plot 's8v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pzz'] w l pt 'circle' sf 'no' st 0.3 lw 0.3 lc 'black' dt 'Solid' title '8<sup>3</sup>, 24<sup>3</sup>', \
+     's8v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pzz'] w l pt 'square' lw 0.3 lc 'blue' dt 'Dashed' title '8<sup>3</sup>, 32<sup>3</sup>', \
+     's4v24/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pzz'] w l pt 'grad' lw 0.3 lc 'green' dt 'DashDot' title '4<sup>3</sup>, 24<sup>3</sup>', \
+     's4v32/data_line_1,1,0-0,0,1.txt' using pm['s']:pm['Pzz'] w l pt 'diamond' lw 0.3 lc 'red' dt 'DashDotDot' title '4<sup>3</sup>, 32<sup>3</sup>', \
+     'dsmc/data_line_1,1,0-0,0,1.txt' using sm['s']:sm['Pzz'] every 5 w p pt 'circle' sf 'no' st 0.3 lw 1.2 lc 'black' title ''
+set out
