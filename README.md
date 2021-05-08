@@ -27,3 +27,7 @@ The research data contained in this repository is arranged by section number as 
 - Section 4.13: 3D/3V Single-species Lid-driven cavity flow
 - Section 5.2: 2D/3V Single-species flow in Micro In-Plane Knudsen Radiometric Actuator (MIKRA)
 - Section 5.3: 2D/3V Multi-species flow in MIKRA
+
+To run 1d cases, consult: [dgfs1D_gpu](https://github.com/jaisw7/dgfs1D_gpu)
+To run 2d/3d cases, consult: [frfs](https://github.com/jaisw7/frfs)
+To run DSMC cases, consult: [sparta](https://github.com/sparta/sparta)

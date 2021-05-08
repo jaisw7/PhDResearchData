@@ -1,0 +1,107 @@
+############################# Some Comments ##################################
+
+#-- TDK chip simulations, invensense
+
+#-- /scratch/gilbreth/jaiswal0/tdk/tdk_40N2_sj
+#-- Prepared by Shashank Jaiswal (Purdue AAE)
+#-- Updated: 27 Dec 2019 (v0: 27 Dec 2019)
+
+############################# Initialization ##################################
+
+variable           sdump equal 1000
+variable           nfix equal 200000  #10*${sdump}
+variable           gdump equal 1000000 
+variable           tdump equal 5000000
+
+seed               12344
+dimension          2
+global             gridcut 0.0 comm/sort yes
+
+boundary		   rr ss p
+create_box         0 17e-6 0 43e-6 -0.5 0.5
+create_grid        17 43 1 level 2 * * * 5 5 1
+balance_grid       rcb cell
+fix                fbalance balance ${sdump} 1.1 rcb part
+
+# nden = P*NA/(Rg*T)
+# fnum = nden*volume/(Ncells*PPC)
+global             nrho 9.787801539726301e+23 fnum 1.13e8 # ~300 particles/cell
+species            air.species N2
+mixture	           gas N2 vstream 0 0 0 temp 296
+mixture	           gas N2 frac 1.0
+
+surf_collide       diffuse_ylo diffuse 295 1.0
+bound_modify	   ylo collide diffuse_ylo
+
+surf_collide       diffuse_yhi diffuse 297 1.0
+bound_modify	   yhi collide diffuse_yhi
+
+#python2 ~/sparta/sparta-27Jul17/bin/surf_create.py substrate.surf rect 0 0 30e-6 30e-6 50 50
+read_surf          substrate.surf group substrate trans -15e-6 2e-6 0 clip
+surf_collide       diffuse_substrate diffuse 296 1.0
+surf_modify	       substrate collide diffuse_substrate
+
+global             surfpush yes #yes
+
+collide	           vss gas air.vss
+create_particles   gas n 0 #4500000
+fix                mycheck grid/check ${sdump} silent #silent or warn or error
+timestep           1e-9
+
+compute            sfluxesSubstrate surf substrate gas fx fy etot
+fix                sfluxesSubstrate ave/surf all 1 ${sdump} ${sdump} c_sfluxesSubstrate[*] ave one
+compute            netfluxesSubstrate reduce sum f_sfluxesSubstrate[1] f_sfluxesSubstrate[2] f_sfluxesSubstrate[3]
+
+compute            sumKe reduce sum ke
+stats_style	       step cpu ncoll nscoll np c_sumKe &
+                   c_netfluxesSubstrate[1] c_netfluxesSubstrate[2] c_netfluxesSubstrate[3] &
+
+############################# Unsteady Regime #################################
+
+collide_modify     vremax ${sdump} yes
+
+# dump some images
+dump               dimage image all 100 prop_image_100x250_*.ppm vy type pdiam 5.e-7 &
+						   box yes 1e-2 surf one 1e-2 size 360 720 zoom 45000 # gline yes 5e-5 #grid proc
+dump_modify        dimage pad 6 scolor * black backcolor white glinecolor gray boxcolor magenta &
+                           cmap particle 0 600 cf 0 5 min blue 0.25 cyan 0.5 green 0.75 yellow max red
+
+#stats              ${sdump}
+#run                5000
+undump             dimage
+
+stats              ${sdump}
+run                ${nfix}
+
+uncompute          sfluxesSubstrate
+unfix              sfluxesSubstrate
+uncompute          netfluxesSubstrate
+
+#write_grid         parent mikra_parent.grid
+#write_grid         geom mikra_geom.grid
+
+############################## Steady Regime ##################################
+
+collide_modify     vremax ${nfix} yes
+
+compute            cgrid grid all gas n nrho massrho ke u v
+compute            cthermal thermal/grid all gas temp press
+compute            cpflux stress/grid all gas momxy momxx momyy
+compute            ceflux heatflux/grid all gas heatx heaty
+fix                fgrid ave/grid all 1 ${nfix} ${nfix} c_cgrid[*] c_cthermal[*] c_cpflux[*] c_ceflux[*] ave running 
+dump               dgrid grid all ${gdump} 40N2_grid.*.dat id xlo ylo f_fgrid[*]
+dump_modify        dgrid pad 8 append no
+
+compute            csurf surf substrate all n press px py shx shy etot fx fy ke
+fix                fsurf ave/surf all 1 ${nfix} ${nfix} c_csurf[*] ave one
+dump               dsurf surf substrate ${nfix} 40N2_surfsubstrate.*.dat v1x v1y v2x v2y f_fsurf[*]
+dump_modify        dsurf pad 8 append no
+
+compute            sfluxesSubstrate surf substrate gas fx fy etot
+fix                sfluxesSubstrate ave/surf all 1 ${nfix} ${nfix} c_sfluxesSubstrate[*] ave one
+compute            netfluxesSubstrate reduce sum f_sfluxesSubstrate[1] f_sfluxesSubstrate[2] f_sfluxesSubstrate[3]
+
+stats              ${nfix}
+run                ${tdump}
+
+############################ End of Simulation ################################

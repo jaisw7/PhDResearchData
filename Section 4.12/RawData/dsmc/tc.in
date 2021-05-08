@@ -1,0 +1,94 @@
+#-- 2D Flow Around a Circle
+#-- /scratch/rice/i/isebasti/SPARTA/sparta-8Sep16/examples/circle
+#-- Prepared by Israel B. Sebastião (Purdue AAE) for AAE590-SPARTA Tutorial
+#-- Updated: 20 Sep 2016 (v0:18 Sep 2016)
+
+############################# Initialization ##################################
+
+# surf_create.py data.rect rect 0 -1e-4 1e-3 0 21 1
+
+variable           Pi equal 27420.0
+variable           Pr equal 1.
+variable           Po equal ${Pi}*${Pr}
+
+variable           Ti equal 600
+variable           Tr equal 0.5
+variable           To equal ${Ti}*${Tr}
+
+seed               12345
+dimension          2
+global             gridcut 0.0 comm/sort yes
+
+boundary           oo ro pp
+create_box         0 9e-6 0 2e-6 -0.5 0.5
+create_grid        900 200 1 level 2 199*701 199*200 * 10 10 1 #level 3 * * * 2 2 1
+balance_grid       rcb cell
+fix                fbalance balance 1000 1.1 rcb part
+				   
+global             fnum 0.2e8 #1.379e8 #2.238826e+11
+species            air.species N2
+mixture            gas N2 vstream 0 0 0 temp 300 nrho 6.620077570720044e+24 
+mixture            gas N2 frac 1.0
+mixture            gas2 N2 vstream 0 0 0 temp 600 nrho 3.310038785360022e+24 
+mixture            gas2 N2 frac 1.0
+
+surf_collide       diffuse_rest diffuseLinearTemp 300 1 600 300 2e-6 7e-6
+read_surf	       rect.data trans 2e-6 0.5e-6 0 group surfTop clip
+surf_modify        surfTop collide diffuse_rest
+
+#surf_collide       diffuse_cold diffuse 300 1 
+#bound_modify       yhi collide diffuse_cold
+
+global             surfpush yes
+
+region inlet_top block 0.0 2.5e-6 2e-6 INF INF INF
+region outlet_top block 6.5e-6 9e-6 2e-6 INF INF INF
+
+collide            vss all air.vss
+#collide_modify     vibrate smooth
+fix                mycheck grid/check 1 error
+fix                xlo_inlet emit/face gas2 xlo #subsonic ${Pi} ${Ti}
+fix                xhi_outlet emit/face gas xhi #subsonic ${Po} ${To}
+fix                yhi_inlet emit/face gas2 yhi region inlet_top #subsonic ${Pi} ${Ti} region inlet_top
+fix                yhi_outlet emit/face gas yhi region outlet_top #subsonic ${Po} ${To} region outlet_top
+#create_particles   gas n 0
+timestep           2e-10
+
+compute            sumKe reduce sum ke
+stats_style        step elaplong cpu np c_sumKe nattempt ncoll nscoll #nscheck #c_fcircle[1] c_fcircle[2]
+				   
+############################# Unsteady Regime #################################
+
+collide_modify     vremax 100 yes
+
+dump               dimage image all 50 prop_image.*.ppm vx type pdiam 5.e-8 &
+						   box yes 2e-2 surf one 2e-2 size 720 320 zoom 440000 # gline yes 5e-5 #grid proc
+dump_modify        dimage pad 6 scolor * black backcolor white glinecolor gray boxcolor magenta &
+                           cmap particle 0 600 cf 0 5 min blue 0.25 cyan 0.5 green 0.75 yellow max red
+
+#stats              250
+#run                20000
+undump             dimage
+
+stats              100 
+run                200000 
+write_restart      restart.equil
+
+############################## Steady Regime ##################################
+
+collide_modify     vremax 50000 yes
+
+compute            cgrid grid all species n nrho massrho u v
+compute            cthermal thermal/grid all species temp press
+compute            cpflux stress/grid all species momxy momxx momyy 
+compute            ceflux heatflux/grid all species heatx heaty 
+
+fix                fgrid ave/grid all 1 50000 50000 c_cgrid[*] c_cthermal[*] c_cpflux[*] c_ceflux[*] ave running
+
+dump               dgrid grid all 50000 prop_grid.*.dat id xlo ylo xhi yhi f_fgrid[*] 
+dump_modify        dgrid pad 7 append no
+
+stats              1000
+run                1200000
+
+############################ End of Simulation ################################

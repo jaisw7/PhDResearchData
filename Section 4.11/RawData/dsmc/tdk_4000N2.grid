@@ -1,0 +1,15 @@
+############################# Some Comments ##################################
+
+#-- TDK chip simulations, invensense
+
+#-- /scratch/gilbreth/jaiswal0/tdk/tdk_40N2_sj
+#-- Prepared by Shashank Jaiswal (Purdue AAE)
+#-- Updated: 27 Dec 2019 (v0: 27 Dec 2019)
+
+############################# Initialization ##################################
+
+dimension          2
+create_box         0 17e-6 0 43e-6 -0.5 0.5
+create_grid        17 43 1 level 2 * * * 5 5 1
+
+############################ End of Simulation ################################

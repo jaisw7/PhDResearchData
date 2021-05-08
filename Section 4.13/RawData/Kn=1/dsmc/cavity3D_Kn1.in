@@ -1,0 +1,76 @@
+#-- 2D Flow Around a Circle
+#-- /scratch/rice/i/isebasti/SPARTA/sparta-8Sep16/examples/circle
+#-- Prepared by Israel B. Sebastião (Purdue AAE) for AAE590-SPARTA Tutorial
+#-- Updated: 20 Sep 2016 (v0:18 Sep 2016)
+
+############################# Initialization ##################################
+
+# surf_create.py data.rect rect 0 -1e-4 1e-3 0 21 1
+
+seed               12345
+dimension          3
+global             gridcut 0.0 comm/sort yes
+
+boundary           ss ss ss
+#create_box         0.0 1e-3 0.0 1e-3 -0.5 0.5
+create_box         0 1e-3 0 1e-3 0 1e-3
+create_grid        80 80 80 #level 2 * * * 2 2 1 level 3 * * * 2 2 1
+balance_grid       rcb cell
+fix                fbalance balance 1000 1.1 rcb part
+				   
+#global             nrho 1.67912e+22 fnum 559706 #use a higher fnum for debugging; (1.67912e+21*1e-6/(30*500*500))
+#global             nrho 1.67912e+22 fnum 4477653.333333333
+#global             nrho 1.67912e+22 fnum 559706000 # 10x10x10
+#global             nrho 1.67912e+22 fnum 69963333.33333333 # 20x20x20
+global             nrho 1.67912e+21 fnum 109317.70833333333 # 80x80x80
+
+species            air.species Ar
+mixture            gas Ar vstream 0 0 0 temp 273
+mixture            gas Ar frac 1.0
+
+#read_surf	       data.rect group surfBottom clip
+#read_surf	       data.rect trans 0 1.1e-3 0 group surfTop clip
+
+surf_collide       diffuse_rest diffuse 273 1
+surf_collide       diffuse_moving diffuse 273 1 translate 50.0 0.0 0.0
+
+bound_modify       xlo collide diffuse_rest
+bound_modify       xhi collide diffuse_rest
+bound_modify       ylo collide diffuse_rest
+bound_modify       yhi collide diffuse_moving
+bound_modify       zlo collide diffuse_rest
+bound_modify       zhi collide diffuse_rest
+
+collide            vss gas air.vss
+create_particles   gas n 0
+timestep           2e-9
+
+compute            sumKe reduce sum ke
+stats_style        step elaplong cpu np c_sumKe nattempt ncoll nscoll #nscheck #c_fcircle[1] c_fcircle[2]
+				   
+############################# Unsteady Regime #################################
+
+collide_modify     vremax 100 yes
+
+stats              10000
+run                200000 #1000000
+
+############################## Steady Regime ##################################
+
+collide_modify     vremax 100000 yes
+
+compute            cgrid grid all species n nrho massrho u v
+compute            cthermal thermal/grid all species temp press
+
+compute            cpflux stress/grid all species momxy momyz momxz momxx momyy momzz
+compute            ceflux heatflux/grid all species heatx heaty heatz
+
+fix                fgrid ave/grid all 1 50000 50000 c_cgrid[*] c_cthermal[*] c_cpflux[*] c_ceflux[*] ave running
+
+dump               dgrid grid all 50000 prop_grid.*.dat id xlo ylo xhi yhi f_fgrid[*] 
+dump_modify        dgrid pad 7 append no
+
+stats              10000
+run                1200000
+
+############################ End of Simulation ################################
