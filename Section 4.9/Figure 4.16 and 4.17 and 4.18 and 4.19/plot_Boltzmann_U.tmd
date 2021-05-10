@@ -11,9 +11,9 @@ set key at 90,40
 set yrange [-250:250]
 set xrange [0:1]
 set yticks spacing 50
-plot 'Kn=0.037/dsmc_Kn0.037.dat' u ($2/1e-3):8 w l lw 0.3 lc 'blue' dt 'Solid' title 'Kn=3.7e-2', \
+plot 'Kn=0.037/dsmc.txt' u ($2/1e-3):8 w l lw 0.3 lc 'blue' dt 'Solid' title 'Kn=3.7e-2', \
      'Kn=0.037/dgfs_boltz-bgk.txt' using ($1/1e-3):($4) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'blue' title '', \
-     'Kn=0.00037/dsmc_Kn0.00037.dat' u ($2/1e-3):8 w l lw 0.3 lc 'red' dt 'Solid' title 'Kn=3.7e-4', \
+     'Kn=0.00037/dsmc.txt' u ($2/1e-3):8 w l lw 0.3 lc 'red' dt 'Solid' title 'Kn=3.7e-4', \
      'Kn=0.00037/dgfs_boltz-bgk.txt' using ($1/1e-3):($4) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'red' title ''
 set label 'IMEX-BDF BDF-1 Boltzmann-BGK' at 0.1,200 font 'Helvetica,18'
 set out
@@ -26,9 +26,9 @@ set key at 90,40
 set yrange [-250:250]
 set xrange [0:1]
 set yticks spacing 50
-plot 'Kn=0.037/dsmc_Kn0.037.dat' u ($2/1e-3):8 w l lw 0.3 lc 'blue' dt 'Solid' title 'Kn=3.7e-2', \
+plot 'Kn=0.037/dsmc.txt' u ($2/1e-3):8 w l lw 0.3 lc 'blue' dt 'Solid' title 'Kn=3.7e-2', \
      'Kn=0.037/dgfs_boltz-esbgk.txt' using ($1/1e-3):($4) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'blue' title '', \
-     'Kn=0.00037/dsmc_Kn0.00037.dat' u ($2/1e-3):8 w l lw 0.3 lc 'red' dt 'Solid' title 'Kn=3.7e-4', \
+     'Kn=0.00037/dsmc.txt' u ($2/1e-3):8 w l lw 0.3 lc 'red' dt 'Solid' title 'Kn=3.7e-4', \
      'Kn=0.00037/dgfs_boltz-esbgk.txt' using ($1/1e-3):($4) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'red' title ''
 set label 'IMEX-BDF BDF-1 Boltzmann-ESBGK' at 0.1,200 font 'Helvetica,18'
 set out
@@ -41,9 +41,9 @@ set key at 90,40
 set yrange [-250:250]
 set xrange [0:1]
 set yticks spacing 50
-plot 'Kn=0.037/dsmc_Kn0.037.dat' u ($2/1e-3):8 w l lw 0.3 lc 'blue' dt 'Solid' title 'Kn=3.7e-2', \
+plot 'Kn=0.037/dsmc.txt' u ($2/1e-3):8 w l lw 0.3 lc 'blue' dt 'Solid' title 'Kn=3.7e-2', \
      'Kn=0.037/dgfs_boltz-shakov.txt' using ($1/1e-3):($4) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'blue' title '', \
-     'Kn=0.00037/dsmc_Kn0.00037.dat' u ($2/1e-3):8 w l lw 0.3 lc 'red' dt 'Solid' title 'Kn=3.7e-4', \
+     'Kn=0.00037/dsmc.txt' u ($2/1e-3):8 w l lw 0.3 lc 'red' dt 'Solid' title 'Kn=3.7e-4', \
      'Kn=0.00037/dgfs_boltz-shakov.txt' using ($1/1e-3):($4) w p pt 'circle' lw 1.2 sf 'no' st 0.3 lc 'red' title ''
 set label 'IMEX-BDF BDF-1 Boltzmann-Shakov' at 0.1,200 font 'Helvetica,18'
 set out
