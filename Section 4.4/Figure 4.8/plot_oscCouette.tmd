@@ -37,25 +37,25 @@ set out
 
 set ylabel 'u<sub>y</sub><sup>(1)</sup> / v<sub>a</sub>'
 set out 'U_Ar_U500_dt=2e-11_normalized.ps'
-plot './Kn=1_ArKr_U500/dsmc_Kn=1_U500_dt=2e-11_0500000.txt' every 3 u ($2/1e-3):($8/500) w p sf 'no' st 0.3 lw 1.2 pt 'circle' lc 'red' title 't=0.2T', \
+plot './Kn=1_ArKr_U500/dsmc_Kn=1_U500_0500000.txt' every 3 u ($2/1e-3):($8/500) w p sf 'no' st 0.3 lw 1.2 pt 'circle' lc 'red' title 't=0.2T', \
      './Kn=1_ArKr_U500/oscCouette1DReconstruct_Ar_specie1_500_sol_.txt' u ($1/1e-3):($4/500) w l lc 'red' pt 4 title '', \
-     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_dt=2e-11_1000000.txt' every 3 u ($2/1e-3):($8/500) w p sf 'no' st 0.3 lw 1.2 pt 'square' lc 'blue' title 't=0.4T', \
+     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_1000000.txt' every 3 u ($2/1e-3):($8/500) w p sf 'no' st 0.3 lw 1.2 pt 'square' lc 'blue' title 't=0.4T', \
      './Kn=1_ArKr_U500/oscCouette1DReconstruct_Ar_specie1_1000_sol_.txt' u ($1/1e-3):($4/500) w l lc 'blue' pt 4 title '', \
-     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_dt=2e-11_1500000.txt' every 3 u ($2/1e-3):($8/500) w p sf 'no' st 0.3 lw 1.2 pt 'rtri' lc 'magenta' title 't=0.6T', \
+     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_1500000.txt' every 3 u ($2/1e-3):($8/500) w p sf 'no' st 0.3 lw 1.2 pt 'rtri' lc 'magenta' title 't=0.6T', \
      './Kn=1_ArKr_U500/oscCouette1DReconstruct_Ar_specie1_1500_sol_.txt' u ($1/1e-3):($4/500) w l lc 'magenta' pt 4 title '', \
-     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_dt=2e-11_2500000.txt' every 3 u ($2/1e-3):($8/500) w p sf 'no' st 0.3 lw 1.2 pt 'diamond' lc 'green' title 't=1.0T', \
+     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_2500000.txt' every 3 u ($2/1e-3):($8/500) w p sf 'no' st 0.3 lw 1.2 pt 'diamond' lc 'green' title 't=1.0T', \
      './Kn=1_ArKr_U500/oscCouette1DReconstruct_Ar_specie1_2500_sol_.txt' u ($1/1e-3):($4/500) w l nz 2 lc 'green' pt 4 title ''
 set out
 
 set ylabel 'u<sub>y</sub><sup>(2)</sup> / v<sub>a</sub>'
 set out 'U_Kr_U500_dt=2e-11_normalized.ps'
-plot './Kn=1_ArKr_U500/dsmc_Kn=1_U500_dt=2e-11_0500000.txt' every 3 u ($2/1e-3):($13/500) w p sf 'no' st 0.3 lw 1.2 pt 'circle' lc 'red' title 't=0.2T', \
+plot './Kn=1_ArKr_U500/dsmc_Kn=1_U500_0500000.txt' every 3 u ($2/1e-3):($13/500) w p sf 'no' st 0.3 lw 1.2 pt 'circle' lc 'red' title 't=0.2T', \
      './Kn=1_ArKr_U500/oscCouette1DReconstruct_Kr_specie2_500_sol_.txt' u ($1/1e-3):($4/500) w l lc 'red' pt 4 title '', \
-     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_dt=2e-11_1000000.txt' every 3 u ($2/1e-3):($13/500) w p sf 'no' st 0.3 lw 1.2 pt 'square' lc 'blue' title 't=0.4T', \
+     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_1000000.txt' every 3 u ($2/1e-3):($13/500) w p sf 'no' st 0.3 lw 1.2 pt 'square' lc 'blue' title 't=0.4T', \
      './Kn=1_ArKr_U500/oscCouette1DReconstruct_Kr_specie2_1000_sol_.txt' u ($1/1e-3):($4/500) w l lc 'blue' pt 4 title '', \
-     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_dt=2e-11_1500000.txt' every 3 u ($2/1e-3):($13/500) w p sf 'no' st 0.3 lw 1.2 pt 'rtri' lc 'magenta' title 't=0.6T', \
+     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_1500000.txt' every 3 u ($2/1e-3):($13/500) w p sf 'no' st 0.3 lw 1.2 pt 'rtri' lc 'magenta' title 't=0.6T', \
      './Kn=1_ArKr_U500/oscCouette1DReconstruct_Kr_specie2_1500_sol_.txt' u ($1/1e-3):($4/500) w l lc 'magenta' pt 4 title '', \
-     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_dt=2e-11_2500000.txt' every 3 u ($2/1e-3):($13/500) w p sf 'no' st 0.3 lw 1.2 pt 'diamond' lc 'green' title 't=1.0T', \
+     './Kn=1_ArKr_U500/dsmc_Kn=1_U500_2500000.txt' every 3 u ($2/1e-3):($13/500) w p sf 'no' st 0.3 lw 1.2 pt 'diamond' lc 'green' title 't=1.0T', \
      './Kn=1_ArKr_U500/oscCouette1DReconstruct_Kr_specie2_2500_sol_.txt' u ($1/1e-3):($4/500) w l nz 2 lc 'green' pt 4 title ''
 set out
 
